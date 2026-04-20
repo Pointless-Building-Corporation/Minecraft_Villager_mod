@@ -1,0 +1,13 @@
+{
+  "itemGroup.villagermod": "Example Mod Tab",
+  "block.villagermod.example_block": "Example Block",
+  "item.villagermod.example_item": "Example Item",
+
+  "villagermod.configuration.title": "Example Mod Configs",
+  "villagermod.configuration.section.villagermod.common.toml": "Example Mod Configs",
+  "villagermod.configuration.section.villagermod.common.toml.title": "Example Mod Configs",
+  "villagermod.configuration.items": "Item List",
+  "villagermod.configuration.logDirtBlock": "Log Dirt Block",
+  "villagermod.configuration.magicNumberIntroduction": "Magic Number Text",
+  "villagermod.configuration.magicNumber": "Magic Number"
+}
