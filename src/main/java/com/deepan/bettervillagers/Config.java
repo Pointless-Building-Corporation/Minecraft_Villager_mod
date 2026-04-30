@@ -1,4 +1,4 @@
-package com.deepan.villagermod;
+package com.deepan.bettervillagers;
 
 import java.util.List;
 import java.util.Set;

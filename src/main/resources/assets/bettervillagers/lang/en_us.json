@@ -1,0 +1,13 @@
+{
+  "itemGroup.bettervillagers": "Better Villagers Tab",
+  "block.bettervillagers.example_block": "Example Block",
+  "item.bettervillagers.example_item": "Example Item",
+
+  "bettervillagers.configuration.title": "Better Villagers Configs",
+  "bettervillagers.configuration.section.bettervillagers.common.toml": "Better Villagers Configs",
+  "bettervillagers.configuration.section.bettervillagers.common.toml.title": "Better Villagers Configs",
+  "bettervillagers.configuration.items": "Item List",
+  "bettervillagers.configuration.logDirtBlock": "Log Dirt Block",
+  "bettervillagers.configuration.magicNumberIntroduction": "Magic Number Text",
+  "bettervillagers.configuration.magicNumber": "Magic Number"
+}

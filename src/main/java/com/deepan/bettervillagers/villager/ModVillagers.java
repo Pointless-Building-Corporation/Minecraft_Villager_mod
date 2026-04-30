@@ -1,5 +1,6 @@
-package com.deepan.villagermod.villager;
+package com.deepan.bettervillagers.villager;
 
+import com.deepan.bettervillagers.BetterVillagers;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.server.ReloadableServerRegistries.Holder;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
@@ -9,9 +10,9 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModVillagers {
     public static final DeferredRegister<PoiType> POI_TYPES = 
-        DeferredRegister.create(BuiltInRegistries.POINT_OF_INTEREST_TYPE, villagermod.MOD_ID);
+        DeferredRegister.create(BuiltInRegistries.POINT_OF_INTEREST_TYPE, BetterVillagers.MODID);
     public static final DeferredRegister<VillagerProfession> VILLAGER_PROFESSIONS = 
-        DeferredRegister.create(BuiltInRegistries.VILLAGER_PROFESSION, villagermod.MOD_ID);
+        DeferredRegister.create(BuiltInRegistries.VILLAGER_PROFESSION, BetterVillagers.MODID);
 
     public static void register(IEventBus eventBus) {
         POI_TYPES.register(eventBus);

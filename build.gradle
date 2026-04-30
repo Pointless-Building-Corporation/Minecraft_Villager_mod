@@ -190,3 +190,9 @@ idea {
         downloadJavadoc = true
     }
 }
+
+tasks.register('deployToInstance', Copy){
+    from layout.buildDirectory.file("libs/${mod_id}-${mod_version}.jar")
+    into "C:\\Users\\User\\AppData\\Roaming\\PrismLauncher\\instances\\1.21.1\\minecraft\\mods"
+    dependsOn build
+}
