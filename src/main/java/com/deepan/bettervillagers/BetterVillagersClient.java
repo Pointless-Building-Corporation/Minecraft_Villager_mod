@@ -1,8 +1,8 @@
 package com.deepan.bettervillagers;
 
+import com.deepan.bettervillagers.client.renderer.SeatRenderer;
 import com.deepan.bettervillagers.entity.ModEntities;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -31,6 +31,6 @@ public class BetterVillagersClient {
     }
 
     static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerEntityRenderer(ModEntities.SEAT.get(), NoopRenderer::new);
+        event.registerEntityRenderer(ModEntities.SEAT.get(), SeatRenderer::new);
     }
 }
