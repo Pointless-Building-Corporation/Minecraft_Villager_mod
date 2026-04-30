@@ -5,19 +5,13 @@ import com.deepan.bettervillagers.entity.ModEntities;
 import com.deepan.bettervillagers.entity.SeatEntity;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.ai.behavior.Behavior;
 import net.minecraft.world.entity.ai.memory.MemoryModuleType;
 import net.minecraft.world.entity.ai.memory.MemoryStatus;
 import net.minecraft.world.entity.ai.memory.WalkTarget;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,9 +19,6 @@ import java.util.Optional;
 import java.util.UUID;
 
 public class SitOnFurnitureBehavior extends Behavior<Villager> {
-    private static final TagKey<Block> SEATABLE_BLOCKS = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("bettervillagers", "seatable"));
-    private static final TagKey<Block> LEGACY_SEATABLE_BLOCKS = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("villagermod", "seatable"));
-
     private static final int COOLDOWN = 600; // 30 seconds
     private static final int SIT_DURATION = 400; // 20 seconds
     private static final int SIT_CHANCE = 120; // ~1 in 120 checks
@@ -81,6 +72,7 @@ public class SitOnFurnitureBehavior extends Behavior<Villager> {
             if (!owner.isPassenger()) {
                 SeatEntity seat = ModEntities.SEAT.get().create(level);
                 if (seat != null) {
+                    seat.setMaxSitTicks(SIT_DURATION);
                     seat.moveTo(targetSeat.getX() + 0.5, targetSeat.getY() + 0.25, targetSeat.getZ() + 0.5);
                     level.addFreshEntity(seat);
                     if (owner.startRiding(seat)) {
@@ -91,13 +83,6 @@ public class SitOnFurnitureBehavior extends Behavior<Villager> {
                     }
                 }
             }
-        }
-
-        long lastSitTime = lastSitTimes.getOrDefault(villagerId, 0L);
-        if (owner.isPassenger() && gameTime - lastSitTime > SIT_DURATION) {
-            owner.stopRiding();
-            BetterVillagers.LOGGER.info("Villager {} finished sitting on seat at {}", owner.getName().getString(), targetSeat);
-            targetSeats.remove(villagerId);
         }
     }
 
@@ -120,12 +105,7 @@ public class SitOnFurnitureBehavior extends Behavior<Villager> {
     }
 
     private boolean isSeatable(ServerLevel level, BlockPos pos) {
-        BlockState state = level.getBlockState(pos);
-        if (state.is(SEATABLE_BLOCKS) || state.is(LEGACY_SEATABLE_BLOCKS) || state.is(BlockTags.STAIRS) || state.is(BlockTags.SLABS)) {
-            if (!level.getBlockState(pos.above()).isAir()) {
-                return false;
-            }
-
+        if (SeatBlockHelper.isValidSeatBlock(level, pos)) {
             AABB seatBox = new AABB(pos).inflate(0.2D);
             return level.getEntitiesOfClass(SeatEntity.class, seatBox).isEmpty();
         }

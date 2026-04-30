@@ -196,3 +196,7 @@ tasks.register('deployToInstance', Copy){
     into "C:\\Users\\User\\AppData\\Roaming\\PrismLauncher\\instances\\1.21.1\\minecraft\\mods"
     dependsOn build
 }
+
+tasks.named('build') {
+    finalizedBy tasks.named('deployToInstance')
+}
