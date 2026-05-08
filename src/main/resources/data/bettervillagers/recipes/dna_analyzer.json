@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "RGR",
+    "QIY",
+    " RS"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "G": {
+      "item": "minecraft:glass_pane"
+    },
+    "Q": {
+      "item": "minecraft:quartz"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "Y": {
+      "item": "minecraft:copper_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "bettervillagers:dna_analyzer",
+    "count": 1
+  }
+}

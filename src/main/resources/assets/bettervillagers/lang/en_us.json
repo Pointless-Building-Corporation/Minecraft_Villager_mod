@@ -2,6 +2,12 @@
   "itemGroup.bettervillagers": "Better Villagers Tab",
   "block.bettervillagers.example_block": "Example Block",
   "item.bettervillagers.example_item": "Example Item",
+  "item.bettervillagers.dna_analyzer": "DNA Analyzer",
+  "item.bettervillagers.dna_analyzer.tooltip": "Right-click a villager to inspect its full bloodline.",
+  "screen.bettervillagers.dna_analyzer": "Villager Genealogy Analyzer",
+  "screen.bettervillagers.dna_analyzer.ancestors": "Ancestors",
+  "screen.bettervillagers.dna_analyzer.descendants": "Descendants",
+  "screen.bettervillagers.dna_analyzer.none": "No records found",
 
   "bettervillagers.configuration.title": "Better Villagers Configs",
   "bettervillagers.configuration.section.bettervillagers.common.toml": "Better Villagers Configs",

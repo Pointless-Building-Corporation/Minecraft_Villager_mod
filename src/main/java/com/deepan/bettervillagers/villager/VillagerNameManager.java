@@ -121,8 +121,9 @@ public class VillagerNameManager {
         NamePool pool = getNamePool(villager);
         String firstName = pickRandom(pool.firstNames(), villager);
         String surname = pickRandom(pool.surnames(), villager);
+        List<Villager> parents = villager.isBaby() ? findCandidateParents(level, villager) : List.of();
         String baseName = villager.isBaby()
-            ? determineBabyBaseName(level, villager, firstName, surname)
+            ? determineBabyBaseName(villager, firstName, surname, parents)
             : buildBaseName(firstName, surname);
 
         CompoundTag data = getNamingData(villager);
@@ -131,6 +132,12 @@ public class VillagerNameManager {
         data.putString(SURNAME_KEY, extractSurname(baseName));
         data.putString(BASE_NAME_KEY, baseName);
         snapshotObservedName(data, baseName);
+
+        if (villager.isBaby()) {
+            VillagerGenealogySavedData.get(level).ensureVillagerRecord(villager, baseName, parents);
+        } else {
+            VillagerGenealogySavedData.get(level).ensureVillagerRecord(villager, baseName);
+        }
 
         applyManagedName(villager, baseName);
     }
@@ -143,6 +150,10 @@ public class VillagerNameManager {
         data.remove(FIRST_NAME_KEY);
         data.putString(SURNAME_KEY, extractSurname(baseName));
         snapshotObservedName(data, baseName);
+
+        if (villager.level() instanceof ServerLevel serverLevel) {
+            VillagerGenealogySavedData.get(serverLevel).ensureVillagerRecord(villager, baseName);
+        }
 
         applyManagedName(villager, baseName);
     }
@@ -215,8 +226,7 @@ public class VillagerNameManager {
         data.putBoolean(LAST_HAS_HOME_KEY, hasAssignedHome(villager));
     }
 
-    private String determineBabyBaseName(ServerLevel level, Villager baby, String firstName, String fallbackSurname) {
-        List<Villager> parents = findCandidateParents(level, baby);
+    private String determineBabyBaseName(Villager baby, String firstName, String fallbackSurname, List<Villager> parents) {
         String inheritedSurname = determineInheritedSurname(parents, baby, fallbackSurname);
         ParentNameContext chosenParent = chooseParentContext(parents, baby);
 

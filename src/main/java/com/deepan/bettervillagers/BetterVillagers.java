@@ -1,6 +1,8 @@
 package com.deepan.bettervillagers;
 
 import com.deepan.bettervillagers.villager.ModVillagers;
+import com.deepan.bettervillagers.item.DnaAnalyzerItem;
+import com.deepan.bettervillagers.network.BetterVillagersPayloads;
 import com.deepan.bettervillagers.villager.VillagerNameManager;
 import org.slf4j.Logger;
 
@@ -27,6 +29,9 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -55,6 +60,7 @@ public class BetterVillagers {
     // Creates a new food item with the id "bettervillagers:example_id", nutrition 1 and saturation 2
     public static final DeferredItem<Item> EXAMPLE_ITEM = ITEMS.registerSimpleItem("example_item", new Item.Properties().food(new FoodProperties.Builder()
             .alwaysEdible().nutrition(1).saturationModifier(2f).build()));
+    public static final DeferredItem<Item> DNA_ANALYZER = ITEMS.register("dna_analyzer", () -> new DnaAnalyzerItem(new Item.Properties().stacksTo(1)));
 
     // Creates a creative tab with the id "bettervillagers:example_tab" for the example item, that is placed after the combat tab
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
@@ -70,6 +76,7 @@ public class BetterVillagers {
     public BetterVillagers(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(BetterVillagersPayloads::register);
 
         // Register the Deferred Register to the mod event bus so blocks get registered
         BLOCKS.register(modEventBus);
@@ -112,6 +119,9 @@ public class BetterVillagers {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(EXAMPLE_BLOCK_ITEM);
         }
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(DNA_ANALYZER);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
@@ -119,5 +129,29 @@ public class BetterVillagers {
     public void onServerStarting(ServerStartingEvent event) {
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
+    }
+
+    @SubscribeEvent
+    public void onVillagerAnalyzerUse(PlayerInteractEvent.EntityInteract event) {
+        if (!(event.getTarget() instanceof net.minecraft.world.entity.npc.Villager villager)) {
+            return;
+        }
+
+        if (!(event.getEntity().getItemInHand(event.getHand()).getItem() instanceof DnaAnalyzerItem)) {
+            return;
+        }
+
+        event.setCanceled(true);
+        event.setCancellationResult(net.minecraft.world.InteractionResult.SUCCESS);
+        if (!event.getLevel().isClientSide() && event.getEntity() instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
+            DnaAnalyzerItem.analyzeVillager(serverPlayer, villager);
+        }
+    }
+
+    @SubscribeEvent
+    public void onVillagerDeath(LivingDeathEvent event) {
+        if (event.getEntity() instanceof net.minecraft.world.entity.npc.Villager villager && villager.level() instanceof net.minecraft.server.level.ServerLevel serverLevel) {
+            com.deepan.bettervillagers.villager.VillagerGenealogySavedData.get(serverLevel).markHistorical(villager);
+        }
     }
 }

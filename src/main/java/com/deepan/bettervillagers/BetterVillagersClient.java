@@ -1,6 +1,7 @@
 package com.deepan.bettervillagers;
 
 import com.deepan.bettervillagers.client.renderer.SeatRenderer;
+import com.deepan.bettervillagers.client.screen.DnaAnalyzerScreen;
 import com.deepan.bettervillagers.entity.ModEntities;
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
