@@ -54,8 +54,8 @@ public class VillagerGenealogyRecord {
             tag.getString(NAME_KEY),
             tag.getString(TYPE_KEY),
             tag.getBoolean(ALIVE_KEY),
-            readUuidSet(tag.getList(PARENTS_KEY, Tag.TAG_INT_ARRAY)),
-            readUuidSet(tag.getList(CHILDREN_KEY, Tag.TAG_INT_ARRAY))
+            readUuidSet(tag.getList(PARENTS_KEY, Tag.TAG_COMPOUND)),
+            readUuidSet(tag.getList(CHILDREN_KEY, Tag.TAG_COMPOUND))
         );
     }
 
