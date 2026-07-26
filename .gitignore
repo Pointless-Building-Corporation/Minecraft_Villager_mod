@@ -38,3 +38,27 @@ run/
 **/src/generated/**/.cache/
 repo/
 !**/src/**/repo/
+
+### AI Coding Assistants & Tools ###
+.codex/
+.gemini/
+.antigravity/
+.cursor/
+.cursorrules
+.cursorignore
+.aider*
+.cline/
+.roo/
+.windsurf/
+.continue/
+.cody/
+.codeium/
+.tabnine/
+.copilot/
+.devin/
+.openhands/
+brain/
+scratch/
+task.md
+implementation_plan.md
+walkthrough.md
