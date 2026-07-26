@@ -45,6 +45,12 @@ Preferred verification:
 
 The repo has hit Windows file-lock issues in `build/` with normal cache/clean flows. Prefer `--no-build-cache` before assuming the code is broken.
 
+# Git & Auto-Commit Discipline
+
+All agents working in this project must actively maintain clean git history and trigger atomic commits at relevant milestones (see `.codex/skills/git-auto-commit/SKILL.md`).
+- Use `.\scripts\auto_commit.ps1 -Type "feat|fix|chore" -Scope "<area>" -Message "<summary>" -Files <paths>` after completing logical checkpoints (e.g., asset creation, bug fixes, license/setup tasks).
+- Never leave completed, working changes uncommitted at the end of a session or task step.
+
 # Current Focus
 
 Assume the active long-term goal is to improve villager family simulation and inspection:
