@@ -38,7 +38,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build Mod Release JARs
-        run: ./gradlew --no-build-cache build --stacktrace
+        run: ./gradlew build --stacktrace
 
       - name: Determine Release Tag
         id: get_tag

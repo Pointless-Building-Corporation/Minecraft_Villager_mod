@@ -33,10 +33,10 @@ jobs:
         run: chmod +x gradlew
 
       - name: Validate Java Compilation
-        run: ./gradlew --no-build-cache compileJava --stacktrace
+        run: ./gradlew compileJava --stacktrace
 
       - name: Build Mod & Run Tests
-        run: ./gradlew --no-build-cache build --stacktrace
+        run: ./gradlew build --stacktrace
 
       - name: Upload Build Artifacts (JARs)
         uses: actions/upload-artifact@v4
