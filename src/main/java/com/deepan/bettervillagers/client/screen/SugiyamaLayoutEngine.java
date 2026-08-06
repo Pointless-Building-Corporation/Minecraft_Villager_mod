@@ -70,6 +70,23 @@ public class SugiyamaLayoutEngine {
             }
         }
 
+        // Center the tree horizontally around viewWidth / 2.0
+        if (!currentX.isEmpty()) {
+            double minXNode = Double.MAX_VALUE;
+            double maxXNode = Double.MIN_VALUE;
+            for (Double x : currentX.values()) {
+                minXNode = Math.min(minXNode, x);
+                maxXNode = Math.max(maxXNode, x);
+            }
+            
+            double currentCenterX = minXNode + (maxXNode - minXNode) / 2.0;
+            double offset = (viewWidth / 2.0) - currentCenterX;
+            
+            for (Map.Entry<UUID, Double> entry : currentX.entrySet()) {
+                entry.setValue(entry.getValue() + offset);
+            }
+        }
+
         // Final coordinate assignment
         double availableHeight = Math.max(1, viewHeight - 110.0);
         double rawBandSpacing = availableHeight / Math.max(1, (maxBand - minBand + 1));
