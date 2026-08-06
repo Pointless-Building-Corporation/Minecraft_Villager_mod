@@ -31,6 +31,7 @@ public class DnaAnalyzerScreen extends Screen {
     private final DnaAnalyzerPayload payload;
     private double scrollX = 0;
     private double scrollY = 0;
+    private double zoom = 1.0;
 
     public DnaAnalyzerScreen(DnaAnalyzerPayload payload) {
         super(Component.translatable("screen.bettervillagers.dna_analyzer"));
@@ -52,7 +53,10 @@ public class DnaAnalyzerScreen extends Screen {
         
         guiGraphics.enableScissor(0, 26, this.width, this.height);
         guiGraphics.pose().pushPose();
-        guiGraphics.pose().translate(this.scrollX, this.scrollY, 0);
+        
+        guiGraphics.pose().translate(this.width / 2.0f, this.height / 2.0f, 0);
+        guiGraphics.pose().scale((float) this.zoom, (float) this.zoom, 1.0f);
+        guiGraphics.pose().translate(-this.width / 2.0f + this.scrollX, -this.height / 2.0f + this.scrollY, 0);
         
         for (SugiyamaLayoutEngine.LineSegment line : layout.lines()) {
             if (line.isHorizontal()) {
@@ -141,9 +145,20 @@ public class DnaAnalyzerScreen extends Screen {
 
     @Override
     public boolean mouseDragged(double mouseX, double mouseY, int button, double dragX, double dragY) {
-        this.scrollX += dragX;
-        this.scrollY += dragY;
+        this.scrollX += dragX / this.zoom;
+        this.scrollY += dragY / this.zoom;
         return super.mouseDragged(mouseX, mouseY, button, dragX, dragY);
+    }
+    
+    @Override
+    public boolean mouseScrolled(double mouseX, double mouseY, double scrollX, double scrollY) {
+        if (scrollY > 0) {
+            this.zoom *= 1.1;
+        } else if (scrollY < 0) {
+            this.zoom /= 1.1;
+        }
+        this.zoom = Mth.clamp(this.zoom, 0.2, 4.0);
+        return true;
     }
 
 }
