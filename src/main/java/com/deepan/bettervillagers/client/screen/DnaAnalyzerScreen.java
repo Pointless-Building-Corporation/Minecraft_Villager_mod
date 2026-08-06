@@ -204,8 +204,11 @@ public class DnaAnalyzerScreen extends Screen {
             int stagger = (familyIndex % 5) * 8 - 16;
             int midY = parentY + (endY - parentY) / 2 + stagger;
             
+            int busMinX = Math.min(startX, childMinX);
+            int busMaxX = Math.max(startX, childMaxX);
+            
             drawVerticalLine(guiGraphics, startX, startY, midY, CONNECTOR_COLOR);
-            drawHorizontalLine(guiGraphics, childMinX, childMaxX, midY, CONNECTOR_COLOR);
+            drawHorizontalLine(guiGraphics, busMinX, busMaxX, midY, CONNECTOR_COLOR);
             
             for (UUID cId : children) {
                 PositionedNode c = positionedNodes.get(cId);
