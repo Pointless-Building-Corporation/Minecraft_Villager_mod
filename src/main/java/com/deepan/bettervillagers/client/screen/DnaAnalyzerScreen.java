@@ -152,13 +152,18 @@ public class DnaAnalyzerScreen extends Screen {
     
     @Override
     public boolean mouseScrolled(double mouseX, double mouseY, double scrollX, double scrollY) {
-        if (scrollY > 0) {
-            this.zoom *= 1.1;
-        } else if (scrollY < 0) {
-            this.zoom /= 1.1;
+        System.out.println("MOUSE SCROLLED: x=" + scrollX + ", y=" + scrollY);
+        double scroll = scrollY != 0 ? scrollY : scrollX;
+        if (scroll != 0) {
+            if (scroll > 0) {
+                this.zoom *= 1.1;
+            } else {
+                this.zoom /= 1.1;
+            }
+            this.zoom = Mth.clamp(this.zoom, 0.2, 4.0);
+            return true;
         }
-        this.zoom = Mth.clamp(this.zoom, 0.2, 4.0);
-        return true;
+        return super.mouseScrolled(mouseX, mouseY, scrollX, scrollY);
     }
 
 }
