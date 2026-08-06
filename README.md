@@ -1,25 +1,38 @@
+# Better Villagers (Minecraft NeoForge Mod)
 
-Installation information
-=======
+A Minecraft NeoForge mod that introduces advanced kinship and genealogy tracking to Villagers.
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+## Features
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+### 🧬 DNA Analyzer
+Craft the **DNA Analyzer** to inspect the genetic bloodlines of villagers.
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+**Recipe:**
+- 4x Glass Pane
+- 4x Spider Eye
+- 1x Ender Pearl
+*(Arranged in a cross pattern with the Ender Pearl in the center)*
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+Right-click any Villager with the DNA Analyzer to open the **Villager Genealogy Analyzer** screen.
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+### 🌳 Sugiyama Family Tree Layout
+The analyzer screen displays a beautiful, mathematically-arranged, infinite-scrolling family tree!
+- Computes exact parent-child generational bands.
+- Accurately renders complex non-linear genealogies (such as cousins and distant relatives).
+- Groups multi-parent families and visually maps siblings under unified horizontal connection buses.
+- **Color-coded relations**: Parents (Blue), Children (Green), Siblings/Mates (Pink), Self (Gold), and Distant Relatives (Gray).
+
+### 🧬 Villager Genealogy Tracking
+Villagers now persistently track their ancestors, descendants, and mates in their saved NBT data. Relationships are dynamically evaluated at runtime to accurately map the entire genetic lineage of a village!
+
+## Installation
+Drop the built `.jar` file into your Prism Launcher or standard Minecraft `mods` folder.
+
+**Building from source:**
+```bash
+# Compile and run unit tests (including the layout engine mathematical tests)
+./gradlew build test
+```
+
+## Credits
+Built with the [NeoForge Modding API](https://neoforged.net/).
