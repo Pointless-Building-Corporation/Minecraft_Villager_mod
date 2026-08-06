@@ -67,10 +67,10 @@ public class DnaAnalyzerScreen extends Screen {
             maxBand = Math.max(maxBand, node.band());
         }
 
-        double availableHeight = Math.max(1, this.height - 110.0);
-        double rawBandSpacing = availableHeight / Math.max(1, (maxBand - minBand + 1));
-        final double bandSpacing = Mth.clamp((int) Math.round(rawBandSpacing), 54, 78);
-        double centerY = this.height / 2.0 + 8.0;
+        double availableWidth = Math.max(1, this.width - 110.0);
+        double rawBandSpacing = availableWidth / Math.max(1, (maxBand - minBand + 1));
+        final double bandSpacing = Mth.clamp((int) Math.round(rawBandSpacing), 160, 240);
+        double centerX = this.width / 2.0;
 
         Map<UUID, PositionedNode> positioned = new HashMap<>();
 
@@ -83,29 +83,29 @@ public class DnaAnalyzerScreen extends Screen {
                 int count = 0;
                 for (DnaAnalyzerPayload.FamilyTreeEdge edge : payload.edges()) {
                     if (edge.toId().equals(node.genealogyId()) && positioned.containsKey(edge.fromId())) {
-                        sum += positioned.get(edge.fromId()).centerX();
+                        sum += positioned.get(edge.fromId()).centerY();
                         count++;
                     }
                     if (edge.fromId().equals(node.genealogyId()) && positioned.containsKey(edge.toId())) {
-                        sum += positioned.get(edge.toId()).centerX();
+                        sum += positioned.get(edge.toId()).centerY();
                         count++;
                     }
                 }
                 return count > 0 ? sum / count : 0.0;
             }).thenComparing(DnaAnalyzerPayload.FamilyTreeNode::name));
 
-            int width = bandNodes.stream().anyMatch(DnaAnalyzerPayload.FamilyTreeNode::root) ? ROOT_WIDTH : NODE_WIDTH;
-            int spacing = width + 24;
-            double startX = this.width / 2.0 - (bandNodes.size() - 1) * spacing / 2.0;
-            double y = centerY + band * bandSpacing;
+            int height = bandNodes.stream().anyMatch(DnaAnalyzerPayload.FamilyTreeNode::root) ? ROOT_HEIGHT : NODE_HEIGHT;
+            int spacing = height + 16;
+            double startY = this.height / 2.0 - (bandNodes.size() - 1) * spacing / 2.0;
+            double x = centerX + band * bandSpacing;
 
             for (int index = 0; index < bandNodes.size(); index++) {
                 DnaAnalyzerPayload.FamilyTreeNode node = bandNodes.get(index);
                 int nodeWidth = node.root() ? ROOT_WIDTH : NODE_WIDTH;
                 int nodeHeight = node.root() ? ROOT_HEIGHT : NODE_HEIGHT;
-                int x = (int) Math.round(startX + index * spacing - nodeWidth / 2.0);
-                int yPos = (int) Math.round(y - nodeHeight / 2.0);
-                positioned.put(node.genealogyId(), new PositionedNode(node, x, yPos, nodeWidth, nodeHeight));
+                int xPos = (int) Math.round(x - nodeWidth / 2.0);
+                int yPos = (int) Math.round(startY + index * spacing - nodeHeight / 2.0);
+                positioned.put(node.genealogyId(), new PositionedNode(node, xPos, yPos, nodeWidth, nodeHeight));
             }
         };
 
@@ -124,16 +124,16 @@ public class DnaAnalyzerScreen extends Screen {
                 continue;
             }
 
-            int startX = from.centerX();
-            int startY = from.bottom();
-            int endX = to.centerX();
-            int endY = to.top();
+            int startX = from.right();
+            int startY = from.centerY();
+            int endX = to.left();
+            int endY = to.centerY();
             int stagger = Math.abs(from.node().genealogyId().hashCode()) % 12 - 6;
-            int midY = startY + (endY - startY) / 2 + stagger;
+            int midX = startX + (endX - startX) / 2 + stagger;
 
-            drawVerticalLine(guiGraphics, startX, startY, midY, CONNECTOR_COLOR);
-            drawHorizontalLine(guiGraphics, startX, endX, midY, CONNECTOR_COLOR);
-            drawVerticalLine(guiGraphics, endX, midY, endY, CONNECTOR_COLOR);
+            drawHorizontalLine(guiGraphics, startX, midX, startY, CONNECTOR_COLOR);
+            drawVerticalLine(guiGraphics, midX, startY, endY, CONNECTOR_COLOR);
+            drawHorizontalLine(guiGraphics, midX, endX, endY, CONNECTOR_COLOR);
         }
     }
 
@@ -142,17 +142,27 @@ public class DnaAnalyzerScreen extends Screen {
             .sorted(Comparator.comparingInt(node -> node.node().root() ? 1 : 0))
             .toList()) {
             DnaAnalyzerPayload.FamilyTreeNode node = positionedNode.node();
+            int relColor = getRelationColor(node.relation());
+            
             guiGraphics.fill(positionedNode.left(), positionedNode.top(), positionedNode.right(), positionedNode.bottom(), PANEL_COLOR);
-            guiGraphics.renderOutline(positionedNode.left(), positionedNode.top(), positionedNode.width(), positionedNode.height(), PANEL_BORDER);
-            guiGraphics.fill(positionedNode.left() + 6, positionedNode.top() + 6, positionedNode.right() - 6, positionedNode.top() + 8, ACCENT_COLOR);
+            guiGraphics.renderOutline(positionedNode.left(), positionedNode.top(), positionedNode.width(), positionedNode.height(), relColor);
+            guiGraphics.fill(positionedNode.left() + 6, positionedNode.top() + 6, positionedNode.right() - 6, positionedNode.top() + 8, relColor);
 
             guiGraphics.drawCenteredString(this.font, Component.literal(trimText(node.name(), node.root() ? 16 : 13)),
                 positionedNode.centerX(), positionedNode.top() + 12, TEXT_COLOR);
             guiGraphics.drawCenteredString(this.font, Component.literal(trimText(node.relation(), 16)),
-                positionedNode.centerX(), positionedNode.top() + (node.root() ? 26 : 22), ACCENT_COLOR);
+                positionedNode.centerX(), positionedNode.top() + (node.root() ? 26 : 22), relColor);
             guiGraphics.drawCenteredString(this.font, Component.literal(trimText(node.villagerType() + " - " + node.status(), 18)),
                 positionedNode.centerX(), positionedNode.top() + (node.root() ? 38 : 32), MUTED_TEXT_COLOR);
         }
+    }
+
+    private int getRelationColor(String relation) {
+        if (relation.equals("Self")) return 0xFFFFD700;
+        if (relation.contains("Parent") || relation.contains("Grandparent")) return 0xFF4DA6FF;
+        if (relation.contains("Child") || relation.contains("Grandchild")) return 0xFF5CD65C;
+        if (relation.equals("Sibling") || relation.equals("Mate")) return 0xFFD279A6;
+        return 0xFFA0A0A0;
     }
 
     private String trimText(String text, int maxLength) {
@@ -206,6 +216,10 @@ public class DnaAnalyzerScreen extends Screen {
 
         int centerX() {
             return left + width / 2;
+        }
+
+        int centerY() {
+            return top + height / 2;
         }
     }
 }

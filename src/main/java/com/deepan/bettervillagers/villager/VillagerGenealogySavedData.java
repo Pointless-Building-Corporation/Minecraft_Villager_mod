@@ -208,27 +208,22 @@ public class VillagerGenealogySavedData extends SavedData {
             return descendantRelation(path.length());
         }
         return switch (path) {
+            case "CP" -> "Mate";
             case "PC" -> "Sibling";
             case "PPC" -> "Aunt/Uncle";
+            case "PPPC" -> "Great-Aunt/Uncle";
             case "PCC" -> "Niece/Nephew";
-            case "PPCC" -> "Cousin";
+            case "PCCC" -> "Great-Niece/Nephew";
+            case "PPCC" -> "First Cousin";
+            case "PPPCCC" -> "Second Cousin";
+            case "PPCCC", "PPPCC" -> "First Cousin 1x Removed";
             default -> "Distant Relative";
         };
     }
 
     private int computeBand(String path, String relation) {
-        if (path.chars().allMatch(character -> character == 'P')) {
-            return -path.length();
-        }
-        if (path.chars().allMatch(character -> character == 'C')) {
-            return path.length();
-        }
-        return switch (relation) {
-            case "Sibling" -> 0;
-            case "Aunt/Uncle" -> -1;
-            case "Niece/Nephew", "Cousin" -> 1;
-            default -> path.chars().map(character -> character == 'C' ? 1 : -1).sum();
-        };
+        if ("Mate".equals(relation)) return 0;
+        return path.chars().map(character -> character == 'C' ? 1 : -1).sum();
     }
 
     private String ancestorRelation(int depth) {
@@ -254,11 +249,12 @@ public class VillagerGenealogySavedData extends SavedData {
     private int relationPriority(String relation) {
         return switch (relation) {
             case "Self" -> 0;
-            case "Parent", "Child" -> 1;
-            case "Sibling" -> 2;
-            case "Grandparent", "Grandchild" -> 3;
-            case "Aunt/Uncle", "Niece/Nephew", "Cousin" -> 4;
-            default -> 5;
+            case "Mate" -> 1;
+            case "Parent", "Child" -> 2;
+            case "Sibling" -> 3;
+            case "Grandparent", "Grandchild" -> 4;
+            case "Aunt/Uncle", "Niece/Nephew", "First Cousin" -> 5;
+            default -> 6;
         };
     }
 
