@@ -12,6 +12,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.Set;
+import java.util.HashSet;
 
 public class DnaAnalyzerScreen extends Screen {
     private static final int PANEL_COLOR = 0xCC12151C;
@@ -69,8 +71,9 @@ public class DnaAnalyzerScreen extends Screen {
 
         double availableHeight = Math.max(1, this.height - 110.0);
         double rawBandSpacing = availableHeight / Math.max(1, (maxBand - minBand + 1));
-        final double bandSpacing = Mth.clamp((int) Math.round(rawBandSpacing), 90, 140);
+        final double bandSpacing = Mth.clamp((int) Math.round(rawBandSpacing), 140, 240);
         double centerY = this.height / 2.0 + 8.0;
+        double centerX = this.width / 2.0;
 
         Map<UUID, PositionedNode> positioned = new HashMap<>();
 
@@ -78,7 +81,8 @@ public class DnaAnalyzerScreen extends Screen {
             List<DnaAnalyzerPayload.FamilyTreeNode> bandNodes = bands.get(band);
             if (bandNodes == null) return;
 
-            bandNodes.sort(Comparator.comparingDouble((DnaAnalyzerPayload.FamilyTreeNode node) -> {
+            Map<UUID, Double> idealX = new HashMap<>();
+            for (DnaAnalyzerPayload.FamilyTreeNode node : bandNodes) {
                 double sum = 0;
                 int count = 0;
                 for (DnaAnalyzerPayload.FamilyTreeEdge edge : payload.edges()) {
@@ -86,24 +90,49 @@ public class DnaAnalyzerScreen extends Screen {
                         sum += positioned.get(edge.fromId()).centerX();
                         count++;
                     }
-                    if (edge.fromId().equals(node.genealogyId()) && positioned.containsKey(edge.toId())) {
-                        sum += positioned.get(edge.toId()).centerX();
-                        count++;
+                }
+                if (count == 0) {
+                    for (DnaAnalyzerPayload.FamilyTreeEdge edge : payload.edges()) {
+                        if (edge.fromId().equals(node.genealogyId()) && positioned.containsKey(edge.toId())) {
+                            sum += positioned.get(edge.toId()).centerX();
+                            count++;
+                        }
                     }
                 }
-                return count > 0 ? sum / count : 0.0;
-            }).thenComparing(DnaAnalyzerPayload.FamilyTreeNode::name));
+                idealX.put(node.genealogyId(), count > 0 ? sum / count : centerX);
+            }
 
-            int width = bandNodes.stream().anyMatch(DnaAnalyzerPayload.FamilyTreeNode::root) ? ROOT_WIDTH : NODE_WIDTH;
-            int spacing = width + 24;
-            double startX = this.width / 2.0 - (bandNodes.size() - 1) * spacing / 2.0;
+            bandNodes.sort(Comparator.comparingDouble((DnaAnalyzerPayload.FamilyTreeNode n) -> idealX.get(n.genealogyId()))
+                .thenComparing(DnaAnalyzerPayload.FamilyTreeNode::name));
+
+            double[] actualX = new double[bandNodes.size()];
+            if (bandNodes.size() > 0) {
+                int[] widths = new int[bandNodes.size()];
+                for (int i = 0; i < bandNodes.size(); i++) {
+                    widths[i] = bandNodes.get(i).root() ? ROOT_WIDTH : NODE_WIDTH;
+                }
+                int GAP = 48; // Spacing between nodes
+
+                actualX[0] = idealX.get(bandNodes.get(0).genealogyId());
+                for (int i = 1; i < bandNodes.size(); i++) {
+                    double minX = actualX[i-1] + (widths[i-1] + widths[i])/2.0 + GAP;
+                    double ideal = idealX.get(bandNodes.get(i).genealogyId());
+                    actualX[i] = Math.max(ideal, minX);
+                }
+                
+                for (int i = bandNodes.size() - 2; i >= 0; i--) {
+                    double maxX = actualX[i+1] - (widths[i+1] + widths[i])/2.0 - GAP;
+                    actualX[i] = Math.min(actualX[i], maxX);
+                }
+            }
+
             double y = centerY + band * bandSpacing;
 
             for (int index = 0; index < bandNodes.size(); index++) {
                 DnaAnalyzerPayload.FamilyTreeNode node = bandNodes.get(index);
                 int nodeWidth = node.root() ? ROOT_WIDTH : NODE_WIDTH;
                 int nodeHeight = node.root() ? ROOT_HEIGHT : NODE_HEIGHT;
-                int xPos = (int) Math.round(startX + index * spacing - nodeWidth / 2.0);
+                int xPos = (int) Math.round(actualX[index] - nodeWidth / 2.0);
                 int yPos = (int) Math.round(y - nodeHeight / 2.0);
                 positioned.put(node.genealogyId(), new PositionedNode(node, xPos, yPos, nodeWidth, nodeHeight));
             }
@@ -117,23 +146,73 @@ public class DnaAnalyzerScreen extends Screen {
     }
 
     private void renderEdges(GuiGraphics guiGraphics, Map<UUID, PositionedNode> positionedNodes) {
+        Map<Set<UUID>, List<UUID>> families = new HashMap<>();
+        Map<UUID, Set<UUID>> childToParents = new HashMap<>();
+        
         for (DnaAnalyzerPayload.FamilyTreeEdge edge : payload.edges()) {
-            PositionedNode from = positionedNodes.get(edge.fromId());
-            PositionedNode to = positionedNodes.get(edge.toId());
-            if (from == null || to == null) {
-                continue;
+            childToParents.computeIfAbsent(edge.toId(), k -> new HashSet<>()).add(edge.fromId());
+        }
+        
+        for (Map.Entry<UUID, Set<UUID>> entry : childToParents.entrySet()) {
+            families.computeIfAbsent(entry.getValue(), k -> new ArrayList<>()).add(entry.getKey());
+        }
+
+        int familyIndex = 0;
+        for (Map.Entry<Set<UUID>, List<UUID>> entry : families.entrySet()) {
+            Set<UUID> parents = entry.getKey();
+            List<UUID> children = entry.getValue();
+            if (parents.isEmpty() || children.isEmpty()) continue;
+            
+            int parentMinX = Integer.MAX_VALUE;
+            int parentMaxX = Integer.MIN_VALUE;
+            int parentY = 0;
+            boolean valid = true;
+            
+            for (UUID pId : parents) {
+                PositionedNode p = positionedNodes.get(pId);
+                if (p == null) { valid = false; break; }
+                parentMinX = Math.min(parentMinX, p.centerX());
+                parentMaxX = Math.max(parentMaxX, p.centerX());
+                parentY = p.bottom();
             }
-
-            int startX = from.centerX();
-            int startY = from.bottom();
-            int endX = to.centerX();
-            int endY = to.top();
-            int stagger = Math.abs(from.node().genealogyId().hashCode()) % 12 - 6;
-            int midY = startY + (endY - startY) / 2 + stagger;
-
+            if (!valid) continue;
+            
+            int parentCenterX = parentMinX + (parentMaxX - parentMinX) / 2;
+            
+            if (parents.size() > 1) {
+                int mateY = positionedNodes.get(parents.iterator().next()).centerY();
+                drawHorizontalLine(guiGraphics, parentMinX, parentMaxX, mateY, CONNECTOR_COLOR);
+            }
+            
+            int startX = parentCenterX;
+            int startY = parents.size() > 1 ? positionedNodes.get(parents.iterator().next()).centerY() : parentY;
+            
+            int childMinX = Integer.MAX_VALUE;
+            int childMaxX = Integer.MIN_VALUE;
+            int childY = 0;
+            
+            for (UUID cId : children) {
+                PositionedNode c = positionedNodes.get(cId);
+                if (c == null) { valid = false; break; }
+                childMinX = Math.min(childMinX, c.centerX());
+                childMaxX = Math.max(childMaxX, c.centerX());
+                childY = c.top();
+            }
+            if (!valid) continue;
+            
+            int endY = childY;
+            int stagger = (familyIndex % 5) * 8 - 16;
+            int midY = parentY + (endY - parentY) / 2 + stagger;
+            
             drawVerticalLine(guiGraphics, startX, startY, midY, CONNECTOR_COLOR);
-            drawHorizontalLine(guiGraphics, startX, endX, midY, CONNECTOR_COLOR);
-            drawVerticalLine(guiGraphics, endX, midY, endY, CONNECTOR_COLOR);
+            drawHorizontalLine(guiGraphics, childMinX, childMaxX, midY, CONNECTOR_COLOR);
+            
+            for (UUID cId : children) {
+                PositionedNode c = positionedNodes.get(cId);
+                drawVerticalLine(guiGraphics, c.centerX(), midY, endY, CONNECTOR_COLOR);
+            }
+            
+            familyIndex++;
         }
     }
 
