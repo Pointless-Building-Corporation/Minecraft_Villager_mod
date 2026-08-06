@@ -41,11 +41,13 @@ public class DnaAnalyzerScreen extends Screen {
 
         Map<UUID, PositionedNode> positionedNodes = layoutNodes();
         
+        guiGraphics.enableScissor(0, 26, this.width, this.height);
         guiGraphics.pose().pushPose();
         guiGraphics.pose().translate(this.scrollX, this.scrollY, 0);
         renderEdges(guiGraphics, positionedNodes);
         renderNodes(guiGraphics, positionedNodes);
         guiGraphics.pose().popPose();
+        guiGraphics.disableScissor();
 
         guiGraphics.drawCenteredString(this.font, this.title, this.width / 2, 10, ACCENT_COLOR);
     }
@@ -65,21 +67,35 @@ public class DnaAnalyzerScreen extends Screen {
             maxBand = Math.max(maxBand, node.band());
         }
 
-        for (List<DnaAnalyzerPayload.FamilyTreeNode> bandNodes : bands.values()) {
-            bandNodes.sort(Comparator.comparingInt(DnaAnalyzerPayload.FamilyTreeNode::slot).thenComparing(DnaAnalyzerPayload.FamilyTreeNode::name));
-        }
-
         double availableHeight = Math.max(1, this.height - 110.0);
-        double bandSpacing = availableHeight / Math.max(1, (maxBand - minBand + 1));
-        bandSpacing = Mth.clamp((int) Math.round(bandSpacing), 54, 78);
+        double rawBandSpacing = availableHeight / Math.max(1, (maxBand - minBand + 1));
+        final double bandSpacing = Mth.clamp((int) Math.round(rawBandSpacing), 54, 78);
         double centerY = this.height / 2.0 + 8.0;
 
         Map<UUID, PositionedNode> positioned = new HashMap<>();
-        for (Map.Entry<Integer, List<DnaAnalyzerPayload.FamilyTreeNode>> entry : bands.entrySet()) {
-            int band = entry.getKey();
-            List<DnaAnalyzerPayload.FamilyTreeNode> bandNodes = entry.getValue();
+
+        java.util.function.Consumer<Integer> placeBand = (band) -> {
+            List<DnaAnalyzerPayload.FamilyTreeNode> bandNodes = bands.get(band);
+            if (bandNodes == null) return;
+
+            bandNodes.sort(Comparator.comparingDouble((DnaAnalyzerPayload.FamilyTreeNode node) -> {
+                double sum = 0;
+                int count = 0;
+                for (DnaAnalyzerPayload.FamilyTreeEdge edge : payload.edges()) {
+                    if (edge.toId().equals(node.genealogyId()) && positioned.containsKey(edge.fromId())) {
+                        sum += positioned.get(edge.fromId()).centerX();
+                        count++;
+                    }
+                    if (edge.fromId().equals(node.genealogyId()) && positioned.containsKey(edge.toId())) {
+                        sum += positioned.get(edge.toId()).centerX();
+                        count++;
+                    }
+                }
+                return count > 0 ? sum / count : 0.0;
+            }).thenComparing(DnaAnalyzerPayload.FamilyTreeNode::name));
+
             int width = bandNodes.stream().anyMatch(DnaAnalyzerPayload.FamilyTreeNode::root) ? ROOT_WIDTH : NODE_WIDTH;
-            int spacing = Math.max(width + 12, Math.min(width + 34, (this.width - MARGIN * 2) / Math.max(1, bandNodes.size())));
+            int spacing = width + 24;
             double startX = this.width / 2.0 - (bandNodes.size() - 1) * spacing / 2.0;
             double y = centerY + band * bandSpacing;
 
@@ -91,7 +107,11 @@ public class DnaAnalyzerScreen extends Screen {
                 int yPos = (int) Math.round(y - nodeHeight / 2.0);
                 positioned.put(node.genealogyId(), new PositionedNode(node, x, yPos, nodeWidth, nodeHeight));
             }
-        }
+        };
+
+        placeBand.accept(0);
+        for (int b = 1; b <= maxBand; b++) placeBand.accept(b);
+        for (int b = -1; b >= minBand; b--) placeBand.accept(b);
 
         return positioned;
     }
@@ -108,7 +128,8 @@ public class DnaAnalyzerScreen extends Screen {
             int startY = from.bottom();
             int endX = to.centerX();
             int endY = to.top();
-            int midY = startY + (endY - startY) / 2;
+            int stagger = Math.abs(from.node().genealogyId().hashCode()) % 12 - 6;
+            int midY = startY + (endY - startY) / 2 + stagger;
 
             drawVerticalLine(guiGraphics, startX, startY, midY, CONNECTOR_COLOR);
             drawHorizontalLine(guiGraphics, startX, endX, midY, CONNECTOR_COLOR);
