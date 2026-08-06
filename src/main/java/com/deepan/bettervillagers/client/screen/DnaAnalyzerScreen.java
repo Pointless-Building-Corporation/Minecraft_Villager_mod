@@ -27,6 +27,8 @@ public class DnaAnalyzerScreen extends Screen {
     private static final int MARGIN = 28;
 
     private final DnaAnalyzerPayload payload;
+    private double scrollX = 0;
+    private double scrollY = 0;
 
     public DnaAnalyzerScreen(DnaAnalyzerPayload payload) {
         super(Component.translatable("screen.bettervillagers.dna_analyzer"));
@@ -37,11 +39,15 @@ public class DnaAnalyzerScreen extends Screen {
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
         renderAnalyzerBackdrop(guiGraphics);
 
-        guiGraphics.drawCenteredString(this.font, this.title, this.width / 2, 10, ACCENT_COLOR);
-
         Map<UUID, PositionedNode> positionedNodes = layoutNodes();
+        
+        guiGraphics.pose().pushPose();
+        guiGraphics.pose().translate(this.scrollX, this.scrollY, 0);
         renderEdges(guiGraphics, positionedNodes);
         renderNodes(guiGraphics, positionedNodes);
+        guiGraphics.pose().popPose();
+
+        guiGraphics.drawCenteredString(this.font, this.title, this.width / 2, 10, ACCENT_COLOR);
     }
 
     private void renderAnalyzerBackdrop(GuiGraphics guiGraphics) {
@@ -82,9 +88,8 @@ public class DnaAnalyzerScreen extends Screen {
                 int nodeWidth = node.root() ? ROOT_WIDTH : NODE_WIDTH;
                 int nodeHeight = node.root() ? ROOT_HEIGHT : NODE_HEIGHT;
                 int x = (int) Math.round(startX + index * spacing - nodeWidth / 2.0);
-                int clampedX = Mth.clamp(x, MARGIN, this.width - nodeWidth - MARGIN);
-                int clampedY = Mth.clamp((int) Math.round(y - nodeHeight / 2.0), 26, this.height - nodeHeight - 18);
-                positioned.put(node.genealogyId(), new PositionedNode(node, clampedX, clampedY, nodeWidth, nodeHeight));
+                int yPos = (int) Math.round(y - nodeHeight / 2.0);
+                positioned.put(node.genealogyId(), new PositionedNode(node, x, yPos, nodeWidth, nodeHeight));
             }
         }
 
@@ -148,6 +153,13 @@ public class DnaAnalyzerScreen extends Screen {
     @Override
     public boolean isPauseScreen() {
         return false;
+    }
+
+    @Override
+    public boolean mouseDragged(double mouseX, double mouseY, int button, double dragX, double dragY) {
+        this.scrollX += dragX;
+        this.scrollY += dragY;
+        return super.mouseDragged(mouseX, mouseY, button, dragX, dragY);
     }
 
     private record PositionedNode(DnaAnalyzerPayload.FamilyTreeNode node, int left, int top, int width, int height) {
