@@ -4,8 +4,8 @@ A Minecraft NeoForge mod that introduces advanced kinship and genealogy tracking
 
 ## Features
 
-### 🧬 DNA Analyzer
-Craft the **DNA Analyzer** to inspect the genetic bloodlines of villagers.
+### 🧬 Grimoire of Ancestry
+Craft the **Grimoire of Ancestry** to inspect the genetic bloodlines of villagers.
 
 **Recipe:**
 - 4x Glass Pane
@@ -13,7 +13,7 @@ Craft the **DNA Analyzer** to inspect the genetic bloodlines of villagers.
 - 1x Ender Pearl
 *(Arranged in a cross pattern with the Ender Pearl in the center)*
 
-Right-click any Villager with the DNA Analyzer to open the **Villager Genealogy Analyzer** screen.
+Right-click any Villager with the Grimoire of Ancestry to open the **Grimoire of Ancestry** screen.
 
 ### 🌳 Sugiyama Family Tree Layout
 The analyzer screen displays a beautiful, mathematically-arranged, infinite-scrolling family tree!
@@ -36,3 +36,6 @@ Drop the built `.jar` file into your Prism Launcher or standard Minecraft `mods`
 
 ## Credits
 Built with the [NeoForge Modding API](https://neoforged.net/).
+
+**3D Assets:**
+- "Book for minecraft" (https://skfb.ly/6ZPMu) by SebastianFEnriquez is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). (Used for the Grimoire of Ancestry).
