@@ -264,59 +264,72 @@ public class SugiyamaLayoutEngine {
                 List<UUID> children = families.get(parents);
                 if (parents.isEmpty() || children.isEmpty()) continue;
                 
-                int parentMinX = Integer.MAX_VALUE;
-                int parentMaxX = Integer.MIN_VALUE;
-                int parentY = 0;
-                boolean valid = true;
+                int color = FAMILY_COLORS[globalFamilyIndex % FAMILY_COLORS.length];
                 
+                Map<Integer, List<PositionedNode>> parentsByBand = new HashMap<>();
+                boolean valid = true;
                 for (UUID pId : parents) {
                     PositionedNode p = positionedNodes.get(pId);
                     if (p == null) { valid = false; break; }
-                    parentMinX = Math.min(parentMinX, p.centerX());
-                    parentMaxX = Math.max(parentMaxX, p.centerX());
-                    parentY = p.bottom();
+                    parentsByBand.computeIfAbsent(p.node().band(), k -> new ArrayList<>()).add(p);
                 }
                 if (!valid) continue;
                 
-                int parentCenterX = parentMinX + (parentMaxX - parentMinX) / 2;
-                int color = FAMILY_COLORS[globalFamilyIndex % FAMILY_COLORS.length];
-                
-                if (parents.size() > 1) {
-                    int mateY = positionedNodes.get(parents.iterator().next()).centerY();
-                    lines.add(new LineSegment(parentMinX, mateY, parentMaxX, mateY, true, true, color));
+                int lowestParentY = Integer.MIN_VALUE;
+                for (List<PositionedNode> bandParents : parentsByBand.values()) {
+                    for (PositionedNode p : bandParents) {
+                        lowestParentY = Math.max(lowestParentY, p.bottom());
+                    }
                 }
                 
-                int startX = parentCenterX;
-                int startY = parents.size() > 1 ? positionedNodes.get(parents.iterator().next()).centerY() : parentY;
+                int endY = genEntry.getKey();
+                int availableSpace = endY - lowestParentY;
+                int trackStep = Math.max(4, (availableSpace - 20) / Math.max(1, totalTracks));
+                int midY = lowestParentY + 10 + (trackIndex * trackStep);
+                
+                int minDropX = Integer.MAX_VALUE;
+                int maxDropX = Integer.MIN_VALUE;
+                
+                for (List<PositionedNode> bandParents : parentsByBand.values()) {
+                    int pMinX = Integer.MAX_VALUE;
+                    int pMaxX = Integer.MIN_VALUE;
+                    int pY = bandParents.get(0).centerY();
+                    int pBottom = bandParents.get(0).bottom();
+                    for (PositionedNode p : bandParents) {
+                        pMinX = Math.min(pMinX, p.centerX());
+                        pMaxX = Math.max(pMaxX, p.centerX());
+                        pBottom = Math.max(pBottom, p.bottom());
+                    }
+                    
+                    if (bandParents.size() > 1) {
+                        lines.add(new LineSegment(pMinX, pY, pMaxX, pY, true, true, color));
+                    }
+                    
+                    int dropX = pMinX + (pMaxX - pMinX) / 2;
+                    int dropY = bandParents.size() > 1 ? pY : pBottom;
+                    
+                    lines.add(new LineSegment(dropX, dropY, dropX, midY, false, false, color));
+                    minDropX = Math.min(minDropX, dropX);
+                    maxDropX = Math.max(maxDropX, dropX);
+                }
                 
                 int childMinX = Integer.MAX_VALUE;
                 int childMaxX = Integer.MIN_VALUE;
-                int childY = genEntry.getKey();
                 
                 for (UUID cId : children) {
                     PositionedNode c = positionedNodes.get(cId);
                     if (c == null) { valid = false; break; }
                     childMinX = Math.min(childMinX, c.centerX());
                     childMaxX = Math.max(childMaxX, c.centerX());
+                    lines.add(new LineSegment(c.centerX(), midY, c.centerX(), endY, false, false, color));
                 }
                 if (!valid) continue;
                 
-                int endY = childY;
-                // Allocate a dedicated track between parentY and endY
-                // We use trackIndex to stagger them perfectly without overlapping.
-                int availableSpace = endY - parentY;
-                int trackStep = Math.max(4, (availableSpace - 20) / Math.max(1, totalTracks));
-                int midY = parentY + 10 + (trackIndex * trackStep);
+                int busMinX = Math.min(minDropX, childMinX);
+                int busMaxX = Math.max(maxDropX, childMaxX);
                 
-                int busMinX = Math.min(startX, childMinX);
-                int busMaxX = Math.max(startX, childMaxX);
-                
-                lines.add(new LineSegment(startX, startY, startX, midY, false, false, color));
-                lines.add(new LineSegment(busMinX, midY, busMaxX, midY, true, false, color));
-                
-                for (UUID cId : children) {
-                    PositionedNode c = positionedNodes.get(cId);
-                    lines.add(new LineSegment(c.centerX(), midY, c.centerX(), endY, false, false, color));
+                if (busMinX <= busMaxX && busMinX != Integer.MAX_VALUE) {
+                    lines.add(new LineSegment(busMinX, midY, busMaxX, midY, true, false, color));
                 }
                 
                 trackIndex++;
