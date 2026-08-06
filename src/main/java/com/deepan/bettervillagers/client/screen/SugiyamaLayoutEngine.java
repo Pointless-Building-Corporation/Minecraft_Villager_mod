@@ -25,7 +25,7 @@ public class SugiyamaLayoutEngine {
         public int centerY() { return top + height / 2; }
     }
 
-    public record LineSegment(int startX, int startY, int endX, int endY, boolean isHorizontal, boolean isMateLine) {}
+    public record LineSegment(int startX, int startY, int endX, int endY, boolean isHorizontal, boolean isMateLine, int color) {}
 
     public record LayoutResult(Map<UUID, PositionedNode> nodes, List<LineSegment> lines) {}
 
@@ -116,6 +116,11 @@ public class SugiyamaLayoutEngine {
         return new LayoutResult(positioned, lines);
     }
 
+    private static final int[] FAMILY_COLORS = {
+        0xCCFF5252, 0xCC448AFF, 0xCC69F0AE, 0xFFFFAB40, 0xCCE040FB,
+        0xCC18FFFF, 0xFFFFFF00, 0xFFFF4081, 0xCC69F0AE, 0xCC536DFE
+    };
+
     private static List<LineSegment> generateEdges(List<LayoutEdge> edges, Map<UUID, PositionedNode> positionedNodes) {
         List<LineSegment> lines = new ArrayList<>();
         Map<Set<UUID>, List<UUID>> families = new HashMap<>();
@@ -151,9 +156,11 @@ public class SugiyamaLayoutEngine {
             
             int parentCenterX = parentMinX + (parentMaxX - parentMinX) / 2;
             
+            int color = FAMILY_COLORS[familyIndex % FAMILY_COLORS.length];
+            
             if (parents.size() > 1) {
                 int mateY = positionedNodes.get(parents.iterator().next()).centerY();
-                lines.add(new LineSegment(parentMinX, mateY, parentMaxX, mateY, true, true));
+                lines.add(new LineSegment(parentMinX, mateY, parentMaxX, mateY, true, true, color));
             }
             
             int startX = parentCenterX;
@@ -173,18 +180,18 @@ public class SugiyamaLayoutEngine {
             if (!valid) continue;
             
             int endY = childY;
-            int stagger = (familyIndex % 5) * 8 - 16;
+            int stagger = (familyIndex % 8) * 12 - 42;
             int midY = parentY + (endY - parentY) / 2 + stagger;
             
             int busMinX = Math.min(startX, childMinX);
             int busMaxX = Math.max(startX, childMaxX);
             
-            lines.add(new LineSegment(startX, startY, startX, midY, false, false));
-            lines.add(new LineSegment(busMinX, midY, busMaxX, midY, true, false));
+            lines.add(new LineSegment(startX, startY, startX, midY, false, false, color));
+            lines.add(new LineSegment(busMinX, midY, busMaxX, midY, true, false, color));
             
             for (UUID cId : children) {
                 PositionedNode c = positionedNodes.get(cId);
-                lines.add(new LineSegment(c.centerX(), midY, c.centerX(), endY, false, false));
+                lines.add(new LineSegment(c.centerX(), midY, c.centerX(), endY, false, false, color));
             }
             
             familyIndex++;

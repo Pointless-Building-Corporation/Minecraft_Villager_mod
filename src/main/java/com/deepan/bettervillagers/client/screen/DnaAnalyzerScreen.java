@@ -60,9 +60,9 @@ public class DnaAnalyzerScreen extends Screen {
         
         for (SugiyamaLayoutEngine.LineSegment line : layout.lines()) {
             if (line.isHorizontal()) {
-                drawHorizontalLine(guiGraphics, line.startX(), line.endX(), line.startY(), CONNECTOR_COLOR);
+                drawHorizontalLine(guiGraphics, line.startX(), line.endX(), line.startY(), line.color());
             } else {
-                drawVerticalLine(guiGraphics, line.startX(), line.startY(), line.endY(), CONNECTOR_COLOR);
+                drawVerticalLine(guiGraphics, line.startX(), line.startY(), line.endY(), line.color());
             }
         }
         
