@@ -71,6 +71,8 @@ public class DnaAnalyzerScreen extends Screen {
         guiGraphics.disableScissor();
 
         guiGraphics.drawCenteredString(this.font, this.title, this.width / 2, 10, ACCENT_COLOR);
+        guiGraphics.drawString(this.font, "Zoom: " + String.format("%.2f", this.zoom), 10, 10, 0xFFFFFF);
+        guiGraphics.drawString(this.font, "Scroll: " + String.format("%.2f, %.2f", this.scrollX, this.scrollY), 10, 20, 0xFFFFFF);
     }
 
     private void renderAnalyzerBackdrop(GuiGraphics guiGraphics) {
