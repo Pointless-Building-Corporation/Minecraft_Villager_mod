@@ -1,8 +1,7 @@
 package com.deepan.bettervillagers.network;
 
 import com.deepan.bettervillagers.BetterVillagers;
-import com.deepan.bettervillagers.client.screen.DnaAnalyzerScreen;
-import net.minecraft.client.Minecraft;
+import com.deepan.bettervillagers.BetterVillagers;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
@@ -31,9 +30,7 @@ public record DnaAnalyzerPayload(
         writeEdges(buffer, this.edges);
     }
 
-    public static void handleClient(DnaAnalyzerPayload payload, IPayloadContext context) {
-        context.enqueueWork(() -> Minecraft.getInstance().setScreen(new DnaAnalyzerScreen(payload)));
-    }
+    // handleClient moved to ClientPayloadHandler
 
     private static void writeNodes(FriendlyByteBuf buffer, List<FamilyTreeNode> nodes) {
         buffer.writeVarInt(nodes.size());

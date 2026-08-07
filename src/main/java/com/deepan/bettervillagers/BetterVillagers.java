@@ -59,6 +59,7 @@ public class BetterVillagers {
     public BetterVillagers(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+
         modEventBus.addListener(BetterVillagersPayloads::register);
 
         // Register the Deferred Register to the mod event bus so blocks get registered

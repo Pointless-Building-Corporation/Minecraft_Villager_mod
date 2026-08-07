@@ -21,6 +21,7 @@ public class VillagerGoalPackagesMixin {
     private static void bettervillagers$addSittingToIdle(VillagerProfession profession, float speed, CallbackInfoReturnable<ImmutableList<Pair<Integer, ? extends Behavior<? super Villager>>>> cir) {
         List<Pair<Integer, ? extends Behavior<? super Villager>>> list = new ArrayList<>(cir.getReturnValue());
         list.add(Pair.of(8, new SitOnFurnitureBehavior()));
+        list.add(Pair.of(9, new com.deepan.bettervillagers.villager.StrollOnPathBehavior()));
         cir.setReturnValue(ImmutableList.copyOf(list));
     }
 

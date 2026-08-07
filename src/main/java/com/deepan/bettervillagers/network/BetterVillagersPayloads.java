@@ -9,6 +9,8 @@ public final class BetterVillagersPayloads {
 
     public static void register(RegisterPayloadHandlersEvent event) {
         PayloadRegistrar registrar = event.registrar("1");
-        registrar.playToClient(DnaAnalyzerPayload.TYPE, DnaAnalyzerPayload.STREAM_CODEC, DnaAnalyzerPayload::handleClient);
+        registrar.playToClient(DnaAnalyzerPayload.TYPE, DnaAnalyzerPayload.STREAM_CODEC, (payload, context) -> {
+            ClientPayloadHandler.handleDataOnClient(payload, context);
+        });
     }
 }
