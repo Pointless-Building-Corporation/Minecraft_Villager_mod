@@ -58,6 +58,17 @@ public class DialogueManager {
                 options.add(new OpenDialoguePayload.DialogueOption("Uh, bye.", "NONE"));
             }
 
+        } else if (villager.isBaby()) {
+            if (regionData != null && regionData.children != null && regionData.children.greetings != null && !regionData.children.greetings.isEmpty()) {
+                text = regionData.children.greetings.get(RANDOM.nextInt(regionData.children.greetings.size()));
+            } else {
+                text = "I'm just a kid!";
+            }
+            options.add(new OpenDialoguePayload.DialogueOption("Have a cookie.", "GIVE_CHILD_COOKIE"));
+            options.add(new OpenDialoguePayload.DialogueOption("I brought you some sugar.", "GIVE_CHILD_SUGAR"));
+            options.add(new OpenDialoguePayload.DialogueOption("Want to trade toys?", "TRADE_CHILD_TOYS"));
+            options.add(new OpenDialoguePayload.DialogueOption("Let's play Rock, Paper, Scissors!", "PLAY_RPS"));
+            options.add(new OpenDialoguePayload.DialogueOption("Where are your parents?", "ASK_PARENTS"));
         } else {
             // Check if this villager has an active bounty for this player
             com.deepan.bettervillagers.quest.data.PlayerBountyAttachment attachment = player.getData(com.deepan.bettervillagers.network.ModAttachments.PLAYER_BOUNTIES);

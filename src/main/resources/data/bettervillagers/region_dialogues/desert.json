@@ -1,204 +1,295 @@
 {
-  "guild_master": {
-    "greetings": [
-      "Ah, a traveler! Come into the shade before the sun fries your brain like an egg on a stone.",
-      "Greetings! The bazaar is bustling, but my tent is an oasis of wisdom.",
-      "The sands shift, but my prices remain rock solid. Which means very high."
+    "guild_master": {
+        "greetings": [
+            "Ah, a traveler! Come into the shade before the sun fries your brain like an egg on a stone.",
+            "Greetings! The bazaar is bustling, but my tent is an oasis of wisdom.",
+            "The sands shift, but my prices remain rock solid. Which means very high."
+        ],
+        "reward": "Take this enchanted lamp. No djinns inside, I checked. Mostly just lint."
+    },
+    "generic": [
+        "I've got sand in my sandals, sand in my robes, and I think I swallowed a dune.",
+        "Do you hear the singing sands? Or is that just the cleric humming off-key again?",
+        "May your water skin never run dry, and your camel never spit in your face.",
+        "If you find a lamp, rub it. If a djinn comes out, tell him he owes me five emeralds.",
+        "The oasis is beautiful today. A perfect place to pretend I'm not avoiding work.",
+        "I swear by the beard of my ancestors, I saw a cactus move. This desert is haunted.",
+        "It is said the desert tests a man's soul. So far, my soul is just very thirsty.",
+        "Watch out for the husks. They have zero respect for personal space.",
+        "My mother was a dune, my father was a sandstorm. Just kidding, they were bakers.",
+        "I tried to build a sandcastle once. The wind laughed at me."
     ],
-    "reward": "Take this enchanted lamp. No djinns inside, I checked. Mostly just lint."
-  },
-  "generic": [
-    "I've got sand in my sandals, sand in my robes, and I think I swallowed a dune.",
-    "Do you hear the singing sands? Or is that just the cleric humming off-key again?",
-    "May your water skin never run dry, and your camel never spit in your face.",
-    "If you find a lamp, rub it. If a djinn comes out, tell him he owes me five emeralds.",
-    "The oasis is beautiful today. A perfect place to pretend I'm not avoiding work.",
-    "I swear by the beard of my ancestors, I saw a cactus move. This desert is haunted.",
-    "It is said the desert tests a man's soul. So far, my soul is just very thirsty.",
-    "Watch out for the husks. They have zero respect for personal space.",
-    "My mother was a dune, my father was a sandstorm. Just kidding, they were bakers.",
-    "I tried to build a sandcastle once. The wind laughed at me."
-  ],
-  "professions": {
-    "farmer": [
-      "Growing wheat in the desert? It's not a profession, it's an extreme sport.",
-      "I asked the sky for rain, and a bird pooped on me. The gods have a twisted sense of humor.",
-      "My melons are the juiciest in the bazaar! Just ignore the sand crunch.",
-      "The secret to desert farming? Cry over the crops. They need the moisture.",
-      "I am the master of the oasis! Bow before my... slightly wilted carrots.",
-      "A merchant offered me magic beans. I traded him a handful of hot sand.",
-      "To tame the harsh sands requires patience, discipline, and a very large watering can.",
-      "I chased a rabbit away from my crops. It stopped, judged my irrigation technique, and left.",
-      "Some say the desert is barren. I say they just don't know how to talk to the dirt.",
-      "Life is like a cactus. Prickly, green, and occasionally sprouts a weird flower."
-    ],
-    "fisherman": [
-      "Yes, I fish in the desert. No, I haven't caught anything since Tuesday.",
-      "The oasis is small, but the fish are cunning. They know my face.",
-      "I cast my line into the dunes. Sometimes I catch a scorpion. Good eating.",
-      "A true fisherman does not need a river. He only needs delusion and a nice hat.",
-      "I once hooked a djinn's lamp. He was very annoyed about the bait.",
-      "The water reflects the endless sky, and my endless failure to catch a salmon.",
-      "I'm actually just washing my string. Don't tell the others.",
-      "Sand trout! They exist! You just have to dig really, really fast.",
-      "I stare into the water waiting for a bite. The water stares back, judging me.",
-      "Patience is the anchor of the soul. Also, I fell asleep."
-    ],
-    "shepherd": [
-      "My sheep are 50% wool, 50% sand, and 100% annoying.",
-      "I sheared a sheep yesterday. Under the wool, it was just three cacti in a trench coat.",
-      "Guiding the flock through the dunes is a noble task. Mostly they just eat sand.",
-      "The desert wind howls, but my sheep just go 'baa'. It's very anti-climactic.",
-      "I knit a sweater out of camel hair once. It was so itchy I almost exiled myself.",
-      "A wolf tried to take one of my sheep. The sheep spat at him. We are built different here.",
-      "The bond between a shepherd and his flock is sacred. Also, they owe me money.",
-      "I painted my sheep yellow so they blend in with the sand. Now I can't find them.",
-      "Be still, and listen to the wisdom of the herd. They are saying... 'more grass'.",
-      "I am a master of the shears. I once gave a cactus a fade."
-    ],
-    "fletcher": [
-      "Arrows fly straighter when the wind isn't blowing sand in your eyes. Sadly, it always is.",
-      "I fletch my arrows with the feathers of desert eagles. Or pigeons, don't tell the guards.",
-      "A bow is like a hawk: elegant, deadly, and really annoying to string.",
-      "I tried making an arrow out of a cactus spine. It was a very bad idea.",
-      "Precision is everything. I once shot a fly off a camel's nose. The camel was not amused.",
-      "Buy my arrows! They are guaranteed to hit something. Eventually.",
-      "The trajectory of a projectile is a beautiful mathematical truth. Also, swoosh!",
-      "I traded ten arrows for a block of sand. I am not a very good businessman.",
-      "A quiver full of arrows is a quiver full of hope. And splinters.",
-      "Don't shoot arrows into the sun. It won't shoot back, but it will blind you."
-    ],
-    "cleric": [
-      "I read the ancient scrolls. Mostly they're just recipes for hummus.",
-      "The spirits of the sands speak to me! They say... 'drink more water'.",
-      "I brewed a potion of healing, but it tastes like old camel socks.",
-      "The glowstone illuminates the path of righteousness. It also attracts a lot of moths.",
-      "I sought enlightenment in the deep desert. I found a very angry scorpion.",
-      "To understand the divine, one must understand the lapis lazuli. It's blue. Very blue.",
-      "I offer blessings for a small fee. Emeralds preferred, goats accepted.",
-      "The brewing stand bubbles with the secrets of the universe. And also my lunch.",
-      "Do not fear the darkness, for the light shall guide you. Unless you forgot a torch.",
-      "I am the conduit of the mystical! Please wipe your sandals before entering."
-    ],
-    "weaponsmith": [
-      "A scimitar curved like the crescent moon! Perfect for slicing melons. And heads.",
-      "I forged this blade in the heat of the midday sun. And a furnace. Mostly the furnace.",
-      "The iron speaks to me as I hammer it. It usually says 'ow'.",
-      "A warrior needs a good blade. Or a really heavy rock. I sell the blades.",
-      "I polished a sword so well I blinded myself for three days.",
-      "The clash of steel is the music of the desert. Well, that and the wind.",
-      "I tried to forge a sword out of sandstone. It broke immediately. I am a visionary, not a genius.",
-      "An unsharpened sword is just a very expensive stick.",
-      "I sell weapons of honor! And also pointy things for poking people you don't like.",
-      "The forge is hot, but the desert is hotter. I really need a vacation."
-    ],
-    "armorer": [
-      "Chainmail in the desert? Excellent way to slow-cook yourself.",
-      "I crafted a helmet that perfectly deflects the sun. Unfortunately, you can't see out of it.",
-      "Armor protects the body, but only wisdom protects the soul. Still, buy the armor.",
-      "I make chestplates that can stop an arrow and hide your belly.",
-      "The clang of the anvil is my heartbeat. I probably should see a cleric about that.",
-      "I tried to make armor out of cactus. It was a defensive triumph and an ergonomic disaster.",
-      "A true warrior wears his scars with pride. But wearing my armor is much less painful.",
-      "Iron is strong, but a good bluff is lighter to carry.",
-      "I can custom-fit a helmet to the exact shape of your weird, lumpy head.",
-      "Sweat, soot, and steel. The glamour of the armorer's life."
-    ],
-    "toolsmith": [
-      "A golden pickaxe! It will break in five minutes, but you'll look fabulous doing it.",
-      "I make shovels that can dig through the densest dunes. Or just lean against a wall nicely.",
-      "The right tool for the right job. Unless the job is fighting a creeper, then just run.",
-      "I forged a hoe so sharp it cuts through time itself. Or just dirt.",
-      "A well-made axe is a lumberjack's best friend. Assuming you can find a tree.",
-      "I sell pickaxes! Because punching stone is a really bad life choice.",
-      "The durability of diamond, the elegance of iron, the price of... a lot of emeralds.",
-      "I accidentally glued my hand to a shovel once. It was a very productive day.",
-      "Every tool has a purpose. Even the wooden hoe. Its purpose is to be mocked.",
-      "Craftsmanship is an art. And I am the Michelangelo of pointy sticks."
-    ],
-    "butcher": [
-      "Fresh meat! Guaranteed not to be camel. Probably.",
-      "The desert sun dries the jerky perfectly. Just don't ask about the flies.",
-      "I have a degree in meat sciences. It's a very specialized field.",
-      "A sharp cleaver and a steady hand. That's how you deal with difficult customers.",
-      "I made a sausage so spicy it burned a hole in my cutting board.",
-      "Raw mutton? Only if you want to meet the cleric very soon.",
-      "The circle of life is beautiful. And delicious with a little garlic.",
-      "I once tried to butcher a cactus. I lost.",
-      "Come, taste the finest cuts of the oasis! Ignore the sand, it adds texture.",
-      "A good butcher respects the animal. And then charges a premium for the chops."
-    ],
-    "leatherworker": [
-      "Leather pants in the desert? You are either very brave or very foolish.",
-      "I tan my hides under the blazing sun. It smells terrible, but the results are... okay.",
-      "A good leather tunic breathes well. Unlike the person wearing it in a sandstorm.",
-      "I made a saddle so comfortable, the horse fell asleep.",
-      "Dyeing leather is an art. Today's color is 'desert dust brown'. Same as yesterday.",
-      "I tried to make a leather water skin, but I accidentally made a bagpipe.",
-      "The durability of cowhide, the flexibility of... well, cowhide.",
-      "I sell the finest leather caps! Perfect for hiding your bald spot.",
-      "A true artisan knows the grain of the leather. A bad artisan just glues it together.",
-      "If you buy my pants, I'll throw in a free lesson on how to walk without squeaking."
-    ],
-    "mason": [
-      "Sandstone, sandstone, and more sandstone. I dream in shades of beige.",
-      "I carved a magnificent statue of a djinn. Then it crumbled. Typical.",
-      "The foundation of society is a well-cut block. And maybe some good laws.",
-      "I can cut stone so precisely, you can't even fit a grain of sand between the blocks.",
-      "Chiseled sandstone is just regular sandstone with a superiority complex.",
-      "I accidentally built a wall around myself once. Took me three days to mine out.",
-      "A house of dirt is an insult to the earth. A house of stone is an insult to my back.",
-      "I appreciate the geometry of the pyramids, but their interior design is very lacking.",
-      "Stone endures. Unlike my patience when you try to haggle.",
-      "The mortar must be mixed with the right ratio of water and sand. And sweat."
-    ],
-    "cartographer": [
-      "I map the shifting dunes! It's a terrible job because the map is wrong by Tuesday.",
-      "Here is a map of the ocean. It's mostly blue. Very insightful, I know.",
-      "To explore the unknown is a grand adventure. To sell maps of it is a great business.",
-      "I drew a map to a hidden treasure! But I lost the map. And the treasure was just my lunch.",
-      "A compass points north. Unless you're near a magnet, then it points to trouble.",
-      "I charted the entire oasis. It's a circle. With water in the middle.",
-      "The world is vast and full of wonders. And also very large spiders.",
-      "I tried to map a mirage once. I got very wet and very confused.",
-      "A map is a window to the world. A window you have to pay me for.",
-      "Geography is destiny! Or at least, it tells you where not to build a house."
-    ],
-    "librarian": [
-      "Silence in the library! Even if the library is just a tent and three books.",
-      "I have a book on the history of sand. It is very dry reading.",
-      "Knowledge is power. But a good enchanted book is Mending.",
-      "I trade wisdom for emeralds. It's a flawless business model.",
-      "I dropped a book in a puddle. It is now a tragic novel.",
-      "The words on the page contain the secrets of the ancients. And a really good falafel recipe.",
-      "I read a book on how to survive a creeper explosion. The last page was missing.",
-      "A well-organized bookshelf is a sign of a civilized mind. And too much free time.",
-      "I offer you the enchantment of Unbreaking! Please don't ask how it works.",
-      "Do not dog-ear the pages! I will curse your bloodline with minor inconveniences."
-    ],
-    "nitwit": [
-      "I looked at the sun today. It looked back. We have an understanding.",
-      "Everyone says I should get a job. But watching the sand blow is a full-time commitment.",
-      "I found a shiny rock. I licked it. It tasted like regret.",
-      "The meaning of life is... wait, I forgot. Was it melons?",
-      "I tried to have a conversation with a cactus. It made some good points.",
-      "If you walk backwards, do you go back in time? I'm testing this hypothesis.",
-      "I'm not lazy, I'm just conserving energy for a future emergency. Like a nap.",
-      "I hear the wind whispering my name. It says 'get out of the way, idiot'.",
-      "I collected a jar of desert air. It's my most prized possession.",
-      "Sometimes I pretend I'm a block of sand. Just... existing."
-    ],
-    "none": [
-      "I am currently between professions. Which is a fancy way of saying I am unemployed.",
-      "I thought about being a farmer, but I'm allergic to effort.",
-      "The bazaar is full of opportunities! I am ignoring all of them.",
-      "I am waiting for a sign from the heavens to choose my path. A lightning strike would do.",
-      "Maybe I'll become an adventurer like you! ...Nah, I like my knees un-arrowed.",
-      "I am a blank canvas! A very bored, slightly sandy blank canvas.",
-      "I asked the guild master for advice. He told me to go stand in the sun.",
-      "I'm considering a career in professional sand-castle building. The market is wide open.",
-      "Unemployment is a state of mind. A very relaxing, penniless state of mind.",
-      "I'm just here for the free shade."
-    ]
-  }
+    "professions": {
+        "farmer": [
+            "Growing wheat in the desert? It's not a profession, it's an extreme sport.",
+            "I asked the sky for rain, and a bird pooped on me. The gods have a twisted sense of humor.",
+            "My melons are the juiciest in the bazaar! Just ignore the sand crunch.",
+            "The secret to desert farming? Cry over the crops. They need the moisture.",
+            "I am the master of the oasis! Bow before my... slightly wilted carrots.",
+            "A merchant offered me magic beans. I traded him a handful of hot sand.",
+            "To tame the harsh sands requires patience, discipline, and a very large watering can.",
+            "I chased a rabbit away from my crops. It stopped, judged my irrigation technique, and left.",
+            "Some say the desert is barren. I say they just don't know how to talk to the dirt.",
+            "Life is like a cactus. Prickly, green, and occasionally sprouts a weird flower."
+        ],
+        "fisherman": [
+            "Yes, I fish in the desert. No, I haven't caught anything since Tuesday.",
+            "The oasis is small, but the fish are cunning. They know my face.",
+            "I cast my line into the dunes. Sometimes I catch a scorpion. Good eating.",
+            "A true fisherman does not need a river. He only needs delusion and a nice hat.",
+            "I once hooked a djinn's lamp. He was very annoyed about the bait.",
+            "The water reflects the endless sky, and my endless failure to catch a salmon.",
+            "I'm actually just washing my string. Don't tell the others.",
+            "Sand trout! They exist! You just have to dig really, really fast.",
+            "I stare into the water waiting for a bite. The water stares back, judging me.",
+            "Patience is the anchor of the soul. Also, I fell asleep."
+        ],
+        "shepherd": [
+            "My sheep are 50% wool, 50% sand, and 100% annoying.",
+            "I sheared a sheep yesterday. Under the wool, it was just three cacti in a trench coat.",
+            "Guiding the flock through the dunes is a noble task. Mostly they just eat sand.",
+            "The desert wind howls, but my sheep just go 'baa'. It's very anti-climactic.",
+            "I knit a sweater out of camel hair once. It was so itchy I almost exiled myself.",
+            "A wolf tried to take one of my sheep. The sheep spat at him. We are built different here.",
+            "The bond between a shepherd and his flock is sacred. Also, they owe me money.",
+            "I painted my sheep yellow so they blend in with the sand. Now I can't find them.",
+            "Be still, and listen to the wisdom of the herd. They are saying... 'more grass'.",
+            "I am a master of the shears. I once gave a cactus a fade."
+        ],
+        "fletcher": [
+            "Arrows fly straighter when the wind isn't blowing sand in your eyes. Sadly, it always is.",
+            "I fletch my arrows with the feathers of desert eagles. Or pigeons, don't tell the guards.",
+            "A bow is like a hawk: elegant, deadly, and really annoying to string.",
+            "I tried making an arrow out of a cactus spine. It was a very bad idea.",
+            "Precision is everything. I once shot a fly off a camel's nose. The camel was not amused.",
+            "Buy my arrows! They are guaranteed to hit something. Eventually.",
+            "The trajectory of a projectile is a beautiful mathematical truth. Also, swoosh!",
+            "I traded ten arrows for a block of sand. I am not a very good businessman.",
+            "A quiver full of arrows is a quiver full of hope. And splinters.",
+            "Don't shoot arrows into the sun. It won't shoot back, but it will blind you."
+        ],
+        "cleric": [
+            "I read the ancient scrolls. Mostly they're just recipes for hummus.",
+            "The spirits of the sands speak to me! They say... 'drink more water'.",
+            "I brewed a potion of healing, but it tastes like old camel socks.",
+            "The glowstone illuminates the path of righteousness. It also attracts a lot of moths.",
+            "I sought enlightenment in the deep desert. I found a very angry scorpion.",
+            "To understand the divine, one must understand the lapis lazuli. It's blue. Very blue.",
+            "I offer blessings for a small fee. Emeralds preferred, goats accepted.",
+            "The brewing stand bubbles with the secrets of the universe. And also my lunch.",
+            "Do not fear the darkness, for the light shall guide you. Unless you forgot a torch.",
+            "I am the conduit of the mystical! Please wipe your sandals before entering."
+        ],
+        "weaponsmith": [
+            "A scimitar curved like the crescent moon! Perfect for slicing melons. And heads.",
+            "I forged this blade in the heat of the midday sun. And a furnace. Mostly the furnace.",
+            "The iron speaks to me as I hammer it. It usually says 'ow'.",
+            "A warrior needs a good blade. Or a really heavy rock. I sell the blades.",
+            "I polished a sword so well I blinded myself for three days.",
+            "The clash of steel is the music of the desert. Well, that and the wind.",
+            "I tried to forge a sword out of sandstone. It broke immediately. I am a visionary, not a genius.",
+            "An unsharpened sword is just a very expensive stick.",
+            "I sell weapons of honor! And also pointy things for poking people you don't like.",
+            "The forge is hot, but the desert is hotter. I really need a vacation."
+        ],
+        "armorer": [
+            "Chainmail in the desert? Excellent way to slow-cook yourself.",
+            "I crafted a helmet that perfectly deflects the sun. Unfortunately, you can't see out of it.",
+            "Armor protects the body, but only wisdom protects the soul. Still, buy the armor.",
+            "I make chestplates that can stop an arrow and hide your belly.",
+            "The clang of the anvil is my heartbeat. I probably should see a cleric about that.",
+            "I tried to make armor out of cactus. It was a defensive triumph and an ergonomic disaster.",
+            "A true warrior wears his scars with pride. But wearing my armor is much less painful.",
+            "Iron is strong, but a good bluff is lighter to carry.",
+            "I can custom-fit a helmet to the exact shape of your weird, lumpy head.",
+            "Sweat, soot, and steel. The glamour of the armorer's life."
+        ],
+        "toolsmith": [
+            "A golden pickaxe! It will break in five minutes, but you'll look fabulous doing it.",
+            "I make shovels that can dig through the densest dunes. Or just lean against a wall nicely.",
+            "The right tool for the right job. Unless the job is fighting a creeper, then just run.",
+            "I forged a hoe so sharp it cuts through time itself. Or just dirt.",
+            "A well-made axe is a lumberjack's best friend. Assuming you can find a tree.",
+            "I sell pickaxes! Because punching stone is a really bad life choice.",
+            "The durability of diamond, the elegance of iron, the price of... a lot of emeralds.",
+            "I accidentally glued my hand to a shovel once. It was a very productive day.",
+            "Every tool has a purpose. Even the wooden hoe. Its purpose is to be mocked.",
+            "Craftsmanship is an art. And I am the Michelangelo of pointy sticks."
+        ],
+        "butcher": [
+            "Fresh meat! Guaranteed not to be camel. Probably.",
+            "The desert sun dries the jerky perfectly. Just don't ask about the flies.",
+            "I have a degree in meat sciences. It's a very specialized field.",
+            "A sharp cleaver and a steady hand. That's how you deal with difficult customers.",
+            "I made a sausage so spicy it burned a hole in my cutting board.",
+            "Raw mutton? Only if you want to meet the cleric very soon.",
+            "The circle of life is beautiful. And delicious with a little garlic.",
+            "I once tried to butcher a cactus. I lost.",
+            "Come, taste the finest cuts of the oasis! Ignore the sand, it adds texture.",
+            "A good butcher respects the animal. And then charges a premium for the chops."
+        ],
+        "leatherworker": [
+            "Leather pants in the desert? You are either very brave or very foolish.",
+            "I tan my hides under the blazing sun. It smells terrible, but the results are... okay.",
+            "A good leather tunic breathes well. Unlike the person wearing it in a sandstorm.",
+            "I made a saddle so comfortable, the horse fell asleep.",
+            "Dyeing leather is an art. Today's color is 'desert dust brown'. Same as yesterday.",
+            "I tried to make a leather water skin, but I accidentally made a bagpipe.",
+            "The durability of cowhide, the flexibility of... well, cowhide.",
+            "I sell the finest leather caps! Perfect for hiding your bald spot.",
+            "A true artisan knows the grain of the leather. A bad artisan just glues it together.",
+            "If you buy my pants, I'll throw in a free lesson on how to walk without squeaking."
+        ],
+        "mason": [
+            "Sandstone, sandstone, and more sandstone. I dream in shades of beige.",
+            "I carved a magnificent statue of a djinn. Then it crumbled. Typical.",
+            "The foundation of society is a well-cut block. And maybe some good laws.",
+            "I can cut stone so precisely, you can't even fit a grain of sand between the blocks.",
+            "Chiseled sandstone is just regular sandstone with a superiority complex.",
+            "I accidentally built a wall around myself once. Took me three days to mine out.",
+            "A house of dirt is an insult to the earth. A house of stone is an insult to my back.",
+            "I appreciate the geometry of the pyramids, but their interior design is very lacking.",
+            "Stone endures. Unlike my patience when you try to haggle.",
+            "The mortar must be mixed with the right ratio of water and sand. And sweat."
+        ],
+        "cartographer": [
+            "I map the shifting dunes! It's a terrible job because the map is wrong by Tuesday.",
+            "Here is a map of the ocean. It's mostly blue. Very insightful, I know.",
+            "To explore the unknown is a grand adventure. To sell maps of it is a great business.",
+            "I drew a map to a hidden treasure! But I lost the map. And the treasure was just my lunch.",
+            "A compass points north. Unless you're near a magnet, then it points to trouble.",
+            "I charted the entire oasis. It's a circle. With water in the middle.",
+            "The world is vast and full of wonders. And also very large spiders.",
+            "I tried to map a mirage once. I got very wet and very confused.",
+            "A map is a window to the world. A window you have to pay me for.",
+            "Geography is destiny! Or at least, it tells you where not to build a house."
+        ],
+        "librarian": [
+            "Silence in the library! Even if the library is just a tent and three books.",
+            "I have a book on the history of sand. It is very dry reading.",
+            "Knowledge is power. But a good enchanted book is Mending.",
+            "I trade wisdom for emeralds. It's a flawless business model.",
+            "I dropped a book in a puddle. It is now a tragic novel.",
+            "The words on the page contain the secrets of the ancients. And a really good falafel recipe.",
+            "I read a book on how to survive a creeper explosion. The last page was missing.",
+            "A well-organized bookshelf is a sign of a civilized mind. And too much free time.",
+            "I offer you the enchantment of Unbreaking! Please don't ask how it works.",
+            "Do not dog-ear the pages! I will curse your bloodline with minor inconveniences."
+        ],
+        "nitwit": [
+            "I looked at the sun today. It looked back. We have an understanding.",
+            "Everyone says I should get a job. But watching the sand blow is a full-time commitment.",
+            "I found a shiny rock. I licked it. It tasted like regret.",
+            "The meaning of life is... wait, I forgot. Was it melons?",
+            "I tried to have a conversation with a cactus. It made some good points.",
+            "If you walk backwards, do you go back in time? I'm testing this hypothesis.",
+            "I'm not lazy, I'm just conserving energy for a future emergency. Like a nap.",
+            "I hear the wind whispering my name. It says 'get out of the way, idiot'.",
+            "I collected a jar of desert air. It's my most prized possession.",
+            "Sometimes I pretend I'm a block of sand. Just... existing."
+        ],
+        "none": [
+            "I am currently between professions. Which is a fancy way of saying I am unemployed.",
+            "I thought about being a farmer, but I'm allergic to effort.",
+            "The bazaar is full of opportunities! I am ignoring all of them.",
+            "I am waiting for a sign from the heavens to choose my path. A lightning strike would do.",
+            "Maybe I'll become an adventurer like you! ...Nah, I like my knees un-arrowed.",
+            "I am a blank canvas! A very bored, slightly sandy blank canvas.",
+            "I asked the guild master for advice. He told me to go stand in the sun.",
+            "I'm considering a career in professional sand-castle building. The market is wide open.",
+            "Unemployment is a state of mind. A very relaxing, penniless state of mind.",
+            "I'm just here for the free shade."
+        ]
+    },
+    "children": {
+        "greetings": [
+            "Salaam! Want to buy an authentic desert sapphire? It is definitely not a piece of blue glass I found in the trash.",
+            "My uncle says haggling is an art. I say giving me two emeralds for this stick is just good business.",
+            "I am saving up to buy my own camel. Or at least a really big goat that looks like a camel from far away.",
+            "Beware the midday sun, stranger! It melts your brain into hummus. I think mine is already dip.",
+            "If you dig three blocks down, you find sand. If you dig ten blocks down, you find more sand. I am a geologist.",
+            "My brother tried to ride a wild Husk last night. We are having a very quiet funeral for his sandals today.",
+            "Do you want to trade? I will give you this mysterious ancient lamp for five emeralds! ...No, the Djinn is out on lunch break.",
+            "I put a scorpion in my big brother's boot. He hasn't stopped dancing all morning!",
+            "My papa told me water is more valuable than gold. So I tried paying the butcher with a bucket of spit.",
+            "I practiced my scimitar skills on a cactus! The cactus won, but it was a very close fight.",
+            "Are you a rich merchant from afar? If so, I am a Prince of the Oasis! Please wire me 50 emeralds for an investment.",
+            "They say a lost traveler turned into a Husk right near that dune... Anyway, wanna see his left shoe?",
+            "I tried to build a sandcastle, but the desert wind repossessed it. Sand economics are brutal.",
+            "If a sandstorm comes, just swallow a lot of sand so you don't blow away. That's what my grandpa said before he sank.",
+            "Welcome to the bazaar! I sell dried dates! Well, they're just old raisins I found, but dates sound fancier.",
+            "I hid my secret stash of shiny pebbles in the dunes. The dunes moved. Now the desert owns my wealth.",
+            "My cousin drank cactus juice and started conversing with a sand block. Now they are business partners.",
+            "Do not touch my magic carpet! It doesn't fly, but it rolls up nicely to trip unsuspecting tourists.",
+            "The vulture overhead has been following me for three days. I think it likes my hat... or my frail body.",
+            "My father is the finest carpet weaver in the village! I am the finest carpet messer-up-er.",
+            "I traded my sister's favourite doll for a handful of spiced chickpeas. No regrets, I was hungry.",
+            "You look like someone who buys high and sells low. Welcome, my favorite kind of customer!",
+            "I tried to tame a desert fox with a raw chicken. The fox ate the chicken and then stole my turban.",
+            "Is it true that in other lands, water just falls out of the sky for free? That sounds like a terrible business model.",
+            "My aunt told me to follow my dreams, so I fell asleep under a palm tree for six hours.",
+            "If you hear whisperings from under the sand at night... don't dig. That's where we put my bad uncle.",
+            "I am training to be the Grand Vizier! Step one: convince everyone to pay me a tax on walking.",
+            "I licked a glowing redstone torch because it looked like a pomegranate. Now my tongue tastes like lightning.",
+            "See that skull over there? That was the last guy who refused to haggle with my grandfather.",
+            "May the desert breeze keep your feet cool and your emerald pouch very, very heavy!"
+        ],
+        "interactions": {
+            "cookie_success": [
+                "Shukran, noble traveler! This cookie is sweeter than the finest dates in the Caliph's garden!",
+                "A cookie?! Yesss! I will trade this for three buttons and a dried beetle at the bazaar tomorrow!",
+                "Mmm, delicious! If my mother asks, I found this in the desert ruins and survived the curse to eat it."
+            ],
+            "cookie_fail_1": [
+                "You don't have a cookie? What kind of wealthy merchant travels the desert without emergency baked goods?!",
+                "No cookie? Fine! I shall lower your customer credit rating in the village bazaar.",
+                "Liar! I can smell the sugar on you! May a camel spit directly into your milk!"
+            ],
+            "cookie_fail_2": [
+                "Still no cookie? My disappointment is vast as the Empty Quarter, and twice as dry.",
+                "Stop teasing me! You're worse than a desert mirage of an oasis!",
+                "Are you trying to starve a future merchant prince? The economic impact will be catastrophic!"
+            ],
+            "sugar_rush": [
+                "SUGAR! I CAN OUTRUN A DESERT STORM! I CAN FIGHT A HUSK WITH MY BARE TOES! WHEEEEE!",
+                "THE DUNES ARE SPINNING! THE CACTI ARE DANCING THE DABKE! I AM THE EMPEROR OF SPEED!",
+                "I HAVE SO MUCH ENERGY I CAN DIG A NEW WELL IN FIVE SECONDS! WATCH ME VANISH INTO THE GROUND!"
+            ],
+            "sugar_fail": [
+                "No sugar? But my inner battery is at 1%! I'm gonna collapse right into this scorpion nest...",
+                "You withhold sugar from an innocent child? I am cursing your water skin to leak into your boots!",
+                "No sweet treats? Fine, I'll go chew on dry sugar cane like a peasant..."
+            ],
+            "toy_success": [
+                "A toy! Mashallah! I shall name it Vizier Pebble-Lord and conquer the sandbox!",
+                "Whoa! This is way better than the skull I was playing with earlier!",
+                "A gift for free?! Are you feeling okay, stranger? Desert folk don't just give things away!"
+            ],
+            "toy_fail": [
+                "No toys? What do you carry in that giant backpack then, just sand?!",
+                "You travel across the vast desert empty-handed? Your inventory management is tragic.",
+                "No toy? Fine, I'll go back to throwing sharp rocks at sleeping Husks..."
+            ],
+            "parents": [
+                "My dad is over by the bazaar inflating his prices, and my mom is yelling at a camel.",
+                "My parents told me to stay in the shade. But the shade moved, so now I'm technically disobeying.",
+                "Papa says if I don't learn how to haggle by age eight, he'll trade me to the wandering traders for two llamas."
+            ],
+            "rps_win": [
+                "Ha! Sandstone crushes your shears! You owe me three emeralds, non-negotiable contract!",
+                "I won! The ancient spirits of the dunes have favored my tactical genius!",
+                "Victory is mine! Now hand over your shoes as tribute... wait, that wasn't in the rules?"
+            ],
+            "rps_lose": [
+                "What?! You beat me?! This game was clearly rigged by the thieves' guild!",
+                "No fair! The wind blew sand into my eyes right when I made paper!",
+                "I lost... Take my spare sandal. It's my only worldly possession."
+            ],
+            "rps_tie": [
+                "A tie! A stalemate worthy of two master desert negotiators! Let us double the stakes!",
+                "Both rock?! Great, now we just have two useless sandstone blocks.",
+                "A draw! The sands remain balanced... for now. Again!"
+            ]
+        }
+    }
 }

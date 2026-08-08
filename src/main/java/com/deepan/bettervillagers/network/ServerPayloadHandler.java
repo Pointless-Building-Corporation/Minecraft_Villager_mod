@@ -112,13 +112,155 @@ public class ServerPayloadHandler {
                                         rewardName = "2 Diamonds";
                                     }
                                 }
-                                player.sendSystemMessage(net.minecraft.network.chat.Component.literal("The Guild Master handed you " + rewardName + "!"));
+                                player.sendSystemMessage(net.minecraft.network.chat.Component.literal("Guild Master rewards you with " + rewardName + "!"));
+                            } else {
+                                player.sendSystemMessage(net.minecraft.network.chat.Component.literal("You have " + completions + "/10 quests completed for this board."));
                             }
                         }
+                    } else if ("GIVE_CHILD_COOKIE".equals(payload.actionId())) {
+                        boolean hasCookie = false;
+                        for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
+                            net.minecraft.world.item.ItemStack stack = player.getInventory().getItem(i);
+                            if (stack.getItem() == net.minecraft.world.item.Items.COOKIE) {
+                                stack.shrink(1);
+                                hasCookie = true;
+                                break;
+                            }
+                        }
+                        
+                        String themeId = net.minecraft.core.registries.BuiltInRegistries.VILLAGER_TYPE.getKey(villager.getVillagerData().getType()).getPath();
+                        java.util.List<com.deepan.bettervillagers.quest.network.OpenDialoguePayload.DialogueOption> options = new java.util.ArrayList<>();
+                        String text;
+                        if (hasCookie) {
+                            text = getInteractionLine(themeId, "cookie_success", "A cookie! You're the best!");
+                            player.getInventory().add(new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.DIRT, 1));
+                            options.add(new com.deepan.bettervillagers.quest.network.OpenDialoguePayload.DialogueOption("Thanks.", "NONE"));
+                        } else {
+                            text = getInteractionLine(themeId, "cookie_fail_1", "Liar! You don't have a cookie!");
+                            options.add(new com.deepan.bettervillagers.quest.network.OpenDialoguePayload.DialogueOption("Wait, don't tell him!", "CHILD_NO_COOKIE_2"));
+                        }
+                        net.neoforged.neoforge.network.PacketDistributor.sendToPlayer(player, new com.deepan.bettervillagers.quest.network.OpenDialoguePayload(villager.getId(), themeId, text, options));
+                    } else if ("CHILD_NO_COOKIE_2".equals(payload.actionId())) {
+                        String themeId = net.minecraft.core.registries.BuiltInRegistries.VILLAGER_TYPE.getKey(villager.getVillagerData().getType()).getPath();
+                        java.util.List<com.deepan.bettervillagers.quest.network.OpenDialoguePayload.DialogueOption> options = new java.util.ArrayList<>();
+                        options.add(new com.deepan.bettervillagers.quest.network.OpenDialoguePayload.DialogueOption("Oh.", "NONE"));
+                        String text = getInteractionLine(themeId, "cookie_fail_2", "Too late. You're dead.");
+                        net.neoforged.neoforge.network.PacketDistributor.sendToPlayer(player, new com.deepan.bettervillagers.quest.network.OpenDialoguePayload(villager.getId(), themeId, text, options));
+                    } else if ("ASK_PARENTS".equals(payload.actionId())) {
+                        String themeId = net.minecraft.core.registries.BuiltInRegistries.VILLAGER_TYPE.getKey(villager.getVillagerData().getType()).getPath();
+                        java.util.List<com.deepan.bettervillagers.quest.network.OpenDialoguePayload.DialogueOption> options = new java.util.ArrayList<>();
+                        options.add(new com.deepan.bettervillagers.quest.network.OpenDialoguePayload.DialogueOption("Oh.", "NONE"));
+                        String text = getInteractionLine(themeId, "parents", "They went to get milk 50 chunks ago.");
+                        net.neoforged.neoforge.network.PacketDistributor.sendToPlayer(player, new com.deepan.bettervillagers.quest.network.OpenDialoguePayload(villager.getId(), themeId, text, options));
+                    } else if ("GIVE_CHILD_SUGAR".equals(payload.actionId())) {
+                        boolean hasSugar = false;
+                        for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
+                            net.minecraft.world.item.ItemStack stack = player.getInventory().getItem(i);
+                            if (stack.getItem() == net.minecraft.world.item.Items.SUGAR) {
+                                stack.shrink(1);
+                                hasSugar = true;
+                                break;
+                            }
+                        }
+                        
+                        String themeId = net.minecraft.core.registries.BuiltInRegistries.VILLAGER_TYPE.getKey(villager.getVillagerData().getType()).getPath();
+                        java.util.List<com.deepan.bettervillagers.quest.network.OpenDialoguePayload.DialogueOption> options = new java.util.ArrayList<>();
+                        if (hasSugar) {
+                            villager.addEffect(new net.minecraft.world.effect.MobEffectInstance(net.minecraft.world.effect.MobEffects.MOVEMENT_SPEED, 20 * 60 * 3, 1));
+                            options.add(new com.deepan.bettervillagers.quest.network.OpenDialoguePayload.DialogueOption("Uh oh...", "NONE"));
+                            String text = getInteractionLine(themeId, "sugar_rush", "SUGAAAAAR! I CAN SEE SOUNDS!");
+                            net.neoforged.neoforge.network.PacketDistributor.sendToPlayer(player, new com.deepan.bettervillagers.quest.network.OpenDialoguePayload(villager.getId(), themeId, text, options));
+                        } else {
+                            options.add(new com.deepan.bettervillagers.quest.network.OpenDialoguePayload.DialogueOption("Oops.", "NONE"));
+                            String text = getInteractionLine(themeId, "sugar_fail", "You're empty-handed! Stop teasing me!");
+                            net.neoforged.neoforge.network.PacketDistributor.sendToPlayer(player, new com.deepan.bettervillagers.quest.network.OpenDialoguePayload(villager.getId(), themeId, text, options));
+                        }
+                    } else if ("TRADE_CHILD_TOYS".equals(payload.actionId())) {
+                        boolean hasToy = false;
+                        java.util.List<net.minecraft.world.item.Item> toys = java.util.List.of(
+                            net.minecraft.world.item.Items.STICK, 
+                            net.minecraft.world.item.Items.SLIME_BALL, 
+                            net.minecraft.world.item.Items.CLAY_BALL, 
+                            net.minecraft.world.item.Items.STRING
+                        );
+                        for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
+                            net.minecraft.world.item.ItemStack stack = player.getInventory().getItem(i);
+                            if (toys.contains(stack.getItem())) {
+                                stack.shrink(1);
+                                hasToy = true;
+                                break;
+                            }
+                        }
+
+                        String themeId = net.minecraft.core.registries.BuiltInRegistries.VILLAGER_TYPE.getKey(villager.getVillagerData().getType()).getPath();
+                        java.util.List<com.deepan.bettervillagers.quest.network.OpenDialoguePayload.DialogueOption> options = new java.util.ArrayList<>();
+                        if (hasToy) {
+                            java.util.Random rand = new java.util.Random();
+                            net.minecraft.world.item.Item reward = (rand.nextFloat() < 0.2f) ? net.minecraft.world.item.Items.EMERALD : net.minecraft.world.item.Items.DANDELION;
+                            player.getInventory().add(new net.minecraft.world.item.ItemStack(reward, 1));
+                            options.add(new com.deepan.bettervillagers.quest.network.OpenDialoguePayload.DialogueOption("Thanks, kid.", "NONE"));
+                            String text = getInteractionLine(themeId, "toy_success", "A toy! Yay! I found this shiny thing, you take it!");
+                            net.neoforged.neoforge.network.PacketDistributor.sendToPlayer(player, new com.deepan.bettervillagers.quest.network.OpenDialoguePayload(villager.getId(), themeId, text, options));
+                        } else {
+                            options.add(new com.deepan.bettervillagers.quest.network.OpenDialoguePayload.DialogueOption("My bad.", "NONE"));
+                            String text = getInteractionLine(themeId, "toy_fail", "You don't have any toys!");
+                            net.neoforged.neoforge.network.PacketDistributor.sendToPlayer(player, new com.deepan.bettervillagers.quest.network.OpenDialoguePayload(villager.getId(), themeId, text, options));
+                        }
+                    } else if ("PLAY_RPS".equals(payload.actionId())) {
+                        String themeId = net.minecraft.core.registries.BuiltInRegistries.VILLAGER_TYPE.getKey(villager.getVillagerData().getType()).getPath();
+                        java.util.List<com.deepan.bettervillagers.quest.network.OpenDialoguePayload.DialogueOption> options = new java.util.ArrayList<>();
+                        options.add(new com.deepan.bettervillagers.quest.network.OpenDialoguePayload.DialogueOption("Rock", "RPS_ROCK"));
+                        options.add(new com.deepan.bettervillagers.quest.network.OpenDialoguePayload.DialogueOption("Paper", "RPS_PAPER"));
+                        options.add(new com.deepan.bettervillagers.quest.network.OpenDialoguePayload.DialogueOption("Scissors", "RPS_SCISSORS"));
+                        net.neoforged.neoforge.network.PacketDistributor.sendToPlayer(player, new com.deepan.bettervillagers.quest.network.OpenDialoguePayload(villager.getId(), themeId, "Rock, Paper, Scissors! Shoot!", options));
+                    } else if (payload.actionId().startsWith("RPS_")) {
+                        String playerChoice = payload.actionId().substring(4);
+                        java.util.List<String> choices = java.util.List.of("ROCK", "PAPER", "SCISSORS");
+                        String childChoice = choices.get(new java.util.Random().nextInt(3));
+                        
+                        String themeId = net.minecraft.core.registries.BuiltInRegistries.VILLAGER_TYPE.getKey(villager.getVillagerData().getType()).getPath();
+                        String result;
+                        if (playerChoice.equals(childChoice)) {
+                            result = getInteractionLine(themeId, "rps_tie", "We tied! I chose " + childChoice + " too!");
+                        } else if ((playerChoice.equals("ROCK") && childChoice.equals("SCISSORS")) ||
+                                   (playerChoice.equals("PAPER") && childChoice.equals("ROCK")) ||
+                                   (playerChoice.equals("SCISSORS") && childChoice.equals("PAPER"))) {
+                            result = getInteractionLine(themeId, "rps_lose", "You won... I chose " + childChoice + ". No fair, you cheated!");
+                        } else {
+                            result = getInteractionLine(themeId, "rps_win", "I WON! I chose " + childChoice + "! You lose!");
+                            player.getInventory().add(new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.STICK, 1));
+                        }
+
+                        java.util.List<com.deepan.bettervillagers.quest.network.OpenDialoguePayload.DialogueOption> options = new java.util.ArrayList<>();
+                        options.add(new com.deepan.bettervillagers.quest.network.OpenDialoguePayload.DialogueOption("Good game.", "NONE"));
+                        net.neoforged.neoforge.network.PacketDistributor.sendToPlayer(player, new com.deepan.bettervillagers.quest.network.OpenDialoguePayload(villager.getId(), themeId, result, options));
                     }
                 }
             }
         });
+    }
+
+    private static String getInteractionLine(String themeId, String interactionType, String fallback) {
+        com.deepan.bettervillagers.quest.data.RegionDialogueData data = com.deepan.bettervillagers.quest.data.RegionDialogueManager.getInstance().getRegionDialogue(themeId);
+        if (data == null || data.children == null || data.children.interactions == null) return fallback;
+        
+        java.util.List<String> pool = null;
+        switch (interactionType) {
+            case "cookie_success": pool = data.children.interactions.cookie_success; break;
+            case "cookie_fail_1": pool = data.children.interactions.cookie_fail_1; break;
+            case "cookie_fail_2": pool = data.children.interactions.cookie_fail_2; break;
+            case "sugar_rush": pool = data.children.interactions.sugar_rush; break;
+            case "sugar_fail": pool = data.children.interactions.sugar_fail; break;
+            case "toy_success": pool = data.children.interactions.toy_success; break;
+            case "toy_fail": pool = data.children.interactions.toy_fail; break;
+            case "parents": pool = data.children.interactions.parents; break;
+            case "rps_win": pool = data.children.interactions.rps_win; break;
+            case "rps_lose": pool = data.children.interactions.rps_lose; break;
+            case "rps_tie": pool = data.children.interactions.rps_tie; break;
+        }
+        
+        if (pool == null || pool.isEmpty()) return fallback;
+        return pool.get(new java.util.Random().nextInt(pool.size()));
     }
 
     public static void handleAcceptBountyOnServer(com.deepan.bettervillagers.quest.network.AcceptBountyPayload payload, IPayloadContext context) {

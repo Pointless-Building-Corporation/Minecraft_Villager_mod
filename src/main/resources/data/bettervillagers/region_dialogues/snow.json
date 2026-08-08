@@ -1,204 +1,295 @@
 {
-  "guild_master": {
-    "greetings": [
-      "Hail, traveler. The winds are cold, but my heart... is also cold.",
-      "Welcome to the tundra. By Odin's beard, buy something so I can buy firewood.",
-      "The All-Father brings you to my hall. Either that, or you're just very lost."
+    "guild_master": {
+        "greetings": [
+            "Hail, traveler. The winds are cold, but my heart... is also cold.",
+            "Welcome to the tundra. By Odin's beard, buy something so I can buy firewood.",
+            "The All-Father brings you to my hall. Either that, or you're just very lost."
+        ],
+        "reward": "A meager sum, but enough for a horn of mead."
+    },
+    "professions": {
+        "farmer": [
+            "I planted potatoes yesterday. Today, I harvest ice cubes.",
+            "The All-Father demands blood, but all I have is this frozen beetroot.",
+            "My hoe broke on the permafrost. Again. For the ninth time today.",
+            "I tried to sacrifice a carrot to Freyja. It bounced off the altar.",
+            "You call this farming? I call it chiseling the earth.",
+            "We do not sow. Wait, no, we do sow. It just doesn't grow.",
+            "Behold! The singular grain of wheat I grew this year. It is magnificent.",
+            "A true warrior fights the earth itself for sustenance.",
+            "Sometimes I dream of a warm place. Then I wake up and punch a glacier.",
+            "Buy my crops, traveler, before I use them as blunt weapons."
+        ],
+        "fisherman": [
+            "I caught a fish! And it shattered into pieces when I dropped it.",
+            "They say Jormungandr sleeps in these waters. I'm just looking for a cod.",
+            "My line is frozen. My bait is frozen. I am frozen. Is this Valhalla?",
+            "The sea gives, and the sea takes. Mostly it just takes feeling from my toes.",
+            "I used a frozen salmon as a club during the last pillager raid. It was effective.",
+            "Ice fishing is 90% contemplating your mortality and 10% pulling up an empty hook.",
+            "A kraken owes me five emeralds. Have you seen it?",
+            "I drink mead to stay warm. I fish to buy mead. It is the circle of life.",
+            "This ice hole is my only friend. I call him Bjorn.",
+            "The waters here are colder than a Draugr's embrace."
+        ],
+        "shepherd": [
+            "My sheep are essentially walking snowballs at this point.",
+            "I tried to shear a sheep, but the wool was frozen solid. Now it has a stylish ice-fade.",
+            "Do you have any idea how hard it is to knit a sweater with frostbitten fingers?",
+            "The wolves here are fearsome, but my sheep have developed armor-plating from ice.",
+            "Freyja blesses my flock. And by blesses, I mean she lets them freeze slightly less.",
+            "A sheared sheep in this weather is a crime against nature and the gods.",
+            "I trade in wool, the only thing keeping us from becoming popsicles.",
+            "The sheep are looking at me with murderous intent. I think they want my mead.",
+            "One day I will ride a giant ram into battle. For now, I just feed them.",
+            "Dyeing wool is easy. I just use the blood of my enemies. Or, you know, beetroot."
+        ],
+        "fletcher": [
+            "A well-crafted arrow flies straight. A frozen arrow shatters on impact.",
+            "I am carving a bow from the World Tree itself. Just kidding, it's spruce.",
+            "My arrows will blot out the sun! Not that we see much of it anyway.",
+            "Feathers are hard to come by when all the birds have frozen mid-flight.",
+            "May your aim be as true as Odin's spear, Gungnir.",
+            "I tried shooting a flaming arrow, but the cold put it out before it hit the target.",
+            "Need arrows? Or just very sharp, pointy icicles?",
+            "Fletching is an art. An art that requires you to not shiver while doing it.",
+            "The wind here laughs at archery. It literally mocks my arrows.",
+            "Buy a bow, or face the tundra unarmed. Your choice, weakling."
+        ],
+        "cleric": [
+            "The All-Father sees all, but even he squints in a blizzard.",
+            "I brew potions of fire resistance, mostly just to drink them and stay warm.",
+            "The gods are angry today. Or maybe it's just Tuesday in the tundra.",
+            "I will cleanse you of your sins! And also your frostbite, for five emeralds.",
+            "Valhalla awaits the brave. A cozy bed awaits the smart.",
+            "Do not anger Thor, unless you enjoy being struck by lightning while freezing to death.",
+            "My brewing stand is frozen to the floor. Please send help.",
+            "I commune with the spirits. They mostly complain about the weather.",
+            "A potion of healing won't fix your terrible fashion sense, outlander.",
+            "We pray to the gods of warmth. They have left us on read."
+        ],
+        "weaponsmith": [
+            "A frozen blade cuts deep, but a frozen hand drops the sword.",
+            "I quench my blades in the snow. It saves time and water.",
+            "Buy an axe! Perfect for chopping wood, or the skulls of your enemies.",
+            "The forge fire is the only thing keeping me alive. Do not stand in my light.",
+            "A sword of iron, forged in ice. It's an oxymoron, but it kills just the same.",
+            "My hammers sing the song of the Valkyries.",
+            "I once forged a sword so sharp it cut the winter wind in half. Probably.",
+            "You need a weapon, traveler. The snow hides many teeth.",
+            "A true warrior needs a heavy weapon. It keeps you warm from the exertion.",
+            "Blood freezes quickly on steel. Remember to wipe your blade, amateur."
+        ],
+        "armorer": [
+            "Chainmail in this weather? Are you suicidal, or just stupid?",
+            "I line the armor with fur. Not for comfort, but to prevent your skin from peeling off.",
+            "An iron helmet is basically an ice bucket challenge you wear all day.",
+            "I forge shields sturdy enough to block a troll's club and the biting wind.",
+            "If you lick your iron chestplate right now, your tongue will stick to it. I dare you.",
+            "My armor protects the body. Nothing protects the soul from the cold.",
+            "A heavy breastplate makes it harder to run away from ice bears. Think about it.",
+            "I wear a helmet to bed. You never know when the roof might cave in from snow.",
+            "The All-Father protects, but a good iron pauldron doesn't hurt either.",
+            "Buy armor. Die slightly slower in the frozen wastes."
+        ],
+        "toolsmith": [
+            "A pickaxe that can't break ice is just a funny-shaped hammer.",
+            "My shovels are legendary. They have cleared three feet of snow today alone.",
+            "I made a hoe once. I immediately melted it down in shame.",
+            "Mining in the frozen depths builds character. And hypothermia.",
+            "The bedrock is cold, but the surface is colder. Just keep digging.",
+            "I trade in tools of survival. Without my axes, you are firewood.",
+            "The dwarves of Svartalfheim have nothing on my ironwork!",
+            "A good tool is an extension of your arm. Which is currently numb.",
+            "Don't hit a glacier with an iron pick. The glacier wins.",
+            "Buy a shovel and dig your own grave, or dig a snow fort. Up to you."
+        ],
+        "butcher": [
+            "The meat is fresh! And by fresh, I mean it's been frozen solid since last winter.",
+            "I don't need a cleaver, I just shatter the beef with a hammer.",
+            "Polar bear flank is tough, but it puts hair on your chest.",
+            "Would you like a side of ice with your frozen porkchop?",
+            "The gods demand a blood sacrifice. The best I can do is a frozen chicken.",
+            "Hacking meat in the cold keeps the blood from spraying everywhere. Very convenient.",
+            "I once fought a walrus for a prime cut of blubber. I won.",
+            "Meat is meat. Frozen meat is just meat that takes longer to chew.",
+            "We don't smoke meat here. We just let the winter wind slowly dehydrate it.",
+            "Buy some beef, traveler. Or I will feed you to the wolves."
+        ],
+        "leatherworker": [
+            "Thick pelts are the only thing separating us from Helheim.",
+            "I sewed a leather tunic yesterday. Today it is as stiff as a board.",
+            "Nothing says 'I survived the tundra' like a cape made of rabbit fur.",
+            "I use the bones of my enemies for needles. Just kidding, I use bone meal.",
+            "Leather pants in the snow? Bold fashion choice. Enjoy the frostbite.",
+            "My saddles are crafted to withstand the harshest blizzards. And angry horses.",
+            "A good pair of leather boots is worth more than a chest of gold up here.",
+            "I dream of working with soft silk. But the gods gave me tough leather.",
+            "Freyja's chariot is pulled by cats. I could make a great hat out of... never mind.",
+            "Buy a pelt, before the winter wind claims your soul."
+        ],
+        "mason": [
+            "Stone is strong. Ice is strong. But mostly, they are both just very cold.",
+            "I carve statues of the gods, but they usually just look like lumpy snowmen.",
+            "Laying bricks in a blizzard is a test of faith and stupidity.",
+            "The mortar freezes before I can even place the stone. It is deeply frustrating.",
+            "I am building a grand hall! We will drink mead and sing songs of warmth.",
+            "A stone wall keeps the wind out. And the Draugr. Mostly the wind.",
+            "My chisel broke. My hands are numb. Is it time for mead yet?",
+            "I tried to build an igloo, but my pride as a stonemason wouldn't allow it.",
+            "The mountains are my canvas. The pickaxe is my brush.",
+            "Buy some polished diorite. It looks like snow, but harder."
+        ],
+        "cartographer": [
+            "Here is my map of the region. It's just a blank sheet of white paper.",
+            "The compass points north, but everything looks the same up here.",
+            "I mapped the fjords. It cost me three toes, but it's a very accurate map.",
+            "Beware the edges of the map. That's where the ice dragons live.",
+            "A map won't save you if you can't see past your own nose in a blizzard.",
+            "I chart the stars when the clouds break. Which is basically never.",
+            "My ink keeps freezing in the bottle. I'm considering using blood.",
+            "To explore the unknown is to embrace the cold embrace of death. Want a map?",
+            "I've marked the locations of all known mead halls. You're welcome.",
+            "Navigating the tundra is easy. Just walk until you stop feeling your legs."
+        ],
+        "librarian": [
+            "The sagas tell of a time when the sun actually provided warmth.",
+            "My books are frozen shut. You'll have to thaw them before reading.",
+            "Knowledge is power! But it makes terrible kindling.",
+            "I read a book on pyromancy just to feel warm inside.",
+            "The runes hold ancient secrets. Mostly soup recipes, but still ancient.",
+            "Shh! The library is a place of quiet contemplation and quiet shivering.",
+            "A well-read mind is a sharp mind. Too bad my brain is currently frozen.",
+            "I have a first edition saga of Beowulf. It has coffee\u2014I mean, mead stains on it.",
+            "Reading by candlelight is romantic, until the wind blows the candle out.",
+            "Buy a book, traveler. They make excellent insulation."
+        ],
+        "nitwit": [
+            "I licked the iron golem. Now my tongue is stuck. Mmmph.",
+            "Everyone says 'prepare for winter', but I am busy preparing for a nap.",
+            "I tried to build a snowman, but I used gravel. It's very depressing.",
+            "I am the village idiot, but at least I'm not the one trying to farm in the snow.",
+            "They told me to go fight the pillagers. I hid in a snowdrift instead.",
+            "Mead makes the world go round! And round... and round... I feel sick.",
+            "I lost my shoes in the snow yesterday. I am currently wearing loaves of bread.",
+            "The All-Father gave me one brain cell, and it's currently focused on shivering.",
+            "I think the snow is made of sugar. Nope, just cold dirt.",
+            "I'm not lazy, I'm just conserving body heat. It's tactical."
+        ],
+        "none": [
+            "I am unburdened by a profession. Also unburdened by emeralds.",
+            "I want to be a Viking, but my mom says I have to clean my room first.",
+            "I stand in the snow all day, waiting for purpose. Or a hot meal.",
+            "Do you think the village needs a professional snow-eater? Because I'm qualified.",
+            "The gods have no plan for me. So I just complain about the weather.",
+            "I don't have a job, but I do have a very impressive icicle collection.",
+            "Maybe one day I'll be a great Jarl. Today, I'm just freezing.",
+            "I'm considering a career in mead-tasting. It's a highly competitive field.",
+            "I have no skills, but I can shiver faster than anyone in the village.",
+            "Spare an emerald for a villager with no direction in life?"
+        ]
+    },
+    "generic": [
+        "By Odin's beard, it is cold today.",
+        "May your hearth be warm and your mead horn full.",
+        "I saw a Draugr last night. Or maybe it was just Lars stumbling home from the tavern.",
+        "The wind howls like Fenrir escaping his chains.",
+        "You look like you haven't seen a vegetable in months. Neither have we.",
+        "Keep your axe sharp and your wits sharper. The tundra forgives nothing.",
+        "Hail, traveler! Wipe the snow off your boots before you step on my dirt floor.",
+        "We are born in the ice, we live in the ice, and we complain about the ice.",
+        "The All-Father smiles upon those who bring mead. Got any?",
+        "Another blizzard is coming. Time to huddle together and share body heat. No weird stuff."
     ],
-    "reward": "A meager sum, but enough for a horn of mead."
-  },
-  "professions": {
-    "farmer": [
-      "I planted potatoes yesterday. Today, I harvest ice cubes.",
-      "The All-Father demands blood, but all I have is this frozen beetroot.",
-      "My hoe broke on the permafrost. Again. For the ninth time today.",
-      "I tried to sacrifice a carrot to Freyja. It bounced off the altar.",
-      "You call this farming? I call it chiseling the earth.",
-      "We do not sow. Wait, no, we do sow. It just doesn't grow.",
-      "Behold! The singular grain of wheat I grew this year. It is magnificent.",
-      "A true warrior fights the earth itself for sustenance.",
-      "Sometimes I dream of a warm place. Then I wake up and punch a glacier.",
-      "Buy my crops, traveler, before I use them as blunt weapons."
-    ],
-    "fisherman": [
-      "I caught a fish! And it shattered into pieces when I dropped it.",
-      "They say Jormungandr sleeps in these waters. I'm just looking for a cod.",
-      "My line is frozen. My bait is frozen. I am frozen. Is this Valhalla?",
-      "The sea gives, and the sea takes. Mostly it just takes feeling from my toes.",
-      "I used a frozen salmon as a club during the last pillager raid. It was effective.",
-      "Ice fishing is 90% contemplating your mortality and 10% pulling up an empty hook.",
-      "A kraken owes me five emeralds. Have you seen it?",
-      "I drink mead to stay warm. I fish to buy mead. It is the circle of life.",
-      "This ice hole is my only friend. I call him Bjorn.",
-      "The waters here are colder than a Draugr's embrace."
-    ],
-    "shepherd": [
-      "My sheep are essentially walking snowballs at this point.",
-      "I tried to shear a sheep, but the wool was frozen solid. Now it has a stylish ice-fade.",
-      "Do you have any idea how hard it is to knit a sweater with frostbitten fingers?",
-      "The wolves here are fearsome, but my sheep have developed armor-plating from ice.",
-      "Freyja blesses my flock. And by blesses, I mean she lets them freeze slightly less.",
-      "A sheared sheep in this weather is a crime against nature and the gods.",
-      "I trade in wool, the only thing keeping us from becoming popsicles.",
-      "The sheep are looking at me with murderous intent. I think they want my mead.",
-      "One day I will ride a giant ram into battle. For now, I just feed them.",
-      "Dyeing wool is easy. I just use the blood of my enemies. Or, you know, beetroot."
-    ],
-    "fletcher": [
-      "A well-crafted arrow flies straight. A frozen arrow shatters on impact.",
-      "I am carving a bow from the World Tree itself. Just kidding, it's spruce.",
-      "My arrows will blot out the sun! Not that we see much of it anyway.",
-      "Feathers are hard to come by when all the birds have frozen mid-flight.",
-      "May your aim be as true as Odin's spear, Gungnir.",
-      "I tried shooting a flaming arrow, but the cold put it out before it hit the target.",
-      "Need arrows? Or just very sharp, pointy icicles?",
-      "Fletching is an art. An art that requires you to not shiver while doing it.",
-      "The wind here laughs at archery. It literally mocks my arrows.",
-      "Buy a bow, or face the tundra unarmed. Your choice, weakling."
-    ],
-    "cleric": [
-      "The All-Father sees all, but even he squints in a blizzard.",
-      "I brew potions of fire resistance, mostly just to drink them and stay warm.",
-      "The gods are angry today. Or maybe it's just Tuesday in the tundra.",
-      "I will cleanse you of your sins! And also your frostbite, for five emeralds.",
-      "Valhalla awaits the brave. A cozy bed awaits the smart.",
-      "Do not anger Thor, unless you enjoy being struck by lightning while freezing to death.",
-      "My brewing stand is frozen to the floor. Please send help.",
-      "I commune with the spirits. They mostly complain about the weather.",
-      "A potion of healing won't fix your terrible fashion sense, outlander.",
-      "We pray to the gods of warmth. They have left us on read."
-    ],
-    "weaponsmith": [
-      "A frozen blade cuts deep, but a frozen hand drops the sword.",
-      "I quench my blades in the snow. It saves time and water.",
-      "Buy an axe! Perfect for chopping wood, or the skulls of your enemies.",
-      "The forge fire is the only thing keeping me alive. Do not stand in my light.",
-      "A sword of iron, forged in ice. It's an oxymoron, but it kills just the same.",
-      "My hammers sing the song of the Valkyries.",
-      "I once forged a sword so sharp it cut the winter wind in half. Probably.",
-      "You need a weapon, traveler. The snow hides many teeth.",
-      "A true warrior needs a heavy weapon. It keeps you warm from the exertion.",
-      "Blood freezes quickly on steel. Remember to wipe your blade, amateur."
-    ],
-    "armorer": [
-      "Chainmail in this weather? Are you suicidal, or just stupid?",
-      "I line the armor with fur. Not for comfort, but to prevent your skin from peeling off.",
-      "An iron helmet is basically an ice bucket challenge you wear all day.",
-      "I forge shields sturdy enough to block a troll's club and the biting wind.",
-      "If you lick your iron chestplate right now, your tongue will stick to it. I dare you.",
-      "My armor protects the body. Nothing protects the soul from the cold.",
-      "A heavy breastplate makes it harder to run away from ice bears. Think about it.",
-      "I wear a helmet to bed. You never know when the roof might cave in from snow.",
-      "The All-Father protects, but a good iron pauldron doesn't hurt either.",
-      "Buy armor. Die slightly slower in the frozen wastes."
-    ],
-    "toolsmith": [
-      "A pickaxe that can't break ice is just a funny-shaped hammer.",
-      "My shovels are legendary. They have cleared three feet of snow today alone.",
-      "I made a hoe once. I immediately melted it down in shame.",
-      "Mining in the frozen depths builds character. And hypothermia.",
-      "The bedrock is cold, but the surface is colder. Just keep digging.",
-      "I trade in tools of survival. Without my axes, you are firewood.",
-      "The dwarves of Svartalfheim have nothing on my ironwork!",
-      "A good tool is an extension of your arm. Which is currently numb.",
-      "Don't hit a glacier with an iron pick. The glacier wins.",
-      "Buy a shovel and dig your own grave, or dig a snow fort. Up to you."
-    ],
-    "butcher": [
-      "The meat is fresh! And by fresh, I mean it's been frozen solid since last winter.",
-      "I don't need a cleaver, I just shatter the beef with a hammer.",
-      "Polar bear flank is tough, but it puts hair on your chest.",
-      "Would you like a side of ice with your frozen porkchop?",
-      "The gods demand a blood sacrifice. The best I can do is a frozen chicken.",
-      "Hacking meat in the cold keeps the blood from spraying everywhere. Very convenient.",
-      "I once fought a walrus for a prime cut of blubber. I won.",
-      "Meat is meat. Frozen meat is just meat that takes longer to chew.",
-      "We don't smoke meat here. We just let the winter wind slowly dehydrate it.",
-      "Buy some beef, traveler. Or I will feed you to the wolves."
-    ],
-    "leatherworker": [
-      "Thick pelts are the only thing separating us from Helheim.",
-      "I sewed a leather tunic yesterday. Today it is as stiff as a board.",
-      "Nothing says 'I survived the tundra' like a cape made of rabbit fur.",
-      "I use the bones of my enemies for needles. Just kidding, I use bone meal.",
-      "Leather pants in the snow? Bold fashion choice. Enjoy the frostbite.",
-      "My saddles are crafted to withstand the harshest blizzards. And angry horses.",
-      "A good pair of leather boots is worth more than a chest of gold up here.",
-      "I dream of working with soft silk. But the gods gave me tough leather.",
-      "Freyja's chariot is pulled by cats. I could make a great hat out of... never mind.",
-      "Buy a pelt, before the winter wind claims your soul."
-    ],
-    "mason": [
-      "Stone is strong. Ice is strong. But mostly, they are both just very cold.",
-      "I carve statues of the gods, but they usually just look like lumpy snowmen.",
-      "Laying bricks in a blizzard is a test of faith and stupidity.",
-      "The mortar freezes before I can even place the stone. It is deeply frustrating.",
-      "I am building a grand hall! We will drink mead and sing songs of warmth.",
-      "A stone wall keeps the wind out. And the Draugr. Mostly the wind.",
-      "My chisel broke. My hands are numb. Is it time for mead yet?",
-      "I tried to build an igloo, but my pride as a stonemason wouldn't allow it.",
-      "The mountains are my canvas. The pickaxe is my brush.",
-      "Buy some polished diorite. It looks like snow, but harder."
-    ],
-    "cartographer": [
-      "Here is my map of the region. It's just a blank sheet of white paper.",
-      "The compass points north, but everything looks the same up here.",
-      "I mapped the fjords. It cost me three toes, but it's a very accurate map.",
-      "Beware the edges of the map. That's where the ice dragons live.",
-      "A map won't save you if you can't see past your own nose in a blizzard.",
-      "I chart the stars when the clouds break. Which is basically never.",
-      "My ink keeps freezing in the bottle. I'm considering using blood.",
-      "To explore the unknown is to embrace the cold embrace of death. Want a map?",
-      "I've marked the locations of all known mead halls. You're welcome.",
-      "Navigating the tundra is easy. Just walk until you stop feeling your legs."
-    ],
-    "librarian": [
-      "The sagas tell of a time when the sun actually provided warmth.",
-      "My books are frozen shut. You'll have to thaw them before reading.",
-      "Knowledge is power! But it makes terrible kindling.",
-      "I read a book on pyromancy just to feel warm inside.",
-      "The runes hold ancient secrets. Mostly soup recipes, but still ancient.",
-      "Shh! The library is a place of quiet contemplation and quiet shivering.",
-      "A well-read mind is a sharp mind. Too bad my brain is currently frozen.",
-      "I have a first edition saga of Beowulf. It has coffee—I mean, mead stains on it.",
-      "Reading by candlelight is romantic, until the wind blows the candle out.",
-      "Buy a book, traveler. They make excellent insulation."
-    ],
-    "nitwit": [
-      "I licked the iron golem. Now my tongue is stuck. Mmmph.",
-      "Everyone says 'prepare for winter', but I am busy preparing for a nap.",
-      "I tried to build a snowman, but I used gravel. It's very depressing.",
-      "I am the village idiot, but at least I'm not the one trying to farm in the snow.",
-      "They told me to go fight the pillagers. I hid in a snowdrift instead.",
-      "Mead makes the world go round! And round... and round... I feel sick.",
-      "I lost my shoes in the snow yesterday. I am currently wearing loaves of bread.",
-      "The All-Father gave me one brain cell, and it's currently focused on shivering.",
-      "I think the snow is made of sugar. Nope, just cold dirt.",
-      "I'm not lazy, I'm just conserving body heat. It's tactical."
-    ],
-    "none": [
-      "I am unburdened by a profession. Also unburdened by emeralds.",
-      "I want to be a Viking, but my mom says I have to clean my room first.",
-      "I stand in the snow all day, waiting for purpose. Or a hot meal.",
-      "Do you think the village needs a professional snow-eater? Because I'm qualified.",
-      "The gods have no plan for me. So I just complain about the weather.",
-      "I don't have a job, but I do have a very impressive icicle collection.",
-      "Maybe one day I'll be a great Jarl. Today, I'm just freezing.",
-      "I'm considering a career in mead-tasting. It's a highly competitive field.",
-      "I have no skills, but I can shiver faster than anyone in the village.",
-      "Spare an emerald for a villager with no direction in life?"
-    ]
-  },
-  "generic": [
-    "By Odin's beard, it is cold today.",
-    "May your hearth be warm and your mead horn full.",
-    "I saw a Draugr last night. Or maybe it was just Lars stumbling home from the tavern.",
-    "The wind howls like Fenrir escaping his chains.",
-    "You look like you haven't seen a vegetable in months. Neither have we.",
-    "Keep your axe sharp and your wits sharper. The tundra forgives nothing.",
-    "Hail, traveler! Wipe the snow off your boots before you step on my dirt floor.",
-    "We are born in the ice, we live in the ice, and we complain about the ice.",
-    "The All-Father smiles upon those who bring mead. Got any?",
-    "Another blizzard is coming. Time to huddle together and share body heat. No weird stuff."
-  ]
+    "children": {
+        "greetings": [
+            "Hail! I'm training to be a Berserker, but mom says I have to wear my earmuffs first.",
+            "When I grow up, I'm going to raid the warm lands and steal all their cozy blankets!",
+            "I challenged a polar bear to a duel. He won by sitting on me.",
+            "Behold my mighty longship! It's a hollowed-out log in a frozen puddle, but fear it!",
+            "The All-Father demands I eat my beetroot... but I think Loki made it.",
+            "If you lick a frozen iron sword, Odin gives you double strength! Want to try?",
+            "I'm practicing my battle cry! WARGGHH! ...Did I scare you, outlander?",
+            "My dad says if I chop enough firewood, Thor will grant me a giant axe!",
+            "Look at my snow castle! It has three lookout towers and a moat of slush!",
+            "I tried to sacrifice a snowball to Freyja. It melted near the fire.",
+            "Are you a brave warrior or just another traveler who forgot their heavy coat?",
+            "Sk\u00e1l, traveler! Well, sk\u00e1l with goat milk, because papa won't let me touch the mead.",
+            "I'm building an army of snow golems to conquer the next village over!",
+            "My boots are packed with snow, which means I'm walking on pure frost power!",
+            "Did you bring any sweet rolls from the south? The permafrost ruined mine!",
+            "I carved runes into this stick! It says 'Big Warrior'... or 'Soup', I get them confused.",
+            "The wind is howling like Fenrir! I'm howling back so he knows who's boss!",
+            "I challenged my brother to a snow wrestling match. We're both stuck in a drift now.",
+            "Mama says I have the heart of a dragon and the nose of a runny reindeer.",
+            "If I stand really still, the frost giants won't see me. Shh!",
+            "Do you think Valhalla has hot chocolate? It better have hot chocolate.",
+            "I'm going to sail across the ocean as soon as I figure out how to untie this knot.",
+            "I dropped my axe in a snowbank and now it belongs to the snow gods.",
+            "Thor's hammer makes the thunder, but my tummy makes the exact same sound when I'm hungry!",
+            "My uncle died in battle, so now he gets free endless mead in Valhalla! I'm so jealous!",
+            "If the winter gets any colder, we might have to eat the sled dogs... again.",
+            "I lost two toes to frostbite, but that just makes me lighter for quick battle charges!",
+            "Grandpa says he's going on a 'peaceful walk into the blizzard'. He's been gone three days!",
+            "I made a wooden shield to protect me from pillagers! ...And from papa's stern discipline.",
+            "We buried my pet goat in the ice. On the bright side, he stays fresh forever!"
+        ],
+        "interactions": {
+            "cookie_success": [
+                "By Odin's beard! A cookie! I will write a glorious saga about your generosity!",
+                "A sweet treat! This gives me +10 Strength against frost giants!",
+                "May Thor bless your path, traveler! This cookie is sweeter than honeyed mead!"
+            ],
+            "cookie_fail_1": [
+                "A cookie? Are you trying to poison me like Loki poisoned Baldur?!",
+                "Bah! Real Viking warriors eat frozen seal blubber, not crumbly bread!",
+                "Is this oatmeal raisin? This is an insult worthy of a blood feud!"
+            ],
+            "cookie_fail_2": [
+                "My dentist\u2014I mean, the village witch\u2014says sugar thins the blood against the frost.",
+                "No thanks. Last time I ate a cookie in the cold, my teeth froze together.",
+                "I'm on a strict berserker diet! Protein and rage only!"
+            ],
+            "sugar_rush": [
+                "RAAAAGHHH! THE SUGAR OF THE GODS FLOWS THROUGH MY VEINS! I CAN FIGHT AN ICE BEAR!",
+                "I HAVE THE POWER OF A THOUSAND SUNS! WATCH ME RUN CIRCLES AROUND THE LONGSHIP!",
+                "VALHALLA CAN WAIT! I MUST RUN THROUGH THE BLIZZARD AT MAXIMUM SPEED!"
+            ],
+            "sugar_fail": [
+                "Ugh... my tummy feels like a troll is stomping inside it...",
+                "The sugar crash is heavier than a fallen glacier... I must rest...",
+                "I feel weak... the winter chill is returning to my soul... need nap..."
+            ],
+            "toy_success": [
+                "A carved wooden axe! Now I can raid the neighbor's cabbage patch in style!",
+                "A toy longship! I shall sail it in the washing tub until it sinks in glory!",
+                "By the gods! A genuine wooden shield! I am now ready for the shield wall!"
+            ],
+            "toy_fail": [
+                "What is this trash? You can't even slay a single goblin with this!",
+                "A stuffed sheep? Do I look like a coward who sleeps with soft things?!",
+                "This toy broke the second it hit the permafrost. Your blacksmith is weak!"
+            ],
+            "parents": [
+                "Papa is out hunting dire wolves, and Mama is sharpening her battleaxe for fun.",
+                "My parents told me if I don't finish my stew, the Draugr will drag me away!",
+                "Mom said if I raid the pantry one more time, she's sending me on a lone voyage to Ireland."
+            ],
+            "rps_win": [
+                "HA! Rock smashes your scissors! Odin smiles upon my tactical genius!",
+                "VICTORY! My choice cut through yours like an axe through a wooden door!",
+                "I WIN! Claiming victory in rock-paper-scissors is the first step to becoming Jarl!"
+            ],
+            "rps_lose": [
+                "DEFEAT?! This is treachery! You must have used dark runic magic!",
+                "No! My hand froze at the last second! That doesn't count!",
+                "A true warrior learns from defeat... prepare yourself for a rematch in Valhalla!"
+            ],
+            "rps_tie": [
+                "A tie! Our battle will be spoken of in the sagas for generations!",
+                "Both choices fell at the same moment! An honorable stalemate!",
+                "Neither of us backs down! Truly, a clash of two mighty warlords!"
+            ]
+        }
+    }
 }
