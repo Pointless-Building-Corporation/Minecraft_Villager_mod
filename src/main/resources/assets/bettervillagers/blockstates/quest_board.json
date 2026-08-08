@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "bettervillagers:block/quest_board" },
+    "facing=east":  { "model": "bettervillagers:block/quest_board", "y": 90 },
+    "facing=south": { "model": "bettervillagers:block/quest_board", "y": 180 },
+    "facing=west":  { "model": "bettervillagers:block/quest_board", "y": 270 }
+  }
+}

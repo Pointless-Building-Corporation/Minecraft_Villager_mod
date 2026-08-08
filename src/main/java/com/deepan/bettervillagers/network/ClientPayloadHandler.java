@@ -10,4 +10,16 @@ public class ClientPayloadHandler {
             Minecraft.getInstance().setScreen(new DnaAnalyzerScreen(payload));
         });
     }
+
+    public static void handleQuestBoardOnClient(com.deepan.bettervillagers.quest.network.OpenQuestBoardPayload payload, IPayloadContext context) {
+        context.enqueueWork(() -> {
+            Minecraft.getInstance().setScreen(new com.deepan.bettervillagers.quest.client.QuestBoardScreen(payload.bounties()));
+        });
+    }
+
+    public static void handleDialogueOnClient(com.deepan.bettervillagers.quest.network.OpenDialoguePayload payload, IPayloadContext context) {
+        context.enqueueWork(() -> {
+            com.deepan.bettervillagers.quest.client.ClientDialogueManager.setCurrentDialogue(payload);
+        });
+    }
 }

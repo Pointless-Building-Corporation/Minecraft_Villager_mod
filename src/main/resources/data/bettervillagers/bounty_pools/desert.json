@@ -1,0 +1,13 @@
+{
+  "objectives": [
+    {"item": "minecraft:cactus", "minCount": 8, "maxCount": 16},
+    {"item": "minecraft:sand", "minCount": 16, "maxCount": 32},
+    {"item": "minecraft:sandstone", "minCount": 8, "maxCount": 16},
+    {"item": "minecraft:rabbit_hide", "minCount": 4, "maxCount": 8},
+    {"item": "minecraft:rabbit", "minCount": 3, "maxCount": 6}
+  ],
+  "rewards": [
+    {"item": "minecraft:emerald", "minCount": 2, "maxCount": 5},
+    {"item": "minecraft:gold_ingot", "minCount": 1, "maxCount": 3}
+  ]
+}

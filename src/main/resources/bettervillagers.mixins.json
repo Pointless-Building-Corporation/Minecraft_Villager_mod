@@ -8,6 +8,8 @@
     "VillagerPathfindingMixin"
   ],
   "client": [
+    "MerchantScreenMixin",
+    "AbstractContainerScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1

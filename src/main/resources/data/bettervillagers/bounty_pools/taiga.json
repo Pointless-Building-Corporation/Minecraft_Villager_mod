@@ -1,0 +1,13 @@
+{
+  "objectives": [
+    {"item": "minecraft:spruce_log", "minCount": 10, "maxCount": 20},
+    {"item": "minecraft:sweet_berries", "minCount": 8, "maxCount": 16},
+    {"item": "minecraft:fern", "minCount": 5, "maxCount": 10},
+    {"item": "minecraft:cooked_rabbit", "minCount": 4, "maxCount": 8},
+    {"item": "minecraft:rabbit_hide", "minCount": 4, "maxCount": 8}
+  ],
+  "rewards": [
+    {"item": "minecraft:emerald", "minCount": 2, "maxCount": 5},
+    {"item": "minecraft:book", "minCount": 2, "maxCount": 4}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "objectives": [
+    {"item": "minecraft:lily_pad", "minCount": 6, "maxCount": 12},
+    {"item": "minecraft:clay_ball", "minCount": 10, "maxCount": 20},
+    {"item": "minecraft:slime_ball", "minCount": 4, "maxCount": 8},
+    {"item": "minecraft:sugar_cane", "minCount": 10, "maxCount": 20},
+    {"item": "minecraft:blue_orchid", "minCount": 3, "maxCount": 6}
+  ],
+  "rewards": [
+    {"item": "minecraft:emerald", "minCount": 2, "maxCount": 5},
+    {"item": "minecraft:lapis_lazuli", "minCount": 3, "maxCount": 6}
+  ]
+}

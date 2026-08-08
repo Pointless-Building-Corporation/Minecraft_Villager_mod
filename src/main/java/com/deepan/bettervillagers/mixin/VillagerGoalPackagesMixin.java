@@ -31,4 +31,11 @@ public class VillagerGoalPackagesMixin {
         list.add(Pair.of(8, new SitOnFurnitureBehavior()));
         cir.setReturnValue(ImmutableList.copyOf(list));
     }
+
+    @Inject(method = "getWorkPackage", at = @At("RETURN"), cancellable = true)
+    private static void bettervillagers$addPostBountyToWork(VillagerProfession profession, float speed, CallbackInfoReturnable<ImmutableList<Pair<Integer, ? extends Behavior<? super Villager>>>> cir) {
+        List<Pair<Integer, ? extends Behavior<? super Villager>>> list = new ArrayList<>(cir.getReturnValue());
+        list.add(Pair.of(2, new com.deepan.bettervillagers.quest.PostBountyBehavior()));
+        cir.setReturnValue(ImmutableList.copyOf(list));
+    }
 }

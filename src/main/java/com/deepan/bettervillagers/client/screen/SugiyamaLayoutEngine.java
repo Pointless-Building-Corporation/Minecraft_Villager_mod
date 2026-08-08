@@ -17,7 +17,7 @@ public class SugiyamaLayoutEngine {
     private static final int NODE_HEIGHT = 42;
     private static final int ROOT_WIDTH = 136;
     private static final int ROOT_HEIGHT = 52;
-    private static final int GAP = 48; // Spacing between nodes horizontally
+    private static final int GAP = 72; // Spacing between nodes horizontally
     
     public record LayoutNode(UUID id, String name, int band, boolean root) {}
     public record LayoutEdge(UUID fromId, UUID toId) {}

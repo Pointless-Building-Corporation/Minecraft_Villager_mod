@@ -1,0 +1,5 @@
+{
+  "biomes": ["minecraft:plains"],
+  "title": "Grovekeeper",
+  "texturePath": "bettervillagers:textures/gui/wildwood.png"
+}

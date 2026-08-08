@@ -54,6 +54,11 @@ public class BetterVillagers {
 
     public static final DeferredItem<Item> DNA_ANALYZER = ITEMS.register("dna_analyzer", () -> new DnaAnalyzerItem(new Item.Properties().stacksTo(1)));
 
+    // Quest System
+    public static final DeferredBlock<Block> QUEST_BOARD = BLOCKS.register("quest_board", () -> new com.deepan.bettervillagers.quest.QuestBoardBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0f)));
+    public static final DeferredItem<Item> QUEST_BOARD_ITEM = ITEMS.register("quest_board", () -> new BlockItem(QUEST_BOARD.get(), new Item.Properties()));
+
+
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public BetterVillagers(IEventBus modEventBus, ModContainer modContainer) {
@@ -68,6 +73,9 @@ public class BetterVillagers {
         ITEMS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
         CREATIVE_MODE_TABS.register(modEventBus);
+        
+        // Register Attachments
+        com.deepan.bettervillagers.network.ModAttachments.ATTACHMENT_TYPES.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (BetterVillagers) to respond directly to events.
@@ -77,6 +85,7 @@ public class BetterVillagers {
 
         ModVillagers.register(modEventBus);
         com.deepan.bettervillagers.entity.ModEntities.register(modEventBus);
+        com.deepan.bettervillagers.quest.ModQuests.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -88,7 +97,7 @@ public class BetterVillagers {
     private void commonSetup(FMLCommonSetupEvent event) {
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
-
+        
         if (Config.LOG_DIRT_BLOCK.getAsBoolean()) {
             LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
         }
@@ -101,6 +110,7 @@ public class BetterVillagers {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(DNA_ANALYZER);
+            event.accept(QUEST_BOARD_ITEM);
         }
     }
 
@@ -125,6 +135,29 @@ public class BetterVillagers {
         event.setCancellationResult(net.minecraft.world.InteractionResult.SUCCESS);
         if (!event.getLevel().isClientSide() && event.getEntity() instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
             DnaAnalyzerItem.analyzeVillager(serverPlayer, villager);
+        }
+    }
+
+    @SubscribeEvent
+    public void onQuestGiverInteract(PlayerInteractEvent.EntityInteract event) {
+        if (!(event.getTarget() instanceof net.minecraft.world.entity.npc.Villager villager)) {
+            return;
+        }
+
+        if (villager.getVillagerData().getProfession() == ModVillagers.GUILD_MASTER.get()) {
+            event.setCanceled(true);
+            event.setCancellationResult(net.minecraft.world.InteractionResult.sidedSuccess(event.getLevel().isClientSide));
+        }
+
+        if (!event.getLevel().isClientSide() && event.getEntity() instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
+            // Determine theme based on villager type
+            String themeId = net.minecraft.core.registries.BuiltInRegistries.VILLAGER_TYPE.getKey(villager.getVillagerData().getType()).getPath();
+            
+            // Generate and send the dynamic dialogue payload
+            net.neoforged.neoforge.network.PacketDistributor.sendToPlayer(
+                    serverPlayer, 
+                    com.deepan.bettervillagers.quest.server.DialogueManager.generatePayload(serverPlayer, villager, themeId)
+            );
         }
     }
 

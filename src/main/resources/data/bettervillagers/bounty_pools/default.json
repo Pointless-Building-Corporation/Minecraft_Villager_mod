@@ -1,0 +1,14 @@
+{
+  "objectives": [
+    {"item": "minecraft:wheat", "minCount": 10, "maxCount": 20},
+    {"item": "minecraft:carrot", "minCount": 8, "maxCount": 16},
+    {"item": "minecraft:potato", "minCount": 8, "maxCount": 16},
+    {"item": "minecraft:beetroot", "minCount": 6, "maxCount": 12},
+    {"item": "minecraft:apple", "minCount": 5, "maxCount": 10},
+    {"item": "minecraft:hay_block", "minCount": 3, "maxCount": 6}
+  ],
+  "rewards": [
+    {"item": "minecraft:emerald", "minCount": 2, "maxCount": 5},
+    {"item": "minecraft:golden_carrot", "minCount": 1, "maxCount": 3}
+  ]
+}

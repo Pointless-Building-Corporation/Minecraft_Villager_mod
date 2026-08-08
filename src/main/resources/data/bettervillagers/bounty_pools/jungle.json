@@ -1,0 +1,13 @@
+{
+  "objectives": [
+    {"item": "minecraft:jungle_log", "minCount": 10, "maxCount": 20},
+    {"item": "minecraft:cocoa_beans", "minCount": 8, "maxCount": 16},
+    {"item": "minecraft:melon_slice", "minCount": 10, "maxCount": 20},
+    {"item": "minecraft:bamboo", "minCount": 12, "maxCount": 24},
+    {"item": "minecraft:tropical_fish", "minCount": 3, "maxCount": 6}
+  ],
+  "rewards": [
+    {"item": "minecraft:emerald", "minCount": 3, "maxCount": 6},
+    {"item": "minecraft:diamond", "minCount": 1, "maxCount": 2}
+  ]
+}

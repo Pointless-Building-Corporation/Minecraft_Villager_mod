@@ -1,0 +1,15 @@
+{
+  "text": "The trees spoke your name. They warned me of you. I hoped they were wrong.",
+  "choices": [
+    {
+      "text": "What do they want?",
+      "nextNodeId": "explain",
+      "action": "NONE"
+    },
+    {
+      "text": "Here is my bounty.",
+      "nextNodeId": "reward",
+      "action": "TURN_IN_BOUNTY"
+    }
+  ]
+}

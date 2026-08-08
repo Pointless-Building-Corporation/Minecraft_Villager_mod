@@ -1,0 +1,14 @@
+{
+  "objectives": [
+    {"item": "minecraft:snowball", "minCount": 16, "maxCount": 32},
+    {"item": "minecraft:packed_ice", "minCount": 4, "maxCount": 8},
+    {"item": "minecraft:blue_ice", "minCount": 2, "maxCount": 4},
+    {"item": "minecraft:sweet_berries", "minCount": 8, "maxCount": 16},
+    {"item": "minecraft:cod", "minCount": 5, "maxCount": 10},
+    {"item": "minecraft:salmon", "minCount": 5, "maxCount": 10}
+  ],
+  "rewards": [
+    {"item": "minecraft:emerald", "minCount": 2, "maxCount": 5},
+    {"item": "minecraft:iron_ingot", "minCount": 2, "maxCount": 4}
+  ]
+}
