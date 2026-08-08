@@ -95,7 +95,7 @@ public class DnaAnalyzerScreen extends Screen {
             guiGraphics.renderOutline(positionedNode.left(), positionedNode.top(), positionedNode.width(), positionedNode.height(), relColor);
             guiGraphics.fill(positionedNode.left() + 6, positionedNode.top() + 6, positionedNode.right() - 6, positionedNode.top() + 8, relColor);
 
-            guiGraphics.drawCenteredString(this.font, Component.literal(trimText(node.name(), node.root() ? 16 : 13)),
+            guiGraphics.drawCenteredString(this.font, Component.literal(trimText(node.name(), node.root() ? 22 : 18)),
                 positionedNode.centerX(), positionedNode.top() + 12, TEXT_COLOR);
             guiGraphics.drawCenteredString(this.font, Component.literal(trimText(node.relation(), 16)),
                 positionedNode.centerX(), positionedNode.top() + (node.root() ? 26 : 22), relColor);
