@@ -1,0 +1,204 @@
+{
+  "guild_master": {
+    "greetings": [
+      "Namaste! Did you bring chai? No? Then what are you doing here?",
+      "Ah, the hero arrives. Please tell me you didn't step on my rangoli outside.",
+      "Welcome. I have foreseen your arrival using ancient Vedic astrology... and also because I saw you sprinting past the iron golem."
+    ],
+    "reward": "Take these emeralds. Do not spend them all on spicy panipuri, it will ruin your digestion."
+  },
+  "professions": {
+    "farmer": [
+      "You think farming is easy? Try growing wheat during the monsoon. It's basically underwater basket weaving.",
+      "My friend, these carrots have enough spice to make an Enderman cry.",
+      "Do not touch my beetroot. It is a sacred family heirloom from the Harappan civilization.",
+      "I asked the iron golem to plow the field. Now I have a crater.",
+      "The crows here are fearless. Yesterday one stole my turban and flew to the village center.",
+      "If you chew enough sugarcane, you don't need a dentist. This is ayurvedic fact.",
+      "The universe is an illusion, but this potato is very real and it costs three emeralds.",
+      "I am trying to crossbreed wheat with ginger. The result will be explosive.",
+      "You want a discount? Do I look like a charity? The monsoon was bad this year!",
+      "I have dedicated my life to the soil. And the soil has dedicated its life to ruining my sandals."
+    ],
+    "fisherman": [
+      "I caught a fish so big yesterday, I had to register it for a PAN card.",
+      "The waters of this river are sacred. Please stop throwing your cobblestone into it.",
+      "You call that a fishing rod? My grandmother could catch a whale with a piece of string and a samosa.",
+      "I do not fear the Drowned. I fear my mother-in-law when I return with no fish.",
+      "Would you like some Hilsa fish? It has more bones than a skeleton spawner, but the taste is divine.",
+      "This salmon traveled all the way from the Himalayas just to be sold to you for one emerald. Appreciate its journey.",
+      "Pufferfish? We just call it the spicy balloon of the sea.",
+      "I meditate by the river to achieve inner peace. Also, it's a great excuse to avoid chores.",
+      "I once saw a tiger drinking from the river. I offered it a fish. We are bros now.",
+      "Death is inevitable, but a good fish curry makes the wait enjoyable."
+    ],
+    "shepherd": [
+      "These sheep are not just wool, they are my children. Now buy their sweaters or leave.",
+      "I tried feeding them turmeric to get yellow wool. It just made them sneeze violently.",
+      "Do not look the pink sheep directly in the eyes. It knows your sins.",
+      "Have you tried counting sheep to sleep? I tried, but they keep arguing with me in Marathi.",
+      "I shear them, they grow it back. It is the endless cycle of Samsara.",
+      "My neighbor's cows think they are better than my sheep just because they are holy. Pretentious bovines.",
+      "This wool is softer than a Bollywood romance.",
+      "I charge extra for the white wool because it shows stains. It is a premium feature.",
+      "If a creeper blows up near my flock again, I will personally complain to the village panchayat.",
+      "The silence of the pasture is deafening. It reminds me of the vast emptiness of the cosmos."
+    ],
+    "fletcher": [
+      "You want arrows? I make them with the precision of Vedic mathematics. Zero errors.",
+      "These feathers came from a chicken that survived three lightning strikes. It is very auspicious.",
+      "I can shoot an apple off a zombie's head. I haven't done it, but I can.",
+      "Buy a bow, or I will start reciting my poetry. Your choice.",
+      "An arrow is a meditation on focus. Also, it's pointy and hurts.",
+      "I used bamboo for this shaft. Very eco-friendly, very sustainable. Five emeralds.",
+      "Do not aim this at the cows. I repeat, DO NOT aim this at the cows.",
+      "I once tried to make an arrow out of sugarcane. It was delicious but aerodynamically tragic.",
+      "You miss 100% of the shots you don't take. And 90% of the ones you do take with this lag.",
+      "The path of the arrow is predetermined by karma. Aiming is just a formality."
+    ],
+    "cleric": [
+      "I have brewed a potion that cures all ailments! Side effects include glowing in the dark and sudden urges to dance.",
+      "This redstone has the energy of a thousand chakras. Be careful.",
+      "I asked the gods for wisdom, and they gave me a brewing stand. I think they misunderstood.",
+      "You look cursed. Have you tried rubbing turmeric on it?",
+      "I do not deal in black magic. Unless you have 64 emeralds, then we can talk.",
+      "My lapis lazuli is sourced directly from the heavens. Or a cave, I forget.",
+      "The zombie infection is just a severe dosha imbalance. Drink this spicy kadha.",
+      "I sense a disturbance in your aura. You haven't paid your taxes, have you?",
+      "To transcend the mortal coil, one must first consume this suspicious stew.",
+      "We are all just villagers in the great simulation of life. But my potions are real."
+    ],
+    "weaponsmith": [
+      "This sword was folded one thousand times. Just like my laundry. Not at all.",
+      "A good sword is like a good curry. Sharp, heavy, and leaves your enemies crying.",
+      "I sell axes too. Perfect for chopping wood or settling family disputes over land.",
+      "Do you think swords are violent? It is merely a tool for aggressive negotiations.",
+      "I enchanted this sword with 'Bane of Arthropods'. Because I really hate mosquitoes.",
+      "An iron sword for iron men. But please keep it away from magnets.",
+      "I once crafted a sword so sharp, it cut through the fabric of reality and hit a pig in the next chunk.",
+      "You wield that sword like you are stirring a giant pot of biryani. Put some wrist into it!",
+      "The blade reflects the soul of the wielder. Yours looks a bit rusty.",
+      "Every swing is a dance with death. Make sure you lead."
+    ],
+    "armorer": [
+      "This chestplate will protect you from skeletons, creepers, and the judgmental stares of aunties.",
+      "Iron armor gets so hot in the summer, you can fry a jalebi on it.",
+      "I recommend the chainmail. It provides excellent ventilation for the monsoon humidity.",
+      "Why wear diamond when you can wear iron? Iron builds character. And back pain.",
+      "This helmet is guaranteed to protect your head. Your ego, however, is on its own.",
+      "I once made a full suit of armor out of gold. Then I realized I couldn't walk. Very shiny mistake.",
+      "A warrior without armor is just a very confident snack for a zombie.",
+      "I polish these boots with pure ghee. They smell amazing, but ants are a problem.",
+      "You must protect your vital organs. Specifically your stomach, for more samosas.",
+      "Armor cannot protect you from the inevitable decay of all things. But it helps against arrows."
+    ],
+    "toolsmith": [
+      "A good pickaxe is a miner's best friend. A bad pickaxe is a fast track to a lava bath.",
+      "I made this shovel extra wide so you can dig yourself out of the holes you talk yourself into.",
+      "Do not use my hoes for combat. Have some respect for the agricultural arts.",
+      "This axe is so sharp it chopped down a tree before I even swung it. It's very proactive.",
+      "I forged this iron in the flames of a spicy vindaloo. It is unbreakable.",
+      "A tool is only as smart as the villager using it. I am not offering a warranty.",
+      "I once tried to mine obsidian with a wooden pickaxe. It taught me the true meaning of patience.",
+      "Buy a shovel. Bury your regrets. It's highly therapeutic.",
+      "The rhythmic sound of mining is the heartbeat of the earth. Don't ruin it by breaking your pickaxe.",
+      "Creation and destruction are two sides of the same coin. This pickaxe does both."
+    ],
+    "butcher": [
+      "I only sell ethically sourced, free-range, grass-fed... oh who am I kidding, it's just pork.",
+      "Do you want that chopped, sliced, or minced into a fine paste suitable for a kebab?",
+      "I had a pet pig once. We don't talk about what happened to him.",
+      "My mutton curry is legendary. It has brought grown men to tears. Mostly because of the chili.",
+      "Do not ask me where the chicken went. The chicken has ascended to a higher plane of deliciousness.",
+      "I wield this cleaver with the precision of a classical Kathak dancer.",
+      "If you bring me a rabbit, I will make you a stew that makes you forget your own name.",
+      "Vegetarians fear me. Vegans run from me. Cows... well, cows are safe.",
+      "The flesh is weak, but the barbecue is strong.",
+      "Every life must end, but not every life gets to be seasoned so perfectly."
+    ],
+    "leatherworker": [
+      "This leather is so fine, it feels like the silk of a maharajah's pajamas.",
+      "I made these pants out of a very aggressive cow. You can feel the anger in the stitching.",
+      "Leather armor is not for protection. It is for making a fashion statement in the forest.",
+      "I tried making a leather umbrella for the monsoon. It just got soggy and smelled like wet dog.",
+      "Do you want it dyed? I have red, blue, and 'mysterious brown stain'.",
+      "A good saddle is the difference between riding a horse and being violently thrown into a ravine.",
+      "I work with leather because working with iron is too loud and gives me a headache.",
+      "These boots are made for walking. Specifically, walking away from my ex-wife.",
+      "The hide remembers the shape of the beast. Wear it with reverence.",
+      "Skin is just the boundary between the self and the universe. I just tan it."
+    ],
+    "mason": [
+      "You want stone? I have stone. Big stone, small stone, square stone. Don't ask for round stone, are you crazy?",
+      "I chisel each block by hand. My fingers are basically made of granite now.",
+      "Do not build your house with dirt. Have some self-respect. Use polished diorite.",
+      "I was going to build a Taj Mahal, but I ran out of quartz. So I built a well instead.",
+      "The structural integrity of this brick is guaranteed. If it breaks, you broke it.",
+      "I find carving stone very relaxing. Except when I hit my thumb with the hammer. Then I invent new curse words.",
+      "Terracotta is the future. It is mud, but baked! Genius!",
+      "I can make a statue of you, but it will cost extra for the nose. Noses are hard.",
+      "A building without a strong foundation is like a curry without salt. Tragic.",
+      "We are all just dust and clay, trying to form ourselves into something permanent."
+    ],
+    "cartographer": [
+      "I have mapped the known world. It is mostly water, dirt, and creepers.",
+      "Do not ask me for directions to your house. I only map things that are important.",
+      "This map is 100% accurate, except for the parts I made up because I was scared to go there.",
+      "I once got lost in my own village. That's when I realized the importance of good signage.",
+      "The compass always points to the world spawn. I find this philosophically troubling.",
+      "I sell maps to hidden treasures. The real treasure, of course, is the emeralds you give me.",
+      "I tried to map the monsoon clouds. They did not stay still. Very unprofessional.",
+      "A map is a window to the world. Don't smudge the glass with your greasy fingers.",
+      "You are here. But where is 'here' really? Existentially speaking.",
+      "The lines on a map are arbitrary borders drawn by mortals to pretend they have control."
+    ],
+    "librarian": [
+      "Shhh! This is a library! Keep your block-placing noises down!",
+      "I have read every book here. Most of them are just pages of 'hurr durr' written by my cousin.",
+      "Enchanted books are very dangerous. Do not read them backwards, you will summon a tax collector.",
+      "I charge late fees in emeralds. Do not test me, I know a guy with a sword.",
+      "This book contains the ancient secrets of Vedic mathematics. It will help you calculate how broke you are.",
+      "Knowledge is power. And power is expensive. Pay up.",
+      "I once tried to write a novel. It was about a brave villager who never traded a single item. Tragic ending.",
+      "The paper is made from the finest sugarcane. Please do not chew on it.",
+      "A library is a temple of the mind. Please wipe your boots.",
+      "All words are just attempts to describe the indescribable silence of the void."
+    ],
+    "nitwit": [
+      "I am not lazy, I am conserving my kinetic energy.",
+      "They call me a nitwit, but I am the only one who has figured out that work is a scam.",
+      "I watched a grass block turn into dirt today. It was a very productive morning.",
+      "Do you have any snacks? Being unemployed makes me very hungry.",
+      "I am currently meditating on the philosophical implications of the word 'Hmm'.",
+      "My mother says I have potential. I am keeping it hidden so nobody steals it.",
+      "I tried getting a job once. The uniform was itchy. Never again.",
+      "If you stand still long enough, the villagers forget you are there. It's my superpower.",
+      "The iron golem is my best friend. He never asks me what I'm doing with my life.",
+      "Why strive for greatness when you can achieve perfect mediocrity with zero effort?"
+    ],
+    "none": [
+      "I am looking for a profession. Do you know anyone hiring a professional cloud-watcher?",
+      "I am currently unemployed, but my resume is very strong. I can open doors AND close them.",
+      "I am thinking of becoming a cleric, but the glowing potions give me a headache.",
+      "Just waiting for someone to place a workstation. Any workstation. Please.",
+      "I have an entrepreneurial spirit, but zero capital and zero skills.",
+      "Do you think there's a market for selling imported sand to the desert villagers?",
+      "I spend my days wandering aimlessly. It is a form of active mindfulness.",
+      "I am the blank slate upon which the village writes its destiny.",
+      "Unemployment is just a prolonged period of self-discovery.",
+      "Without a profession, I am undefined. I am infinite potential. I am also very broke."
+    ]
+  },
+  "generic": [
+    "Have you had your chai yet? The day cannot begin without chai.",
+    "The monsoon is coming. I can feel it in my left knee.",
+    "Do you want to buy some spices? No? Your food must be very sad.",
+    "I heard the iron golem is unionizing. Things are getting tense.",
+    "Ah, a traveler. Bring news from the outside world, or just bring emeralds.",
+    "Please do not run in the village, it disturbs the cows.",
+    "My astrologer said today would be a profitable day. Do not prove him wrong.",
+    "The mosquitoes here are the size of bats. Beware.",
+    "Life is a journey, not a destination. But the destination better have a bed.",
+    "In the grand cosmic dance of Shiva, your existence is but a fleeting spark. Want to trade?"
+  ]
+}

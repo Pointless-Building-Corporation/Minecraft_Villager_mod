@@ -167,4 +167,9 @@ public class BetterVillagers {
             com.deepan.bettervillagers.villager.VillagerGenealogySavedData.get(serverLevel).markHistorical(villager);
         }
     }
+
+    @SubscribeEvent
+    public void onAddReloadListeners(net.neoforged.neoforge.event.AddReloadListenerEvent event) {
+        event.addListener(new com.deepan.bettervillagers.quest.data.RegionDialogueManager());
+    }
 }

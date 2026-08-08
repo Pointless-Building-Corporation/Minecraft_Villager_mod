@@ -72,7 +72,8 @@ public class VillagerGenealogySavedData extends SavedData {
                 .comparingInt((RelationNode node) -> relationPriority(node.relation()))
                 .thenComparingInt(RelationNode::band)
                 .thenComparing(RelationNode::path)
-                .thenComparing(RelationNode::name))
+                .thenComparing(RelationNode::name)
+                .thenComparing(RelationNode::genealogyId))
             .toList();
 
         Map<Integer, Integer> bandCounts = new HashMap<>();

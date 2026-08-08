@@ -23,7 +23,7 @@ public class BountyPoolManager extends SimpleJsonResourceReloadListener {
     private final Random random = new Random();
 
     public BountyPoolManager() {
-        super(GSON, "bettervillagers/bounty_pools");
+        super(GSON, "bounty_pools");
     }
 
     @Override

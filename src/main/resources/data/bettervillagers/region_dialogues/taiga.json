@@ -1,0 +1,203 @@
+{
+  "guild_master": {
+    "greetings": [
+      "Welcome, comrade! Come warm your bones by the fire, unless you are a spy from the Plains.",
+      "Ah, a visitor. I was just about to wrestle a bear, but I suppose business comes first."
+    ],
+    "reward": "Here is your reward. Do not spend it all on fermented spider eye kvass."
+  },
+  "professions": {
+    "farmer": [
+      "The dirt here is frozen solid eight months a year. We grow potatoes with pure willpower.",
+      "Ah, beetroot. The red blood of the earth. We boil it, we mash it, we stare at it sadly.",
+      "Last night I caught a zombie trying to eat my carrots. I handed him a hoe. We work together now.",
+      "The crops are meager this year. The Baba Yaga cursed my compost bin.",
+      "You want bread? I have bread. It is hard as cobblestone, perfect for throwing at pillagers.",
+      "I tried growing watermelons once. The cold snapped them like glass. We still speak of the Great Melon Disaster.",
+      "This potato looks like my grandfather. He also lived in the dirt and was very quiet.",
+      "Farming is simple. You put seed in ground. Ground rejects seed. You cry. Ground thaws.",
+      "A creeper exploded near my wheat. Free fertilizer! I am a genius of agriculture.",
+      "The frost approaches. The harvest must end. Only the strongest potatoes will survive."
+    ],
+    "fisherman": [
+      "I sat on the ice for three days. I caught a boot. It was a very good boot.",
+      "The salmon here are aggressive. They have seen things. Terrible things.",
+      "I offer you this raw cod. Do not ask how I caught it without a rod. We do not speak of the Bear Technique.",
+      "The water is cold enough to freeze your soul. Good thing I sold mine for an enchanted fishing rod.",
+      "Sometimes I pull up a pufferfish. I use them as pillows. Very firm.",
+      "A drowned tried to pull me in yesterday. I offered him some kvass. We are pen pals now.",
+      "The secret to fishing in the taiga? Threaten the ice hole until the fish surrender.",
+      "I caught a magic fish once. It granted me three wishes. I wished for more fish. It slapped me.",
+      "You think you know patience? Try waiting for a bite while a stray dog is chewing on your leg.",
+      "The river gives, and the river takes. Mostly, it takes my bobbers."
+    ],
+    "shepherd": [
+      "My sheep are not fat. They wear thick wool to hide their existential dread.",
+      "I sheared a sheep in the middle of winter. It gave me a look that haunts my dreams.",
+      "Do not look the pink sheep in the eyes. It knows your sins.",
+      "We sleep in the barn with the flock. It is warm, and they give excellent relationship advice.",
+      "I dyed this wool with beetroot. I dyed my hands with beetroot. Everything is beetroot.",
+      "The wolves are howling again. I told the sheep to form a phalanx. They just ate grass.",
+      "A sheep is merely a cloud that has given up on flying and decided to eat weeds.",
+      "I knit a sweater for the Iron Golem. He is very self-conscious about his shoulders.",
+      "You want white wool? How boring. Have you considered... slightly gray wool?",
+      "The silence of the pasture is deafening. Or maybe I just have wool in my ears."
+    ],
+    "fletcher": [
+      "I make the arrows straight. If you miss, it is because your soul is crooked.",
+      "This bow is made from the finest spruce. The string is made from spider silk and pure spite.",
+      "Feathers are hard to find. Have you tried asking the chickens politely? They are very unreasonable.",
+      "An arrow to the knee? Please. In the taiga, we take arrows to the face and ask for seconds.",
+      "I tipped these arrows with slowness. Perfect for escaping your responsibilities.",
+      "Fletching is an art. An art that primarily involves gluing feathers to sticks.",
+      "Do not point that at me. I have a very specific set of skills involving flint and gravel.",
+      "A good archer needs a good bow. A bad archer needs a lot of apologies.",
+      "The skeletons keep stealing my designs. I am considering a lawsuit in the Nether courts.",
+      "Precision. Focus. Release. Then run away very fast if you miss the creeper."
+    ],
+    "cleric": [
+      "I brew potions in a cauldron that used to be my grandmother's bathtub. The magic is potent.",
+      "Redstone is the blood of the earth. Lapis is its tears. And emeralds? Pure capitalism.",
+      "I offer healing potions, mostly to cure hangovers from too much fermented spider eye.",
+      "The spirits of the forest are angry today. Perhaps you should buy some glowstone to appease them.",
+      "Do not drink the potion of invisibility. Last time a man did, we still can't find his left shoe.",
+      "I bless this village with rotten flesh and spider eyes. Truly, the divine works in mysterious ways.",
+      "Have you seen the witch in the swamp? She owes me three emeralds and a brewing stand.",
+      "The brewing process requires absolute silence. And occasionally, a bit of aggressive yelling at the nether wart.",
+      "Ender pearls? I use them to skip the line at the bakery. It is highly efficient.",
+      "The void stares back. But if you hold up a gold ingot, it usually blinks first."
+    ],
+    "weaponsmith": [
+      "My swords are sharp enough to cut the winter wind. Or at least slice a very hard loaf of bread.",
+      "An axe is not just a tool. It is a highly aggressive diplomatic instrument.",
+      "You want a diamond sword? In this economy? Take this iron one and hit things harder.",
+      "I quench my blades in the tears of creepers. It adds a certain... explosive temper.",
+      "A good sword is like a good friend. It is heavy, dangerous, and occasionally falls on your foot.",
+      "I sold a sword to a zombie once. He paid in rotten flesh. Worst trade deal in the history of trades.",
+      "The secret to a sharp edge? Grindstone, patience, and thinking about people who owe you money.",
+      "Do not ask for a magic sword. I hit metal with a hammer. I am not a wizard, comrade.",
+      "This blade has a slight curve. It is for striking around corners. Very tactical.",
+      "Steel, fire, and sweat. And a lot of complaining about the price of coal."
+    ],
+    "armorer": [
+      "Iron armor? Good choice. It will make a very loud noise when the ravager steps on you.",
+      "I forge the chestplates to accommodate thick winter coats. Comfort is key when you are being shot at.",
+      "Chainmail is excellent. It breathes well, and lets the arrows directly into your vital organs.",
+      "A shield is just a door you carry with you. Very practical for unexpected guests.",
+      "You want diamond armor? Who do you think you are, the Tsar of the Overworld?",
+      "I make helmets that protect the head, but sadly, they do not protect against bad decisions.",
+      "The best defense is a good offense. But the second best defense is three inches of solid iron.",
+      "Leggings are the most difficult to forge. Getting the knees right is a nightmare of geometry.",
+      "Do not wear gold armor in a thunderstorm. You will become a very shiny, very dead lightning rod.",
+      "Armor is heavy. Life is heavy. Wear both with pride."
+    ],
+    "toolsmith": [
+      "A good pickaxe can break obsidian. A bad pickaxe can break your spirit.",
+      "I sell shovels. Because eventually, everyone needs to dig a hole and hide.",
+      "The hoe is the most disrespected tool. But who do you cry to when you want bread? Exactly.",
+      "Do not use a diamond pickaxe on dirt. It is insulting to me, to the diamond, and to the dirt.",
+      "My tools are guaranteed to last a lifetime. Assuming your lifetime is roughly 250 blocks of durability.",
+      "I tried inventing a tool that mines and chops wood at the same time. It exploded. We do not speak of it.",
+      "An iron axe for your woodcutting needs. Also good for shaving, if you are extremely brave.",
+      "The village idiot tried to eat a piece of flint yesterday. I told him it needed more salt.",
+      "I dream of a pickaxe that mines straight to the diamonds. Then I wake up and hit rock.",
+      "Work hard. Mine deep. And always carry a bucket of water. Always."
+    ],
+    "butcher": [
+      "I have pork. I have beef. I have... mystery meat. Do not ask about the mystery meat.",
+      "The cold preserves the meat perfectly. Also preserves my hands, they have been numb since November.",
+      "A vegetarian? In the taiga? You are either very brave or very hungry.",
+      "I chased a pig for three miles in the snow. I respect it too much to sell it cheap.",
+      "Cooking meat on a campfire adds flavor. The flavor is mostly smoke and pine needles.",
+      "Have you tried the raw mutton? It builds character and a strong immune system.",
+      "The wolves wait outside my shop. We have an understanding. I give them bones, they don't eat me.",
+      "A good butcher knows his cuts. A great butcher knows how to hide the fact that he burnt the steak.",
+      "This chicken was raised on the finest seeds. And by finest, I mean whatever it found in the dirt.",
+      "Meat is life. Meat is power. But mostly, meat is just Tuesday dinner."
+    ],
+    "leatherworker": [
+      "Leather pants? In this cold? You will freeze your... well, everything.",
+      "I tan the hides with tree bark and sadness. The sadness makes the leather very supple.",
+      "A good saddle is essential. The pig will still ignore you, but you will look very stylish.",
+      "I made a leather hat for a snowman once. It melted. The hat, not the snowman. Very strange.",
+      "Item frames are my specialty. Perfect for displaying that one piece of dirt you are oddly proud of.",
+      "Dyeing leather is an art. Getting the dye out of my fingernails is impossible.",
+      "You want horse armor? Bring me a horse first. I need to measure its waistline.",
+      "The cows here are very stoic. They give up their leather with a quiet dignity.",
+      "Leather boots are good for sneaking. Squeak, squeak, squeak. Very stealthy.",
+      "A crafted tunic is like a hug from a dead cow. Warm and slightly disturbing."
+    ],
+    "mason": [
+      "Stone is the only truth in this world. Wood burns. Dirt washes away. Stone just... sits there.",
+      "I cut the stone. I polish the stone. I talk to the stone. The stone is a very good listener.",
+      "Diorite? You want diorite? It looks like bird droppings! But fine, I will sell it to you.",
+      "Bricks are for people who think cobblestone is too 'rustic'. Snobs, all of them.",
+      "The Iron Golem accidentally stepped on my terracotta. Now it is 'abstract art'.",
+      "I build walls to keep the cold out. It doesn't work, but it makes me feel better.",
+      "A well-placed stair block can change a man's life. Or at least his roof.",
+      "Do not eat the clay. I know it looks like gray dough, but trust me. I have made this mistake.",
+      "The creepers blow up my walls. I rebuild them. It is a cycle of violence and masonry.",
+      "Granite, andesite, diorite. The holy trinity of inventory clutter."
+    ],
+    "cartographer": [
+      "I draw the maps. You get lost anyway. Such is the tragic cycle of my profession.",
+      "The taiga is vast and confusing. My maps are also confusing, but they cost emeralds.",
+      "You want a map to the woodland mansion? I hope you like walking. And axes to the face.",
+      "I accidentally spilled kvass on the map of the ocean. Now it looks like a very large swamp.",
+      "A compass points to spawn. My heart points to the nearest tavern.",
+      "Drawing trees on a map is tedious. Just imagine green blobs. Many, many green blobs.",
+      "The world is infinite, they say. I charge by the chunk, so I certainly hope so.",
+      "Do not fold the map in the wrong direction. You will fold space and time, and also ruin the paper.",
+      "I sold a map to a wandering trader once. He has been walking in circles for a week. Success!",
+      "X marks the spot. Mostly the spot where I spilled my ink, but it could be treasure."
+    ],
+    "librarian": [
+      "Books are windows to the soul. Sadly, most of my books are about crop rotation.",
+      "You want Mending? Bring me fifty emeralds and your firstborn child. Or just the emeralds, I am flexible.",
+      "Silence in the library! The paperfish are sleeping.",
+      "I read a book about the Nether once. It was very dry. The pages literally caught fire.",
+      "Enchanting is a delicate science. Mostly involving throwing lapis at a book and hoping for the best.",
+      "A bookshelf is not just decoration. It is a testament to how many trees you have murdered.",
+      "I have a book on how to survive a creeper explosion. Chapter one: Run.",
+      "The ink I use is made from squid. The squids are very displeased about this.",
+      "Knowledge is power. But a sharpness V book is significantly more power.",
+      "Do not return books with zombie stains. I will charge a very high late fee."
+    ],
+    "nitwit": [
+      "I was going to get a job, but then I found this really interesting stick.",
+      "They call me a nitwit. I prefer 'freelance philosopher of the snowy plains'.",
+      "Have you ever just stared at a block of dirt for six hours? Highly recommend it.",
+      "I tried sleeping in a bed in the Nether. It did not go well. Now I sleep here.",
+      "The Iron Golem gave me a poppy. I ate it. It tasted like metal and affection.",
+      "Work is for people who do not appreciate the subtle art of wandering aimlessly.",
+      "I saw a spider climbing a wall. I cheered for him. He is my best friend now.",
+      "Emeralds are shiny, but have you seen a really round snowball?",
+      "The village bell is too loud. I prefer the quiet sound of my own confusion.",
+      "One day, I will be the mayor. Until then, I will stand in this corner and hum."
+    ],
+    "none": [
+      "I am unemployed. It gives me more time to complain about the weather.",
+      "Do you have any jobs? I am very good at standing in doorways and blocking your path.",
+      "I am waiting for my calling. Hopefully it involves sitting by a fire and doing absolutely nothing.",
+      "I tried to be a farmer, but the dirt was too dirty. I have standards.",
+      "The guild master says I lack 'skills'. I say he lacks 'appreciation for my aura'.",
+      "I will trade you three pieces of unsolicited advice for one emerald.",
+      "Perhaps I will become an adventurer like you. Or perhaps I will just take a nap.",
+      "Wandering around looking busy is a full-time job in itself.",
+      "I watched a villager turn into a zombie. It seemed like a lot of effort for very little pay.",
+      "Life is a blank canvas. I am currently staring at it and waiting for someone else to paint."
+    ]
+  },
+  "generic": [
+    "The nights are long, but the kvass is strong. We survive.",
+    "Did you hear the howling last night? Probably just the wind. Or a werewolf. 50/50 chance.",
+    "Keep your doors closed. The snow is cold, and the zombies are surprisingly rude.",
+    "I saw Baba Yaga's hut in the woods. The chicken legs looked very muscular.",
+    "Ah, traveler. You look like you need a bath and a very large potato.",
+    "The Iron Golem is brooding again. I think he is composing poetry about iron ingots.",
+    "Do not step on the ice if it cracks. Unless you want to meet the salmon personally.",
+    "We are simple people. We like our trees tall, our winters harsh, and our trades slightly unfair.",
+    "The stars are beautiful tonight. Almost makes you forget about the imminent threat of exploding green monsters.",
+    "Welcome to our village. Please do not punch the locals. We hit back with bad trades."
+  ]
+}

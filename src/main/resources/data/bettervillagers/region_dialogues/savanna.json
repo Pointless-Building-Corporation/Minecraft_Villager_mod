@@ -1,0 +1,204 @@
+{
+  "guild_master": {
+    "greetings": [
+      "Welcome, traveler, to the heart of the savanna! The spirits brought you here, or maybe you just got lost.",
+      "Ah, a visitor! Come, sit by the fire and hear the tales of our people, after you pay the entrance fee.",
+      "The ancestors foresaw your arrival. They said you'd be taller."
+    ],
+    "reward": "The tribe honors your deeds! Take this artifact, blessed by the rain gods and my grandmother."
+  },
+  "professions": {
+    "farmer": [
+      "The ancestors whispered to me last night... they said 'plant more carrots'.",
+      "My acacia hoe is unbreakable, much like my spirit when a creeper blew up my crops.",
+      "I offer these beetroots to the spirits of the rain. Please, we need precipitation, not more zombie groans.",
+      "Some say I talk to my wheat. I say, my wheat gives better advice than the Nitwit.",
+      "If a lion eats my sheep, I am sad. If a ravager eats my crops, I am going to war.",
+      "The sun is hot, but my compost bin is hotter. Literally, it's smoking. Help.",
+      "You cannot hurry the harvest, but you can certainly hurry away from a spider.",
+      "A wise elder once told me: never trust a man who prefers poisonous potatoes.",
+      "This melon? Grown on the sacred grounds of my forefathers. Ten emeralds.",
+      "I am the master of the savanna soil. Tremble before my... pumpkins."
+    ],
+    "fisherman": [
+      "The watering hole is full of crocodiles, hippos, and exactly three cod.",
+      "I fished up a leather boot. I believe it belonged to my great-grandfather.",
+      "The spirits of the river demand a sacrifice. I offered them a stick.",
+      "A true fisherman does not need a rod, only patience. And maybe a rod. Actually, yes, sell me a rod.",
+      "I stare at the water until it gives me fish. It is a battle of wills.",
+      "I once caught a fish so big, it swallowed a baby zombie. True story.",
+      "The crocodiles respect me. The salmon, however, are deeply insolent.",
+      "Fishing under the acacia tree is peaceful, until the pillagers start shooting.",
+      "May your nets be full and your boat un-exploded.",
+      "This tropical fish holds the wisdom of a thousand generations. Don't eat it."
+    ],
+    "shepherd": [
+      "My sheep are not just wool providers; they are my tribe.",
+      "I sheared a sheep, and beneath the wool... was another, angrier sheep.",
+      "The lions look at my flock with hunger. I look at the lions with a pair of shears.",
+      "An elder told me counting sheep helps you sleep. It only helps me calculate my profits.",
+      "Wool of orange, wool of brown, matching the savanna sun going down.",
+      "Keep your voice low. The sheep are discussing the philosophy of grass.",
+      "I trade wool for emeralds. I trade emeralds for more sheep. It's the circle of life.",
+      "Have you ever tried to dye a sheep while it's running? It requires ancestral guidance.",
+      "The ancestors watch over my flock. Except when it rains, then they go inside.",
+      "A sheared sheep is a cold sheep, but a wealthy shepherd is a happy shepherd."
+    ],
+    "fletcher": [
+      "My arrows fly straighter than a gazelle running from a cheetah.",
+      "I craft these bows from the finest acacia. They snap sometimes, but it builds character.",
+      "An arrow to the knee? Please, my ancestors took arrows to the face and kept farming.",
+      "Feathers from the sacred ostriches... wait, no, just regular chickens. Don't tell anyone.",
+      "I put flint on a stick and charge you emeralds. I am an economic genius.",
+      "The spirits guide my aim. That's my excuse when I miss the target completely.",
+      "Buy my arrows, or I will use them for target practice. You are the target.",
+      "A bow without arrows is just a very inconvenient curved stick.",
+      "May your aim be true and your string never snap in front of a skeleton.",
+      "I once shot an arrow so far, it hit the sun. That's why it gets dark at night."
+    ],
+    "cleric": [
+      "The spirits of the savanna demand flesh! Rotten flesh, specifically. Two emeralds for ten.",
+      "I brew potions using the tears of my enemies and some nether wart.",
+      "The ancestors speak to me. Mostly they complain about my posture.",
+      "I can heal your wounds, but I cannot heal your terrible fashion sense.",
+      "Do not anger the spirits, or they will spawn a creeper in your house.",
+      "This glowstone dust contains the trapped souls of fireflies. Or so I tell the children.",
+      "I have stared into the void, and the void offered me a discount on ender pearls.",
+      "My lapis lazuli is blessed by the rain gods. It also stains everything blue.",
+      "Cleanse your spirit! And your inventory. Give me your gold.",
+      "A zombie villager is just a relative who hasn't had their morning coffee."
+    ],
+    "weaponsmith": [
+      "I forge swords sharp enough to slice the heat in half.",
+      "An iron sword is good, but a diamond sword shows you have financial responsibility.",
+      "The elders say violence is not the answer. They clearly never met a Ravager.",
+      "I heat my forge with the burning rage of a thousand suns. And some coal.",
+      "A dull blade is an insult to your ancestors. Buy a sharp one.",
+      "I once fought a lion with my bare hands. Then I learned to make swords.",
+      "My axes do not chop wood, they chop bad vibes.",
+      "May your blade never chip, and your enemies always drop good loot.",
+      "I sell weapons of mass destruction. Please use responsibly on zombies.",
+      "The spirits guide my hammer. Sometimes they guide it directly onto my thumb."
+    ],
+    "armorer": [
+      "My armor can withstand a rhino charge. I haven't tested it, but trust me.",
+      "Wearing iron in the savanna heat? You are either very brave or very foolish.",
+      "Diamond armor sparkles like the stars over the Serengeti.",
+      "I pounded this chestplate until my arms fell off. The spirits reattached them.",
+      "Protection from arrows, zombies, and the harsh judgment of your mother-in-law.",
+      "A shield is just a door you carry with you. Buy my portable doors!",
+      "The ancestors wore nothing but leather. The ancestors also died early. Buy iron.",
+      "If a creeper explodes and you're wearing my armor, you will be a very well-preserved corpse.",
+      "May your boots never wear out, and your helmet never fall off.",
+      "I make helmets that fit perfectly over your massive, blocky head."
+    ],
+    "toolsmith": [
+      "My pickaxes break rock, dirt, and occasionally, the laws of physics.",
+      "A good shovel is the difference between a house and a dirt hut.",
+      "I craft hoes of such quality, the dirt practically tills itself out of respect.",
+      "An iron axe? Good. A diamond axe? Now you're chopping with ancestral power.",
+      "The spirits told me to make tools. They didn't say who would buy them, but here you are.",
+      "My tools are guaranteed to last a lifetime. Unless you fall in lava.",
+      "A blunt pickaxe is a sign of a weak spirit. And a weak bank account.",
+      "I can fix your tools, but I can't fix your terrible mining habits.",
+      "May your tunnels be straight and your diamonds plentiful.",
+      "This flint and steel will burn your enemies, or your own house. Choose wisely."
+    ],
+    "butcher": [
+      "I respect the animals of the savanna. Then I turn them into porkchops.",
+      "The ancestors hunted with spears. I hunt with a very sharp cleaver and a corral.",
+      "Nothing beats a good steak cooked over an open acacia fire.",
+      "I have beef with everyone. Literally, I sell beef.",
+      "A moment of silence for the chickens. Okay, moment over, who wants nuggets?",
+      "My sausages are a secret tribal recipe. Mostly pig, maybe some mystery meat.",
+      "The spirits demand a feast! And I demand payment in emeralds.",
+      "I chop the meat with the fury of a thousand rhinos.",
+      "May your belly be full and your food poisoning nonexistent.",
+      "I once butchered a hoglin. The meat tasted like burning and regret."
+    ],
+    "leatherworker": [
+      "The hide of a cow, the spirit of a warrior, the fashion sense of a confused trader.",
+      "I tan this leather under the brutal savanna sun. It builds character. And smell.",
+      "Leather pants in this heat? You are making a bold choice, my friend.",
+      "I can make a saddle fit for a horse, a pig, or a particularly large child.",
+      "The ancestors wore leather. I dye it pink so they can't recognize me.",
+      "My horse armor will make your steed look magnificent, right before it walks into a ravine.",
+      "Dyeing leather is an art passed down through generations. Mostly involving squids.",
+      "May your boots never squeak when you are sneaking past a warden.",
+      "I sell the finest leather tunics. Perfect for sweating profusely.",
+      "I make leather items. Please stop asking if I have vegan options."
+    ],
+    "mason": [
+      "I take rocks and make them into slightly different shaped rocks.",
+      "Terracotta is the lifeblood of savanna architecture. And it looks pretty.",
+      "I stare at stone all day. Sometimes the stone stares back.",
+      "The spirits reside in the stones. I cut them into neat little bricks anyway.",
+      "Building a dirt hut? The ancestors weep for you. Buy my bricks.",
+      "I chisel with the patience of a lion stalking a gazelle.",
+      "Quartz? In this economy? You must be royalty.",
+      "May your walls be straight and your creepers far away.",
+      "I once built a statue of myself out of diorite. The village burned it down.",
+      "My stone blocks are guaranteed to be heavy and hard. Just like life."
+    ],
+    "cartographer": [
+      "I map the savanna, from the tallest acacia to the deepest, most terrifying ravine.",
+      "The ancestors navigated by the stars. I navigate by charging you for paper.",
+      "I have a map to a woodland mansion. It mostly involves walking for three weeks.",
+      "The world is flat, my maps prove it. Don't argue with science.",
+      "I got lost in my own village yesterday, but my maps are flawless, I swear.",
+      "An unmapped world is an insult to my profession. Go explore it for me.",
+      "I draw little monsters on the edges of the map where I haven't been.",
+      "May your paths be clear and your compass never spin wildly.",
+      "I trade glass panes for emeralds. I don't know why, it just works.",
+      "I have mapped the stars, the rivers, and exactly where the iron golem is stuck."
+    ],
+    "librarian": [
+      "The oral traditions of my people are sacred. But I write them down anyway. Better for business.",
+      "A book of Mending will fix your tools, but not your broken heart.",
+      "I have read every book in this village. All three of them.",
+      "The elders say knowledge is power. I say knowledge is worth twenty emeralds.",
+      "Silence in the library! The spirits are trying to read.",
+      "I have a book on how to survive a zombie attack. It just says 'RUN' on every page.",
+      "Enchanted books contain the whispers of the ancestors. And some really confusing grammar.",
+      "May your bookshelves be full and your reading glasses strong.",
+      "I trade paper for emeralds. It's a scam, but don't tell the others.",
+      "I once read a book so profound, my brain leveled up."
+    ],
+    "nitwit": [
+      "The ancestors tell me to do nothing. I am very obedient.",
+      "I am observing the grass. It is a very complex process.",
+      "Work is for people who don't appreciate the beauty of a nap.",
+      "I am the spiritual anchor of this village. By sitting here and doing nothing.",
+      "The spirits spoke to me. They said, 'Go back to sleep'.",
+      "I'm not lazy, I'm just operating on a higher plane of energy conservation.",
+      "Some chop wood, some farm. I... I breathe. It's important.",
+      "My shirt is green, like the grass I sleep on.",
+      "If you run fast enough, the work can't catch you.",
+      "I am currently busy contemplating a single grain of sand. Please come back later."
+    ],
+    "none": [
+      "I am searching for my calling. Hopefully, it pays well.",
+      "The spirits have not yet assigned me a profession. I am a free agent.",
+      "I stand here, waiting for a block to be placed. Any block.",
+      "I am a blank canvas, ready to be painted by the brush of capitalism.",
+      "Give me a composter and I will show you the meaning of life.",
+      "I have no job, no emeralds, but I have a lot of free time.",
+      "The elders say I have potential. I think they mean I take up space.",
+      "I am currently unemployed, but I am accepting donations.",
+      "My dream is to be a Nitwit, but it requires too much dedication.",
+      "I wander the village, offering unsolicited advice and getting in the way."
+    ]
+  },
+  "generic": [
+    "Hrm. The sun is hot today.",
+    "Hrmmm. The ancestors are restless.",
+    "Hah? Have you seen the iron golem? He owes me money.",
+    "Hmm. The acacia trees whisper your name. Mostly complaining.",
+    "Hrm. Welcome to the savanna, mind the heat.",
+    "Hahh. We honor the spirits by trading fairly. And overcharging tourists.",
+    "Hrmm. The rains will come when the rains will come.",
+    "Hmm. If you see a pillager, please point them towards the Nitwit.",
+    "Hah. May the spirits guide your steps away from my crops.",
+    "Hrm. Life is like a block of dirt. You can build with it, or you can fall on it."
+  ]
+}

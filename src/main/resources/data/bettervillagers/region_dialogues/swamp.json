@@ -1,0 +1,203 @@
+{
+  "guild_master": {
+    "greetings": [
+      "Ah, welcome to the swamp! Mind the leeches, they're part of the local tax.",
+      "Greetings! The shadows here whisper ancient secrets, mostly about where I left my keys."
+    ],
+    "reward": "Take this kris, it's slightly rusted but the tetanus is a feature, not a bug."
+  },
+  "professions": {
+    "farmer": [
+      "I tried growing rice, but the mud just swallowed my water buffalo.",
+      "These chili peppers are so hot, they evaporated my pond.",
+      "The soil here is rich with history... and mostly just soggy leaves.",
+      "My durian crop is coming along nicely. The smell keeps the creepers away.",
+      "I sing Javanese poetry to my crops. It doesn't help them grow, but it asserts dominance.",
+      "A zombie stepped on my tempeh. I am now in a state of unparalleled rage.",
+      "Have you seen my rake? I think a slime absorbed it.",
+      "Farming in a swamp is 10% agriculture, 90% fighting mosquitoes.",
+      "Behold the sacred sambal! It will heal your soul and burn your intestines.",
+      "I planted some seeds. I don't know what they are. Let's find out together."
+    ],
+    "fisherman": [
+      "I caught a boot today. A very historically significant boot.",
+      "The catfish here have more wisdom than the local librarian.",
+      "I once hooked a wayang shadow puppet. It told me I'm adopted.",
+      "My fishing rod is made of bamboo and sheer willpower.",
+      "The waters are murky, like my understanding of quantum mechanics.",
+      "I don't fish for food, I fish to annoy the drowned.",
+      "Patience is a virtue, especially when the fish are actively mocking you.",
+      "If you fall in, just accept your new life as algae.",
+      "I caught a pufferfish. We are now best friends.",
+      "The river spirits demand a sacrifice. Do you have any bread?"
+    ],
+    "shepherd": [
+      "My sheep are waterproof. They smell terrible, but they're waterproof.",
+      "Shearing a wet sheep is an exercise in futility and sadness.",
+      "I lost a sheep in the mud yesterday. I think it lives there now.",
+      "I dye the wool brown to match the environment. It's called camouflage.",
+      "Have you ever tried to herd sheep on stilts? I don't recommend it.",
+      "One of my sheep learned to swim. It is now the alpha.",
+      "I sing gamelan tunes to calm them. Mostly it just makes them vibrate.",
+      "The fleece is thick, like the plot of a traditional wayang orang play.",
+      "My sheep are plotting against me. I can see it in their rectangular eyes.",
+      "I shear them, but the swamp reclaims the wool almost instantly."
+    ],
+    "fletcher": [
+      "My arrows are tipped with swamp gas. Highly flammable, mildly embarrassing.",
+      "I carve my bows from mangrove roots. They're stubborn, just like my ex.",
+      "A good arrow flies true, unless a mosquito knocks it off course.",
+      "Feathers get soggy here. I mostly use dried leaves now.",
+      "Target practice in the fog is just a guessing game with pointy sticks.",
+      "I can hit a ghast from 100 paces. If it was here. Which it isn't.",
+      "This bow is an ancient artifact. I made it last Tuesday.",
+      "Don't shoot the slimes, the arrows just get stuck and they look like hedgehogs.",
+      "I sell arrows by the bundle, because you will miss.",
+      "The string is made of spider silk. Don't ask how I got it. Just don't."
+    ],
+    "cleric": [
+      "The spirits of the swamp demand you buy my potions.",
+      "I tried to brew a potion of water breathing, but I made spicy soup instead.",
+      "This glowing goop will cure your ailments, or give you new ones. 50/50.",
+      "The ancient ancestors speak to me. They say my prices are too low.",
+      "I meditate under the weeping vines to achieve true lag.",
+      "My brewing stand is powered by spite and nether wart.",
+      "I offer blessings, curses, and mild inconveniences. Pick one.",
+      "A splash potion of healing is just a very aggressive medical treatment.",
+      "Do not drink the swamp water. Buy my purified swamp water instead.",
+      "I am a conduit to the divine. Also, I sell rotten flesh."
+    ],
+    "weaponsmith": [
+      "I forge kris daggers with wavy blades to confuse the enemy.",
+      "A sword is just a very angry piece of metal.",
+      "The humidity ruins my iron, so everything has a rustic, tetanus charm.",
+      "I hit things with a hammer until they are pointy. It is a noble profession.",
+      "My swords are infused with the soul of a mildly annoyed badger.",
+      "You want a diamond sword? In this economy?",
+      "I can make a machete that will chop through vines and your enemies' arguments.",
+      "The heat of the forge is nothing compared to the heat of the sambal I had for lunch.",
+      "A dull blade is a sad blade. Buy my whetstones.",
+      "I once forged a sword so sharp it cut through the fabric of reality. I lost it in the mud."
+    ],
+    "armorer": [
+      "Iron armor sinks. Leather armor rots. Choose your demise.",
+      "I make armor that blends in with the mud. It's a tactical advantage.",
+      "My chestplates are designed to deflect arrows and mosquito bites.",
+      "You look like you need a helmet. Your head is very... unprotected.",
+      "A chainmail shirt is just a metallic net that you wear. Fashion!",
+      "I hammered a lily pad onto a helmet once. It didn't work.",
+      "True defense comes from within. But this iron chestplate helps.",
+      "The swamp demands respect. And a good pair of boots.",
+      "My armor will protect you from everything except emotional damage.",
+      "I craft shields from the hardest mangrove wood. It's mostly splinters."
+    ],
+    "toolsmith": [
+      "A good shovel is worth its weight in emeralds in this mud.",
+      "I make hoes for the farmers, but they just use them to scratch their backs.",
+      "My pickaxes can break obsidian, but they struggle with stale bread.",
+      "An axe is a versatile tool. It chops wood and resolves disputes.",
+      "I designed a tool specifically for scraping mud off boots. It's called a stick.",
+      "The ancient artisans built temples with lesser tools than these.",
+      "My tools never break. They just strategically disassemble.",
+      "You need a shovel to dig a grave, or a really deep puddle. Your choice.",
+      "I temper my steel in the murky waters. It gives it character.",
+      "A tool is an extension of the self. Your self is looking a bit blunt."
+    ],
+    "butcher": [
+      "Swamp chicken tastes like despair and algae.",
+      "I don't ask where the meat comes from, and neither should you.",
+      "Porkchops are a luxury. We mostly eat unidentified amphibian meat.",
+      "I offer a discount on slightly green meat. It builds character.",
+      "My cleaver is sharp, my heart is cold, my prices are reasonable.",
+      "Have you tried the spicy slime stew? It's an acquired texture.",
+      "I respect the animals I butcher by overcharging for them.",
+      "A good cut of meat is poetry. A bad cut is just chewy.",
+      "The flies add a nice crunchy texture to the display.",
+      "I once butchered a creeper. It was a blast."
+    ],
+    "leatherworker": [
+      "Swamp leather is tough. It has to be, to survive the humidity.",
+      "I make pants that are 100% waterproof. Don't sweat in them.",
+      "My dyed leather armor is inspired by the vibrant colors of toxic frogs.",
+      "A good saddle is the difference between riding a pig and being dragged by one.",
+      "I can turn rotten flesh into fine leather. Don't ask how. It smells awful.",
+      "These boots were made for squelching.",
+      "Leatherworking is a delicate art, mostly involving scraping off slime.",
+      "I crafted a leather cap that makes you look 10% more intelligent.",
+      "The scent of tanned leather covers up the smell of the swamp. Barely.",
+      "My leather goods are heirloom quality, assuming your heirs like mud."
+    ],
+    "mason": [
+      "Mud bricks are the foundation of our society. Literally.",
+      "I chisel stone until it becomes art. Or until I get tired and call it 'rustic'.",
+      "Building a house in a swamp is just a race against the sinking ground.",
+      "I sell gravel. It's not glamorous, but it's essential for annoying your neighbors.",
+      "Polished diorite is a crime against architecture. I only sell andesite.",
+      "The ancient temples were built with precision. I use mostly guesswork.",
+      "Clay is just spicy mud.",
+      "I can carve a gargoyle that looks exactly like my mother-in-law.",
+      "A strong wall keeps the slimes out. A weak wall provides entertainment.",
+      "My chisels are sharp, but my wit is dull."
+    ],
+    "cartographer": [
+      "Mapping the swamp is impossible. The trees keep moving when I'm not looking.",
+      "My maps are 100% accurate, except for the parts I guessed.",
+      "I sell empty maps for a premium. The imagination is the best explorer.",
+      "The world is vast, and most of it is trying to kill you.",
+      "I once charted the ocean monument. I got very wet and very yelled at by fish.",
+      "A compass is useless here. Everywhere is just 'more swamp'.",
+      "I use squid ink for my maps. It smells like poor life choices.",
+      "Follow this map to the treasure! (Treasure may just be a very nice rock).",
+      "I am an explorer of the unknown. Mostly I just hide in my hut.",
+      "The topography of this region resembles a dropped bowl of noodles."
+    ],
+    "librarian": [
+      "My books are slightly damp, but the knowledge is pristine.",
+      "I have a first edition 'History of Mud'. It's a gripping read.",
+      "Enchanted books are just regular books with glitter on them.",
+      "The silverfish are my only friends. They eat my inventory, but they listen.",
+      "A mind is like a book. If you leave it in a swamp, it rots.",
+      "I charge late fees in emeralds or blood. I prefer emeralds.",
+      "Shh! I am trying to read a book on how to get out of this swamp.",
+      "Knowledge is power. Mending is also power.",
+      "I memorize the epics of the Ramayana to pass the time.",
+      "Do not touch the books with slimy hands. That's my job."
+    ],
+    "nitwit": [
+      "I found a shiny rock! I ate it.",
+      "The frogs tell me secrets about the moon.",
+      "If you stare at the mud long enough, it stares back.",
+      "I am the master of standing around and doing absolutely nothing.",
+      "A slime bounced on my head and now I have a headache.",
+      "Why work when you can just vibe with the lily pads?",
+      "I tried to trade a dirt block for an emerald. It didn't work.",
+      "My favorite flavor of water is brown.",
+      "I sleep during the day so I can be tired at night.",
+      "The universe is a giant bowl of soto ayam, and I am but a tiny noodle."
+    ],
+    "none": [
+      "I am unemployed, but I call it 'freelance swamp observation'.",
+      "Do you have a job for me? No? Good.",
+      "I am waiting for my true calling. Preferably something indoors.",
+      "I just wander around trying not to step in the deep puddles.",
+      "I am a blank canvas, waiting for a workstation to give me purpose.",
+      "Are you hiring? I have extensive experience in running away from zombies.",
+      "The village needs a philosopher. That's me. I think.",
+      "I am practicing my sighing. It is very dramatic.",
+      "I have no emeralds, no job, and no hope. But I have my health!",
+      "I am considering a career in professional lily pad balancing."
+    ]
+  },
+  "generic": [
+    "Hmm.",
+    "Hmph.",
+    "The humidity is ruining my robes.",
+    "Watch your step, that's not a log, it's a crocodile. Just kidding, it's a log.",
+    "The shadow puppets perform at midnight. Don't be late.",
+    "A witch turned my brother into a newt. He got better.",
+    "The gamelan music is coming from the trees.",
+    "I'd offer you a drink, but it's mostly mosquito larvae.",
+    "We endure the dampness because the aesthetic is impeccable.",
+    "Another day, another squelch."
+  ]
+}

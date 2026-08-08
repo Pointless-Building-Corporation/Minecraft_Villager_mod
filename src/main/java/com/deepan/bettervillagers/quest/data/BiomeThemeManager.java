@@ -21,7 +21,7 @@ public class BiomeThemeManager extends SimpleJsonResourceReloadListener {
     private final List<BiomeThemeData> themes = new ArrayList<>();
 
     public BiomeThemeManager() {
-        super(GSON, "bettervillagers/biome_themes");
+        super(GSON, "biome_themes");
     }
 
     @Override

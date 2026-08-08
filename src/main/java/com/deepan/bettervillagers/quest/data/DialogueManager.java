@@ -20,7 +20,7 @@ public class DialogueManager extends SimpleJsonResourceReloadListener {
     private final Map<ResourceLocation, DialogueNodeData> nodes = new HashMap<>();
 
     public DialogueManager() {
-        super(GSON, "bettervillagers/dialogue");
+        super(GSON, "dialogue");
     }
 
     @Override

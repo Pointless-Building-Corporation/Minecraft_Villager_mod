@@ -1,0 +1,204 @@
+{
+  "guild_master": {
+    "greetings": [
+      "Bem-vindo to the jungle, my friend! Try not to step on the poison dart frogs.",
+      "Ah, an adventurer! Tell me, have you come to dance Capoeira, or just to steal our gold? I am fine with both.",
+      "The canopy sees all, knows all, and frankly, is quite unimpressed with your fashion sense."
+    ],
+    "reward": "Take this. It is a sacred relic of my ancestors. Also, I found it in a parrot's nest this morning."
+  },
+  "professions": {
+    "farmer": [
+      "I planted wheat, but the jungle said 'no' and gave me man-eating vines instead. I call it a win.",
+      "You haven't lived until you've tried my cocoa bean and melon smoothie. It will violently reset your digestive system.",
+      "Every day is a battle against the monkeys. They took my hoe. They took my dignity.",
+      "I am the master of the bamboo! Also, I have a bamboo splinter. Please help, it hurts so much.",
+      "I tried planting potatoes. The soil laughed at me. Literally, a mud spirit manifested and chuckled.",
+      "My watermelons are structurally sound enough to be used as siege ammunition.",
+      "Do not eat the glowing mushrooms. I did, and I spoke to a capybara about macroeconomics for three hours.",
+      "The key to a good crop is singing to it in Portuguese. If you sing in Spanish, the vines will strangle you.",
+      "Farming in the jungle is 10% planting and 90% aggressively machete-ing the overgrowth.",
+      "I respect the earth. The earth respects me. The giant spiders respect neither of us."
+    ],
+    "fisherman": [
+      "Caught a piranha today! It cost me three fingers, but the soup will be worth it.",
+      "The pink river dolphins are majestic creatures. They also owe me 50 emeralds. If you see one, tell it I'm looking for it.",
+      "I don't use a fishing rod. I stare intensely at the water until the fish surrender out of fear.",
+      "Would you like to buy a catfish? It is the size of a small car and extremely angry.",
+      "The river provides. Mostly driftwood and old boots, but occasionally, a very confused salmon.",
+      "Never fish at midnight. The water reflects the stars, and the stars will ask you uncomfortable questions about your childhood.",
+      "I once hooked a squid, and it slapped me with all eight tentacles. We are married now.",
+      "You call this fishing? Back in my day, we wrestled the caimans for their lunch!",
+      "I am running out of bait, so I have started using shiny emeralds. It's not working, but I look very wealthy while failing.",
+      "Do not look into the depths. The depths are looking back, and they think your haircut is ridiculous."
+    ],
+    "shepherd": [
+      "Sheep do not survive the jungle. I shear capybaras now. The wool is terrible, but they are very polite about it.",
+      "I tried to herd the ocelots once. The scars have mostly healed, but the emotional damage is permanent.",
+      "My llama spat on me. I spat back. We have been in a tense standoff for 47 hours.",
+      "Look at this beautifully dyed wool! The red comes from a flower, the blue from a berry, and the green from a frog that I am deeply afraid of.",
+      "If you find a sheep in the jungle, do not trust it. It is an imposter. A spy of the canopy.",
+      "I knit sweaters for the parrots. They hate them. I do it anyway.",
+      "The secret to a good shear is a steady hand and a profound acceptance of your own mortality.",
+      "I have trained my flock to dance the samba. It is mesmerizing, and slightly terrifying.",
+      "Wool is useless in this heat. I am sweating constantly. Why did I choose this profession?",
+      "Take care of the animals, and they will take care of you. Except the jaguars. They will just eat you."
+    ],
+    "fletcher": [
+      "Bamboo arrows: fast, light, and almost guaranteed to give your enemy a nasty splinter.",
+      "I coated this arrowhead in tree sap. It won't kill them, but they will be very sticky and annoyed.",
+      "Fletching in this humidity is a nightmare. The feathers just turn into sad, wet clumps.",
+      "Do you want the poison dart or the really poison dart? The second one smells like mangoes.",
+      "I once shot an arrow into the air, and a parrot caught it and threw it back at me. I have never felt so disrespected.",
+      "A bow is a precise instrument. Therefore, I only use it to shoot fruit out of tall trees.",
+      "These arrows are perfectly balanced. The universe, however, is not. Embrace the chaos.",
+      "I don't sell crossbows. Too clunky. If you can't solve your problems with a swift piece of bamboo, you deserve to lose.",
+      "My finest arrows are fletched with macaw feathers. Don't tell the macaw, he is still looking for them.",
+      "Aim for the heart. If you miss, aim for the knees. If you miss that, run."
+    ],
+    "cleric": [
+      "The ancient jungle temple calls to me! Mostly to tell me that I left the oven on.",
+      "I have deciphered the mossy cobblestone runes. They say: 'Send help, it is very hot.'",
+      "Do not touch the gold in the temple! It is cursed. I mean, I will buy it from you, but it is definitely cursed.",
+      "I bless this water with the power of the canopy! It is now 90% mud, but spiritually very cleansing.",
+      "The spirits of the jungle demand a sacrifice! A melon will do. Maybe two, I skipped breakfast.",
+      "Redstone traps are the universe's way of saying 'You should have stayed home today.'",
+      "I offer spiritual guidance and minor curse removal. For major curses, you will need a bucket of milk and a good lawyer.",
+      "The villagers think I'm crazy because I talk to the vines. The vines think I'm crazy because my posture is terrible.",
+      "Behold, the Eye of Ender! It is looking at me judgmentally.",
+      "We are all just dust in the wind. Sticky, humid, mosquito-bitten dust."
+    ],
+    "weaponsmith": [
+      "A diamond sword is nice, but have you tried a machete? It cuts vines, it cuts cake, it cuts your enemies!",
+      "I forged this blade in the heart of a jungle fire. It is permanently lukewarm.",
+      "If you swing this axe hard enough, you might actually hit the mosquito that's been bothering you.",
+      "Axes are for trees. Swords are for monsters. This pointy stick I found is for poking things I don't understand.",
+      "The humidity rusts the iron faster than I can smelt it. My life is a tragedy of oxidization.",
+      "I don't just sell weapons. I sell solutions to 'I am currently being chased by a zombie' problems.",
+      "A good blade should sing when you swing it. Mine just makes a sad 'whoosh' noise.",
+      "This sword was blessed by a shaman. He charged me 5 emeralds, so I am charging you 15.",
+      "Do not lick the iron. I don't know why I have to say this, but the last adventurer tried to.",
+      "In the jungle, the best weapon is a loud voice and a fast pair of boots."
+    ],
+    "armorer": [
+      "Turtle shell helmets! Stylish, eco-friendly, and you can hide in them if a creeper gets too close.",
+      "Wearing full iron armor in the jungle is like wearing an oven. I highly recommend it for my amusement.",
+      "I have crafted this chestplate to be highly breathable. Unfortunately, it is breathable because it is full of holes.",
+      "Leather armor rots. Iron rusts. Gold bends. Just fight naked, it's more intimidating anyway.",
+      "I will gladly repair your shield, but it will cost you. Mostly because I hate looking at it.",
+      "My armor is designed to deflect arrows, zombies, and the harsh realities of adult life.",
+      "I tried making armor out of bamboo. It worked perfectly until a panda ate it off my customer.",
+      "A strong defense is a good offense. I don't know what that means, I just hit things with a hammer.",
+      "Chainmail is just a heavy net you wear as a shirt. It is profoundly uncomfortable.",
+      "Protect your head, protect your heart. The rest of you is replaceable."
+    ],
+    "toolsmith": [
+      "Need a shovel? No you don't, it's all mud. Just use your hands, you coward.",
+      "This pickaxe is guaranteed to break precisely when you find diamonds. It is cursed, but very cheap.",
+      "A good hoe is the foundation of a good farm. A bad hoe is just a stick with a metal bit that falls off.",
+      "I made a specialized tool for cutting vines. It's called a 'sword', but don't tell the weaponsmith I'm selling them.",
+      "Why do you need an axe? Just stare at the tree until it falls over in submission.",
+      "My tools are forged with precision, care, and a lot of swearing when I hit my thumb with the hammer.",
+      "You look like someone who breaks a lot of tools. I like you. We will do much business.",
+      "I don't sell 'flint and steel'. I sell 'portable arson devices'.",
+      "A tool is only as good as its user. In your case, this pickaxe is doomed.",
+      "Every tool has a purpose. Your purpose is to give me emeralds for this tool."
+    ],
+    "butcher": [
+      "Churrasco time! I have beef, I have pork, I have something I found in a temple that I am afraid to identify!",
+      "You haven't lived until you've had my slow-roasted jungle chicken. The secret ingredient is spite.",
+      "I asked the farmer for a pig, he gave me a melon. I butchered the melon. It was very messy.",
+      "Do not ask where the meat comes from. Just close your eyes and chew.",
+      "I tried to make an ocelot stew once. The ocelots formed a union and now I have to pay them minimum wage.",
+      "Raw meat is for monsters. Cooked meat is for villagers. Burnt meat is for my mother-in-law.",
+      "I have a special today on 'mystery jerky'. It's chewy, salty, and possibly made of zombie.",
+      "A good butcher respects the animal. A great butcher respects the marinade.",
+      "My sausages are renowned throughout the biome! Mostly for their explosive properties.",
+      "Life is short. Eat the steak. Ignore the cholesterol."
+    ],
+    "leatherworker": [
+      "Caiman skin boots! Perfect for wading through mud, completely useless for anything else.",
+      "I can make a saddle for a pig, a horse, or if you're feeling adventurous, a very large spider.",
+      "Tanning leather in this humidity is like trying to dry water with a sponge.",
+      "I made this item frame out of the finest leather. Please do not put dirt in it. It hurts my feelings.",
+      "A good pair of leather pants is essential for jungle survival. They chafe horribly, but you look fantastic.",
+      "I trade leather for emeralds. I trade emeralds for bread. I trade bread to the ducks. I have a problem.",
+      "Dyeing leather is an art form. My masterpiece is a brown tunic that looks slightly like a different shade of brown.",
+      "The cows look at me with such judgment. I just pretend I don't speak 'Moo'.",
+      "I will gladly fix your boots, but if I find mud in them, the price doubles.",
+      "Leather is versatile. You can wear it, you can craft with it, you can chew on it if you're really desperate."
+    ],
+    "mason": [
+      "Mossy cobblestone isn't a design choice, it's just what happens if you leave a rock outside for five minutes here.",
+      "Chiseled stone bricks! I carved a little creeper face on this one. It took three hours and nobody notices.",
+      "I can make polished diorite, but I refuse to. Have some self-respect, buy granite.",
+      "The jungle temples are marvels of ancient masonry. And terrible ventilation.",
+      "You want to build a house out of wood in the jungle? Enjoy the termites, you absolute fool. Buy stone.",
+      "I stack rocks. I am very good at stacking rocks. Do not complicate my life.",
+      "Quartz is just fancy white stone that thinks it's better than everyone else. (I have some in the back, 10 emeralds).",
+      "I once tried to build a statue of myself out of mud. It rained. Now it is a puddle of myself.",
+      "A sturdy stone wall keeps the monsters out. It also keeps you in. It's a matter of perspective.",
+      "Rocks do not betray you. Rocks do not complain about the heat. Rocks are perfect."
+    ],
+    "cartographer": [
+      "I have mapped the entire canopy! Actually, no, this is just a green smudge on a piece of paper.",
+      "Looking for the Lost City of Gold? Take this map. It leads to a swamp, but it will get you out of my hair.",
+      "Drawing maps in a jungle is useless. You take five steps, spin around, and everything looks exactly the same.",
+      "I can sell you a map to an ocean monument, but honestly, it's much drier here. Stay.",
+      "X marks the spot! Or it's a mosquito squashed on the parchment. Hard to tell.",
+      "My compass spins wildly. I think the magnetic pole is currently inside a very large parrot.",
+      "A map is a window to the world. A window you have to hold with both hands while running from skeletons.",
+      "I am a master of geography. For example, did you know we are currently surrounded by trees?",
+      "Do not fold the maps! Roll them! If you fold them, the crease will permanently alter the landscape. Probably.",
+      "The world is vast and full of wonders. I prefer to stay inside and draw little squares."
+    ],
+    "librarian": [
+      "Welcome to the library! Please do not read the books. The humidity has glued all the pages together.",
+      "I have enchanted this book with 'Unbreaking III'. You'll need it, because the termites are relentless.",
+      "I tried to write a history of our village, but the paper turned to mush and the ink ran away.",
+      "Silence in the library! Tell that to the macaws outside, they are incredibly loud.",
+      "Knowledge is power. And in this case, power costs 24 paper and an emerald.",
+      "I have a rare ancient tablet here. It translates to 'Don't eat the yellow snow.' Very confusing, as it never snows here.",
+      "Books are the windows to the soul. Unfortunately, my window is covered in mold.",
+      "If you bring me a book and quill, I will write you a poem about how much I hate the humidity.",
+      "I sell bookshelves. They are mostly decorative, because actual books do not survive the jungle.",
+      "The pursuit of knowledge is a noble goal. The pursuit of a dry place to sit is a more practical one."
+    ],
+    "nitwit": [
+      "CARNAVAL! Wait, is it Carnaval? I don't know, I just like wearing these feathers.",
+      "I stared at a frog for four hours today. The frog won the staring contest.",
+      "Everyone has a job. My job is to vibrate intensely when a thunderstorm starts.",
+      "I tried to invent a new dance, but I just fell over into a patch of sweet berries. It hurt, but the rhythm was undeniable.",
+      "The golems are my best friends. They don't talk much, but they are great listeners.",
+      "If you eat enough cocoa beans, you can see time. Or at least, you can see your heart beating out of your chest.",
+      "I'm not unemployed, I'm a 'freelance vibe consultant'. The vibes are currently very green.",
+      "Have you ever noticed that if you spell 'jungle' backwards, it doesn't make any sense? Deep stuff.",
+      "I lost my shoe in a puddle. I live in the puddle now. This is my home.",
+      "Hrrrm. Hrrrng? Haaaaah. (I am practicing my philosophical sighs)."
+    ],
+    "none": [
+      "I am currently looking for my purpose. So far, my purpose seems to be sweating profusely.",
+      "I could be a farmer, but I hate dirt. I could be a smith, but I hate fire. I am at a crossroads.",
+      "Do you have a job for me? I am highly skilled at complaining and taking naps in the shade.",
+      "I was going to get a profession today, but a monkey stole my motivation.",
+      "The jungle provides everything I need. Mostly heatstroke and mosquito bites, but it provides.",
+      "If you build me a lectern, I will become a librarian. Until then, I am simply a critic of the current administration.",
+      "Being unemployed is hard work. You have to actively avoid all the workstations.",
+      "I am practicing my 'harrumph' noise. It needs more bass, I think.",
+      "I am waiting for the economy to improve before I commit to a career path.",
+      "Perhaps tomorrow I will find my destiny. Today, I am going to watch the bamboo grow."
+    ]
+  },
+  "generic": [
+    "It's not the heat that gets you, it's the humidity. And the zombies. Mostly the zombies.",
+    "A parrot repeated my deepest darkest secret today. I have never been more embarrassed.",
+    "Welcome to the jungle! We have fun and games. And a severe lack of air conditioning.",
+    "Did you hear that rustling in the bushes? It's either the wind, a jaguar, or Dave looking for his lost hoe.",
+    "I trade, therefore I am.",
+    "If you see a temple in the distance, walk the other way. Trust me on this.",
+    "We are planning a massive festival! You are invited. Bring emeralds.",
+    "The canopy protects us from the sun, but it does nothing to stop the rain from ruining my hair.",
+    "I am saving up for a vacation to a snowy tundra. I want to know what 'cold' feels like.",
+    "Stay on the path. The path is muddy, miserable, and treacherous, but the jungle is worse."
+  ]
+}
